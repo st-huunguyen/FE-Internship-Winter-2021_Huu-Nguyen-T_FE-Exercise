@@ -2,5 +2,5 @@
 infomation
 name : Nguyen Trong Huu
 age : 26
-team : Front end
-email: huu.nguyen@supremetech.vn
+email : huu.nguyen@supremetech.vn
+phone : 0764845131
