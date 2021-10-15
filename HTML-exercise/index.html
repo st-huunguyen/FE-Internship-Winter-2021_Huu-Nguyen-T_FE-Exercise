@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>E-shop Homepage</title>
-    <meta name="description" content="E-shop" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="shop">
-        <img src="asset/images/noun_cloth_2129414.png" alt="Logo-image" />
-        <h1><a href="#">E-Shop</a></h1>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>E-shop Homepage</title>
+  <meta name="description" content="E-shop" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="" />
+</head>
 
-      <nav class="navigation">
-        <ul class="list-nav-items">
-          <li class="list-item">
-            <a href="#" class="item-link"><p>Men</p></a>
-          </li>
-          <li class="list-item">
-            <a href="#" class="item-link"><p>Women</p></a>
-          </li>
-          <li class="list-item">
-            <a href="#" class="item-link"><p>Kids</p></a>
-          </li>
-        </ul>
-      </nav>
-
-      <ul class="list-user-options">
+<body>
+  <header class="container">
+    <div class="header-logo">
+      <a href="#">
+        <img src="asset/images/noun_cloth_2129414.png" alt="E-shop" />
+        <h2>E-Shop</h2>
+      </a>
+    </div>
+    <nav class="navigation">
+      <ul class="list-group">
         <li class="list-item">
-          <a href="#" class="user-option"
-            ><img src="asset/images/noun_Search_2102816.png" alt="search"
-          /></a>
+          <a href="#" class="item-link">Men</a>
         </li>
         <li class="list-item">
-          <a href="#" class="user-option"
-            ><img src="asset/images/noun_cart_2102832.png" alt="cart"
-          /></a>
+          <a href="#" class="item-link">Women</a>
         </li>
         <li class="list-item">
-          <a href="#" class="user-option"
-            ><img src="asset/images/noun_avatar_2102861.png" alt="user"
-          /></a>
+          <a href="#" class="item-link">Kids</a>
         </li>
       </ul>
-    </header>
+    </nav>
+    <ul class="list-group">
+      <li class="list-item">
+        <a href="#" class="user-option">
+          <img src="asset/images/noun_Search_2102816.png" alt="search" />
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="#" class="user-option">
+          <img src="asset/images/noun_cart_2102832.png" alt="cart" />
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="#" class="user-option">
+          <img src="asset/images/noun_avatar_2102861.png" alt="user" />
+        </a>
+      </li>
+    </ul>
+  </header>
 
-    <section class="section-top-banner">
+  <main>
+    <section class="section-top-banner container">
       <div class="banner-content">
         <h2>Sale of the summer collection</h2>
       </div>
@@ -57,63 +59,72 @@
         <img src="asset/images/noun_Arrow Left_2682937.png" alt="arrow" />
         <p>SHOP NOW</p>
       </a>
-
-      <section class="section-service">
+      <div class="services">
         <ul class="list-services">
           <li class="list-item">
-            <img src="asset/images/Group 179.png" alt="shipping-icon" />
-            <div class="item-detail">
-              <h3>Free Shipping</h3>
-              <p>On purchases over $199</p>
+            <div class="service-card">
+              <img src="asset/images/Group 179.png" alt="shipping-icon" />
+              <div class="item-detail">
+                <h3>Free Shipping</h3>
+                <p>On purchases over $199</p>
+              </div>
             </div>
           </li>
-
           <li class="list-item">
-            <img src="asset/images/noun_Happy_1563582.png" alt="customer-icon" />
-            <div class="item-detail">
-              <h3>99% Satisfied Customers</h3>
-              <p>Our clients' opinions speak for themselves</p>
+            <div class="service-card">
+              <img src="asset/images/noun_Happy_1563582.png" alt="customer-icon" />
+              <div class="item-detail">
+                <h3>99% Satisfied Customers</h3>
+                <p>Our clients' opinions speak for themselves</p>
+              </div>
             </div>
           </li>
-
           <li class="list-item">
-            <img src="asset/images/noun_guarantee_25190481.png" alt="warranty-icon" />
-            <div class="item-detail">
-              <h3>Originality Guaranteed</h3>
-              <p>30 days warranty for each product from our store</p>
+            <div class="service-card">
+              <img src="asset/images/noun_guarantee_25190481.png" alt="warranty-icon" />
+              <div class="item-detail">
+                <h3>Originality Guaranteed</h3>
+                <p>30 days warranty for each product from our store</p>
+              </div>
             </div>
           </li>
         </ul>
-      </section>
+      </div>
     </section>
 
-    <main>
-      <ul class="list-collection row">
+    <section class="section-collection container">
+      <ul class="list-group row">
         <li class="list-item col-6">
-          <h3>New arrivals are now in!</h3>
-          <button class="btn btn-secondary">SHOW COLLECTION</button>
+          <div class="collection-card">
+            <h3>New arrivals are now in!</h3>
+            <button class="btn btn-secondary">SHOW COLLECTION</button>
+          </div>
         </li>
-
         <li class="list-item col-3">
-          <h3>Basic t-shirts</h3>
-          <p>$29,99</p>
-          <button class="btn btn-secondary">MORE DETAILS</button>
+          <div class="collection-card">
+            <h3>Basic t-shirts</h3>
+            <p>$29,99</p>
+            <button class="btn btn-secondary">MORE DETAILS</button>
+          </div>
         </li>
-
         <li class="list-item col-3">
-          <p class="sale-tag">50%</p>
-          <h3>Sale this summer</h3>
-          <button class="btn btn-secondary">VIEW ALL</button>
+          <div class="collection-card">
+            <p class="sale-tag">50%</p>
+            <h3>Sale this summer</h3>
+            <button class="btn btn-secondary">VIEW ALL</button>
+          </div>
         </li>
       </ul>
+    </section>
 
-      <section class="section-suggestions">
-        <div class="suggestions-header">
-          <h2>Selected just for you</h2>
-          <button class="btn btn-secondary">SHOW MORE</button>
-        </div>
-        <ul class="list-products row">
-          <li class="list-item col">
+    <section class="section-suggestions container">
+      <div class="suggestions-header">
+        <h2>Selected just for you</h2>
+        <button class="btn btn-secondary">SHOW MORE</button>
+      </div>
+      <ul class="list-group row">
+        <li class="list-item col">
+          <div class="suggestion-card">
             <img src="asset/images/image.png" alt="t-shirt-image" class="item-image" />
             <p class="badge">30%</p>
             <div class="item-detail">
@@ -123,54 +134,48 @@
                 <p>$119.99</p>
               </div>
             </div>
-          </li>
-          <li class="list-item col">
-            <img
-              src="asset/images/image-2.png"
-              alt="loose-knit-3/4-sleeve"
-              class="item-image"
-            />
+          </div>
+        </li>
+        <li class="list-item col">
+          <div class="suggestion-card">
+            <img src="asset/images/image-2.png" alt="loose-knit-3/4-sleeve" class="item-image" />
             <div class="item-detail">
               <h3>Loose Knit 3/4 Sleeve</h3>
               <div class="item-price">
                 <p>$119.99</p>
               </div>
             </div>
-          </li>
-
-          <li class="list-item col">
-            <img
-              src="asset/images/image-3.png"
-              alt="slim-fit-t-shirt"
-              class="item-image"
-            />
+          </div>
+        </li>
+        <li class="list-item col">
+          <div class="suggestion-card">
+            <img src="asset/images/image-3.png" alt="slim-fit-t-shirt" class="item-image" />
             <div class="item-detail">
               <h3>Basic Slim Fit T-Shirt</h3>
               <div class="item-price">
                 <p>$79.99</p>
               </div>
             </div>
-          </li>
-          <li class="list-item col">
-            <img
-              src="asset/images/image-4.png"
-              alt="textured-t-shirt"
-              class="item-image"
-            />
+          </div>
+        </li>
+        <li class="list-item col">
+          <div class="suggestion-card">
+            <img src="asset/images/image-4.png" alt="textured-t-shirt" class="item-image" />
             <div class="item-detail">
               <h3>Loose Textured T-Shirt</h3>
               <div class="item-price">
                 <p>$119.99</p>
               </div>
             </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section-introduct">
-        <h2>Why should you choose us?</h2>
-        <ul class="list-introducts row">
-          <li class="list-item col">
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="section-introduct container">
+      <h2>Why should you choose us?</h2>
+      <ul class="list-group row">
+        <li class="list-item col">
+          <div class="introduct-card">
             <div class="item-icon">
               <img src="asset/images/Group 181.png" alt="Shipping" />
             </div>
@@ -181,9 +186,10 @@
                 First Class Mail.
               </p>
             </div>
-          </li>
-
-          <li class="list-item col">
+          </div>
+        </li>
+        <li class="list-item col">
+          <div class="introduct-card">
             <div class="item-icon">
               <img src="asset/images/noun_payment_2281176.png" alt="Payments" />
             </div>
@@ -194,9 +200,10 @@
                 protocol.
               </p>
             </div>
-          </li>
-
-          <li class="list-item col">
+          </div>
+        </li>
+        <li class="list-item col">
+          <div class="introduct-card">
             <div class="item-icon">
               <img src="asset/images/noun_guarantee_2519048.png" alt="Guarantee" />
             </div>
@@ -207,9 +214,10 @@
                 send it back for a full refund.
               </p>
             </div>
-          </li>
-
-          <li class="introduct-item col">
+          </div>
+        </li>
+        <li class="introduct-item col">
+          <div class="introduct-card">
             <div class="item-icon">
               <img src="asset/images/noun_materials_308312.png" alt="Quality" />
             </div>
@@ -220,16 +228,17 @@
                 finest materials.
               </p>
             </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section-today-suggestions">
-        <div class="suggestions-header">
-          <h2>Products in today</h2>
-        </div>
-        <ul class="list-products row">
-          <li class="list-item col">
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="section-today-suggestions container">
+      <div class="suggestions-header">
+        <h2>Products in today</h2>
+      </div>
+      <ul class="list-group row">
+        <li class="list-item col">
+          <div class="suggestion-card">
             <img src="asset/images/image.png" alt="t-shirt-image" class="item-image" />
             <p class="badge">30%</p>
             <div class="item-detail">
@@ -239,131 +248,130 @@
                 <p>$119.99</p>
               </div>
             </div>
-          </li>
-          <li class="list-item col">
-            <img
-              src="asset/images/image-2.png"
-              alt="loose-knit-3/4-sleeve"
-              class="item-image"
-            />
+          </div>
+        </li>
+        <li class="list-item col">
+          <div class="suggestion-card">
+            <img src="asset/images/image-2.png" alt="loose-knit-3/4-sleeve" class="item-image" />
             <div class="item-detail">
               <h3>Loose Knit 3/4 Sleeve</h3>
               <div class="item-price">
                 <p>$119.99</p>
               </div>
             </div>
-          </li>
-
-          <li class="list-item col">
-            <img
-              src="asset/images/image-3.png"
-              alt="slim-fit-t-shirt"
-              class="item-image"
-            />
+          </div>
+        </li>
+        <li class="list-item col">
+          <div class="suggestion-card">
+            <img src="asset/images/image-3.png" alt="slim-fit-t-shirt" class="item-image" />
             <div class="item-detail">
               <h3>Basic Slim Fit T-Shirt</h3>
               <div class="item-price">
                 <p>$79.99</p>
               </div>
             </div>
-          </li>
-          <li class="list-item col">
-            <img
-              src="asset/images/image-4.png"
-              alt="textured-t-shirt"
-              class="item-image"
-            />
+          </div>
+        </li>
+        <li class="list-item col">
+          <div class="suggestion-card">
+            <img src="asset/images/image-4.png" alt="textured-t-shirt" class="item-image" />
             <div class="item-detail">
               <h3>Loose Textured T-Shirt</h3>
               <div class="item-price">
                 <p>$119.99</p>
               </div>
             </div>
-          </li>
-        </ul>
-      </section>
-      <section class="section-bottom-banner">
-        <form class="bottom-form">
-          <p>
-            Subscribe to our newsletter and receive exclusive offers every week
-          </p>
-          <input type="text" />
-          <button class="btn btn-secondary">SUBSCRIBE</button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <section class="section-footer-top">
-        <div class="about-us">
-          <div class="shop">
-            <img src="asset/images/noun_cloth_2129414.png" alt="logo-E-shop" />
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="section-bottom-banner container">
+      <h3>
+        Subscribe to our newsletter and receive exclusive offers every week
+      </h3>
+      <form class="bottom-form">
+        <input type="text" />
+        <button class="btn btn-secondary">SUBSCRIBE</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <section class="section-footer-top">
+      <div class="about-us">
+        <div class="footer-logo">
+          <a href="#">
+            <img src="asset/images/noun_cloth_2129414.png" alt="E-shop" />
             <h2>E-Shop</h2>
-          </div>
-          <div class="about-us-detail">
-            <p>
-              House My Brand designs clothing for the young, the old &everyone
-              in between – but most importantly, for the fashionable
-            </p>
-          </div>
-          <div class="social-network">
-            <ul class="list-social">
-              <li class="list-item">
-                <a href="#"><img src="asset/images/Path 70.png" alt="facebook" /></a>
-              </li>
-              <li class="list-item">
-                <a href="#"><img src="asset/images/Path 69.png" alt="twitter" /></a>
-              </li>
-              <li class="list-item">
-                <a href="#"><img src="asset/images/LinkedIn.png" alt="linkedin" /></a>
-              </li>
-              <li class="list-item">
-                <a href="#"
-                  ><img src="asset/images/instagram.png" alt="instagram"
-                /></a>
-              </li>
-              <li class="list-item">
-                <a href="#"><img src="asset/images/Path 73.png" alt="youtube" /></a>
-              </li>
-            </ul>
-          </div>
+          </a>
         </div>
-        <ul class="shop-detail">
-          <li class="detail-item">
-            <h3>Shopping online</h3>
-            <ul class="list-options">
-              <li class="list-item"><a href="#">Order Status</a></li>
-              <li class="list-item"><a href="#">Shipping and Delivery</a></li>
-              <li class="list-item"><a href="#">Returns</a></li>
-              <li class="list-item"><a href="#">Payment Options</a></li>
-              <li class="list-item"><a href="#">Contact Us</a></li>
-            </ul>
-          </li>
-
-          <li class="detail-item">
-            <h3>Information</h3>
-            <ul class="list-info">
-              <li class="list-item"><a href="">Gift Cards</a></li>
-              <li class="list-item"><a href="">Find a store</a></li>
-              <li class="list-item"><a href="">Newsletter</a></li>
-              <li class="list-item"><a href="">Become a member</a></li>
-              <li class="list-item"><a href="">Site feedback</a></li>
-            </ul>
-          </li>
-
-          <li class="detail-item">
-            <h3>Contact</h3>
-            <ul class="list-contacts">
-              <li class="list-item"><p>store@uikit.com</p></li>
-              <li class="list-item"><p>Hotline: +1 131 138 138</p></li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section class="section-footer-bottom">
-        <p>DESIGN BY ICEO.CO - © 2021. ALL RIGHTS RESERVED.</p>
-      </section>
-    </footer>
-    <script></script>
-  </body>
+        <div class="about-us-detail">
+          <h3>
+            House My Brand designs clothing for the young, the old &everyone
+            in between – but most importantly, for the fashionable
+          </h3>
+        </div>
+        <div class="social-network">
+          <ul class="list-group">
+            <li class="list-item">
+              <a href="#"><img src="asset/images/Path 70.png" alt="facebook" /></a>
+            </li>
+            <li class="list-item">
+              <a href="#"><img src="asset/images/Path 69.png" alt="twitter" /></a>
+            </li>
+            <li class="list-item">
+              <a href="#"><img src="asset/images/LinkedIn.png" alt="linkedin" /></a>
+            </li>
+            <li class="list-item">
+              <a href="#">
+                <img src="asset/images/instagram.png" alt="instagram" />
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="#">
+                <img src="asset/images/Path 73.png" alt="youtube" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="list-group">
+        <li class="list-item">
+          <h3>Shopping online</h3>
+          <ul class="list-group">
+            <li class="list-item"><a href="#">Order Status</a></li>
+            <li class="list-item"><a href="#">Shipping and Delivery</a></li>
+            <li class="list-item"><a href="#">Returns</a></li>
+            <li class="list-item"><a href="#">Payment Options</a></li>
+            <li class="list-item"><a href="#">Contact Us</a></li>
+          </ul>
+        </li>
+        <li class="list-item">
+          <h3>Information</h3>
+          <ul class="list-group">
+            <li class="list-item"><a href="#">Gift Cards</a></li>
+            <li class="list-item"><a href="#">Find a store</a></li>
+            <li class="list-item"><a href="#">Newsletter</a></li>
+            <li class="list-item"><a href="#">Become a member</a></li>
+            <li class="list-item"><a href="#">Site feedback</a></li>
+          </ul>
+        </li>
+        <li class="list-item">
+          <h3>Contact</h3>
+          <ul class="list-group">
+            <li class="list-item">
+              <p>store@uikit.com</p>
+            </li>
+            <li class="list-item">
+              <p>Hotline: +1 131 138 138</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="section-footer-bottom">
+      <p>DESIGN BY ICEO.CO - © 2021. ALL RIGHTS RESERVED.</p>
+    </section>
+  </footer>
+  <script></script>
+</body>
 </html>
