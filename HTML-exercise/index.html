@@ -6,7 +6,7 @@
     <title>E-shop</title>
     <meta name="description" content="E-shop" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,6 @@
     <header>
       <div class="container">
         <div class="row">
-            <div class="col justify-content-between">
               <h1 class="header-logo cols-2">
                 <a href="#" class="header-logo-link" >
                   <img src="asset/images/logo.png" alt="E-shop" />
@@ -26,19 +25,19 @@
                 </a>
               </h1>
               <nav class="navigation cols-4">
-                <ul class="list-group justify-content-between">
+                <ul class="list-group">
                   <li class="list-item">
-                    <a href="#" class="item-link text-primary">Men</a>
+                    <a href="#" class="item-link">Men</a>
                   </li>
                   <li class="list-item">
-                    <a href="#" class="item-link text-primary">Women</a>
+                    <a href="#" class="item-link">Women</a>
                   </li>
                   <li class="list-item">
-                    <a href="#" class="item-link text-primary">Kids</a>
+                    <a href="#" class="item-link">Kids</a>
                   </li>
                 </ul>
               </nav>
-              <ul class="list-group  cols-2 justify-content-between">
+              <ul class="list-group  cols-2">
                 <li class="list-item">
                     <img src="asset/images/search.png" alt="search" />
                 </li>
@@ -50,14 +49,12 @@
                 </li>
               </ul>
             </div>
-          </div>
         </div>
     </header>
 
     <main>
       <section class="section-top-banner">
             <div class="banner-content">
-              <!-- <img src="asset/images/top_banner_background.png" alt="top_banner_background"> -->
               <h2 class="top-banner-title">
                 Sale of the <span class="text-primary ">
                 summer
@@ -104,7 +101,6 @@
 
       <section class="section-collection">
         <div class="container">
-          <div class="row">
             <ul class="list-group row">
               <li class="list-item cols-6">
                 <div class="card cart-collection">
@@ -125,7 +121,7 @@
                       Basic t-shirts
                     </h4>
                     <p class="price text-light">$29,99</p>
-                    <button class="btn btn-secondary">MORE DETAILS</button>
+                    <button class="btn">MORE DETAILS</button>
                   </div>
                 </div>
               </li>
@@ -142,16 +138,15 @@
                 </div>
               </li>
             </ul>
-          </div>
         </div>
       </section>
 
       <section class="section-suggestions">
         <div class="container">
           <div class="row">
-            <div class="section-header col justify-content-between">
+            <div class="section-header col">
               <h3 class="section-title">Selected just for you</h3>
-              <button class="btn .btn-border">SHOW MORE</button>
+              <button class="btn btn-border">SHOW MORE</button>
             </div>
             <ul class="list-group row">
               <li class="list-item cols-3">
@@ -207,7 +202,7 @@
       <section class="section-introduct">
         <div class="container">
           <div class="row">
-            <div class="section-header introduct col justify-content-center">
+            <div class="section-header col">
               <h3 class="section-title">Why should you choose us?</h3>
             </div>
             <ul class="list-group row">
@@ -215,8 +210,8 @@
                 <div class="product-card">
                   <img src="asset/images/ship.png" alt="Shipping" />
                   <div class="item-detail">
-                    <h4 class="item-title">Free Shipping</h4>
-                    <p>
+                    <h4 class="item-title text-dark">Free Shipping</h4>
+                    <p class="text-muted">
                       All purchases over $199 are eligible for free shipping via USPS
                       First Class Mail.
                     </p>
@@ -227,8 +222,8 @@
                 <div class="product-card">
                   <img src="asset/images/payment.png" alt="Payments" class="item-icon" />
                   <div class="item-detail">
-                    <h4 class="item-title">Easy Payments</h4>
-                    <p>
+                    <h4 class="item-title text-dark">Easy Payments</h4>
+                    <p  class="text-muted">
                       All payments are processed instantly over a secure payment
                       protocol.
                     </p>
@@ -239,8 +234,8 @@
                 <div class="product-card">
                   <img src="asset/images/guarantee.png" alt="Guarantee" class="item-icon" />
                   <div class="item-detail">
-                    <h4 class="item-title">Money-Back Guarantee</h4>
-                    <p>
+                    <h4 class="item-title text-dark">Money-Back Guarantee</h4>
+                    <p  class="text-muted">
                       If an item arrived damaged or you've changed your mind, you can
                       send it back for a full refund.
                     </p>
@@ -251,8 +246,8 @@
                 <div class="product-card">
                   <img src="asset/images/material.png" alt="material" class="item-icon" />
                   <div class="item-detail">
-                    <h4 class="item-title">Finest Quality</h4>
-                    <p>
+                    <h4 class="item-title text-dark">Finest Quality</h4>
+                    <p  class="text-muted">
                       Designed to last, each of our products has been crafted with the
                       finest materials.
                     </p>
@@ -266,7 +261,7 @@
       <section class="section-today-suggestions">
         <div class="container">
           <div class="row">
-            <div class="section-header col justify-content-center">
+            <div class="section-header col">
               <h3 class="section-title">Products in today</h3>
             </div>
             <ul class="list-group row">
@@ -277,7 +272,7 @@
                   <div class="item-detail">
                     <h4 class="item-title">T-Shirt Summer Vibes</h4>
                     <div class="item-price">
-                      <p class="price text-dark">$89.99</p>
+                      <p class="price text-danger">$89.99</p>
                       <p class="price text-muted">$119.99</p>
                     </div>
                   </div>
@@ -323,12 +318,12 @@
       <section class="section-bottom-banner">
         <div class="container">
           <div class="row">
-              <h4 class="item-title cols-6">
+              <h4 class="item-title col text-white">
                 Subscribe to our newsletter and receive exclusive offers every week
               </h4>
-              <form class="bottom-form cols-6 justify-content-between">
-                <input type="text" />
-                <button class="btn btn-secondary">SUBSCRIBE</button>
+              <form class="bottom-form col">
+                <input type="text" placeholder="Enter your email" />
+                <button class="btn bg-primary">SUBSCRIBE</button>
               </form>
           </div>
       </section>
@@ -339,7 +334,7 @@
           <div class="footer-logo">
             <a href="#">
               <img src="asset/images/logo.png" alt="E-shop" />
-              <h3 class="shop-name">E-Shop</h3>
+              <h3 class="shop-name text-white">E-Shop</h3>
             </a>
           </div>
           <div class="about-us-detail">
@@ -372,7 +367,7 @@
             </ul>
           </div>
         </div>
-        <ul class="list-group">
+        <ul class="list-group shop-detail">
           <li class="list-item">
             <h4 class="item-title">Shopping online</h4>
             <ul class="list-group">
@@ -407,7 +402,7 @@
         </ul>
         </div>
       </section>
-      <section class="section-footer-bottom justify-content-center">
+      <section class="section-footer-bottom">
         <p>DESIGN BY ICEO.CO - © 2021. ALL RIGHTS RESERVED. </p>
       </section>
     </footer>
