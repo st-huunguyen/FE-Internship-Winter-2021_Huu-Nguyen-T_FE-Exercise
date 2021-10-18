@@ -5,19 +5,7 @@
   box-sizing: border-box;
 }
 
-/*style for color */
-.bg-primary {background-color: #fbb03b;}
-.bg-danger {background-color: #ff0000;}
-.bg-light {background-color: #fff3df;}
-.bg-white {background-color: #ffffff;}
 
-.text-primary {color: #fbb03b;}
-.text-danger {color: #ff0000;}
-.text-dark {color: #333333;}
-.text-muted {color: #a8a8a8;}
-.text-light {color: #cecece;}
-
-.border-muted {border: 1px solid #c4c4c4;}
 
 /* typography */
 a {text-decoration: none;}
@@ -43,12 +31,41 @@ footer,
 main,
 section {
   width: 100%;
-  max-width: 1440px;
 }
 
 footer,
 section,
 header {padding: 0 10%;}
+
+/*  */
+input{
+  height: 3rem;
+
+  padding: 1rem;
+
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+  text-indent: 1rem;
+}
+img{
+  width: 100%;
+}
+
+/*style for color */
+.bg-primary {background-color: #fbb03b;}
+.bg-danger {background-color: #ff0000;}
+.bg-light {background-color: #fff3df;}
+.bg-white {background-color: #ffffff;}
+
+.text-primary {color: #fbb03b;}
+.text-danger {color: #ff0000;}
+.text-dark {color: #333333;}
+.text-muted {color: #a8a8a8;}
+.text-light {color: #cecece;}
+
+.border-muted {border: 1px solid #c4c4c4;}
+
 
 .container {
   width: 100%;
@@ -101,21 +118,11 @@ header {padding: 0 10%;}
   font-size: .75rem;
   font-weight: 800;
 }
-.btn-border{
+.btn-outline{
   border: 1px solid #c4c4c4;
 }
 
-/*  */
-input{
-  height: 3rem;
 
-  padding: 1rem;
-
-  border-radius: 1.5rem;
-  border: none;
-  outline: none;
-  text-indent: 1rem;
-}
 
 .badge{
   position: absolute;
@@ -144,16 +151,14 @@ input{
   justify-content: space-between;
   padding-right: 1.25rem;
 }
-img{
-  width: 100%;
-}
+
 
 /* style for ul li */
-ul {
+.list-group {
   display: flex;
   align-items: center;
 }
-li {
+.list-item {
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -185,7 +190,6 @@ header .header-logo ,
   font-weight: 700;
   color: #fbb03b;
   font-size: 1.25rem;
-  align-content: 3rem;
 
   display: flex;
   align-items: center;
@@ -208,7 +212,8 @@ header ul{
 /* style for top banner */
 .section-top-banner{
   width: 100%;
-  height: 800px;
+  height: 100vh;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -220,8 +225,7 @@ header ul{
 }
 .section-top-banner::before{
   width: 100%;
-  max-width: 1440px;
-  padding-bottom: 800px;
+  height:100%;
   
   position: absolute;
   top: 0;
@@ -231,15 +235,12 @@ header ul{
   content: "";
 }
 .banner-content{
-  height: 17.625rem;
-  width: 25rem;
   z-index: 0;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  margin: 13.876rem 15rem 0 15rem;
+  padding: 13.876rem 35rem 0 15rem;
 }
 .top-banner-title{
   color:#ffffff;
@@ -249,20 +250,21 @@ header ul{
 }
 
 .banner-link{
-  width: 180px;
-
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
   font-size: 1.5rem;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.banner-link img{
+.banner-link span{
   width: 2.25rem;
   height: 2.25rem;
-  padding: .5rem;
+
+  text-align: center;
+  margin-right: 1rem;
+
+  background-color: #fbb03b;
   border-radius: 50%;
 }
 
@@ -275,9 +277,6 @@ header ul{
   border-radius: 0 70px 0 0;
 
   padding-left: 15vw;
-
-  display: flex;
-  align-items: center;
 
   z-index: 0;
 }
@@ -295,7 +294,7 @@ header ul{
 .list-services li{
   display : flex;
   min-width :220px;
-  margin: 1.5rem 3rem 0 0;
+  padding: 1.5rem 3rem 0 0;
 }
 .service-card h4{ font-size: .875rem;}
 .service-card p{ font-size: .75rem;}
