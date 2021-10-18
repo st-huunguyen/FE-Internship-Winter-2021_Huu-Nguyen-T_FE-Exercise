@@ -151,7 +151,7 @@ background-repeat:no-repeat;
 background-size:100% auto;
 object-fit:cover;
 }
-.section-top-banner .container{
+.section-top-banner .top-banner{
 position:relative;
 }
 .section-top-banner::before{
@@ -259,8 +259,8 @@ font-size:1.5rem;
 color:#ffffff;
 font-weight:400;
 }
-.collection-card .badge{
-top:20%;
+.badge{
+top:10%;
 left:10%;
 z-index:2;
 }
@@ -270,13 +270,7 @@ justify-content:space-between;
 }
 .card{
 width:100%;
-}
-.product-card{
 position:relative;
-}
-.product-card .badge{
-top:5%;
-left:10%;
 }
 .section-introduct{
 margin:3rem 0;
@@ -320,7 +314,7 @@ content:"";
 z-index:0;
 background-color:rgba(0,0,0,.7);
 }
-.section-bottom-banner .container{
+.section-bottom-banner .bottom-banner{
 display:flex;
 flex-direction:column;
 justify-content:center;
