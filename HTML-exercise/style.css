@@ -22,7 +22,7 @@ h3 {
 a {
   text-decoration: none;
 }
-input {
+.input-email {
   height: 3rem;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -89,11 +89,11 @@ input {
   font-weight: 800;
   text-transform: uppercase;
 }
-.btn-outline {
+.btn.btn-outline {
   border: 1px solid #c4c4c4;
   background-color: transparent;
 }
-.btn-primary {
+.btn.btn-primary {
   background-color: #fbb03b;
 }
 .list-group {
@@ -132,12 +132,12 @@ input {
   background-color: rgba(0, 0, 0, 0.7);
   content: "";
 }
-.card-title {
+.card .card-title {
   color: #333333;
   font-weight: 300;
   font-size: 1rem;
 }
-.card-info {
+.card .card-info {
   width: 70%;
   height: 40%;
   position: absolute;
@@ -171,7 +171,7 @@ input {
   color: #ffffff;
   font-weight: 600;
 }
-.badge-danger {
+.badge.badge-danger {
   background-color: #ff0000;
 }
 .page-header {
@@ -220,8 +220,7 @@ input {
 .section-top-banner {
   height:100vh;
   position: relative;
-  background-image: url(asset/images/top_banner_background.png);
-  background-repeat: no-repeat;
+  background: url(asset/images/top_banner_background.png) no-repeat ;
   background-size: 100% auto;
   object-fit: cover;
 }
@@ -318,7 +317,7 @@ input {
 }
 .section-bottom-banner {
   height: 240px;
-  background-image: url(asset/images/bottom_banner_background.png);
+  background: url(asset/images/bottom_banner_background.png) no-repeat;
   position: relative;
 }
 .section-bottom-banner::before {
@@ -340,7 +339,7 @@ input {
   color: #ffffff;
   z-index: 1;
 }
-.subscribe-form input {
+.subscribe-form .input-email {
   display: flex;
   flex: 2;
   margin-right: 2.5rem;
