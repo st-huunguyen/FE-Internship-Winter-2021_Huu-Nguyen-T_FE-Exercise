@@ -1,0 +1,82 @@
+footer {
+  background-color: #fbb03b;
+  .section-footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    .row {
+      align-items: flex-start;
+    }
+  }
+  .footer-logo {
+    a {
+      display: flex;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+    h3 {
+      font-family: Helvetica;
+      color: #ffffff;
+    }
+    img {
+      width: 42px;
+      height: 36px;
+      margin-right: 20px;
+    }
+  }
+  .about-us {
+    padding-right: 20%;
+  }
+  .about-us-detail h4 {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+  }
+  .social-network {
+    margin-top: 58px;
+    width: 12.75rem;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .shop-detail {
+    align-items: flex-start;
+    li {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    li ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 1rem;
+      color: #ffffff;
+    }
+    h4,
+    p,
+    a {
+      color: #ffffff;
+      line-height: 2.5rem;
+    }
+    p,
+    a {
+      font-size: 0.875rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+  .section-footer-bottom {
+    height: 3.5rem;
+    color: #ffffff;
+    border-top: 1px solid#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
