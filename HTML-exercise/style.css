@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   width: 100vw;
   font-family: "Poppins", sans-serif;
@@ -9,25 +14,13 @@ html {
 body {
   position: relative;
 }
-footer {
-  background-color: #fbb03b;
-}
-.page-header {
-  width: 100%;
-  height: 3rem;
-  position: absolute;
-  z-index: 100;
-  top: 3rem;
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-a {
-  text-decoration: none;
-}
 h3 {
   font-size: 2rem;
   font-weight: 300;
   color: #333333;
+}
+a {
+  text-decoration: none;
 }
 input {
   height: 3rem;
@@ -37,13 +30,22 @@ input {
   outline: none;
   text-indent: 1rem;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+footer {
+  background-color: #fbb03b;
 }
 .text-primary {
   color: #fbb03b;
+}
+.price {
+  color: #333333;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.price-initial {
+  color: #cecece;
+}
+.price-sale-off {
+  color: #ff0000;
 }
 .container {
   height: 100%;
@@ -58,14 +60,6 @@ input {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
-.header-logo {
-  display: flex;
-  align-items: center;
-}
-.logo-link {
-  font-size: 1.25rem;
-  font-weight: bold;
 }
 .row [class*="col"] {
   padding: 0 0.625rem;
@@ -86,6 +80,7 @@ input {
 .col-6 {
   width: 50%;
 }
+
 .btn {
   height: 3rem;
   padding: 0.875rem;
@@ -101,6 +96,25 @@ input {
 }
 .btn-primary {
   background-color: #fbb03b;
+}
+.list-group {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-header {
+  font-weight: 300;
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .card {
   width: 100%;
@@ -119,6 +133,11 @@ input {
   background-color: rgba(0, 0, 0, 0.7);
   content: "";
 }
+.card-title {
+  color: #333333;
+  font-weight: 300;
+  font-size: 1rem;
+}
 .card-info {
   width: 70%;
   height: 40%;
@@ -131,10 +150,6 @@ input {
   align-items: flex-start;
   z-index: 1;
 }
-.card-price {
-  display: flex;
-  justify-content: space-between;
-}
 .service-card img {
   width: 2.25rem;
   height: 2.25rem;
@@ -142,8 +157,12 @@ input {
   border-radius: 0.5rem;
   background-color: #fff3df;
 }
+
 .badge {
   position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 2;
   height: 2rem;
   width: 4rem;
   padding: 0.5rem;
@@ -157,30 +176,22 @@ input {
 .badge-danger {
   background-color: #ff0000;
 }
-.section-header {
-  font-weight: 300;
-  font-size: 2rem;
-  color: #333333;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
+.page-header {
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  z-index: 100;
+  top: 3rem;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
-.section-suggestions .section-header {
-  justify-content: space-between;
-}
-.section-suggestions {
-  margin-top: 6rem;
-}
-.list-group {
-  list-style-type: none;
+.header-logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.logo-link {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 .logo-link,
 .nav-link {
@@ -196,6 +207,17 @@ input {
   font-family: Helvetica;
   color: #ffffff;
   margin-left: 1rem;
+}
+.section-suggestions .card-price,
+.section-today-suggestions .card-price{
+  display: flex;
+  justify-content: space-between;
+}
+.section-suggestions .section-header {
+  justify-content: space-between;
+}
+.section-suggestions {
+  margin-top: 6rem;
 }
 .section-top-banner {
   height: 100vh;
@@ -272,11 +294,6 @@ input {
 }
 .section-collection {
   margin: 3rem auto;
-}
-.badge {
-  top: 10%;
-  left: 10%;
-  z-index: 2;
 }
 .section-introduct {
   margin: 3rem 0;
@@ -366,7 +383,7 @@ input {
   margin-top: 58px;
   width: 12.75rem;
 }
-.social-network ul {
+.social-network .list-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -380,7 +397,7 @@ input {
   flex-direction: column;
   align-items: flex-start;
 }
-.shop-detail li ul {
+.shop-detail .list-item .list-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -406,24 +423,8 @@ input {
   justify-content: center;
   align-items: center;
 }
-.price {
-  color: #333333;
-  font-weight: 400;
-  font-size: 1.25rem;
-}
-.price-initial {
-  color: #cecece;
-}
-.price-sale-off {
-  color: #ff0000;
-}
-.card-title {
-  color: #333333;
-  font-weight: 300;
-  font-size: 1rem;
-}
 
-.card-title.introduct-title {
+.section-introduct .card-title{
   font-weight: 700;
   font-size: 1rem;
 }
@@ -432,7 +433,7 @@ input {
   font-size: 0.875rem;
   font-weight: 400;
 }
-.card-title.colection-title {
+.section-collection .card-title{
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
