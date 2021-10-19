@@ -45,15 +45,6 @@ input {
 .text-primary {
   color: #fbb03b;
 }
-.text-danger {
-  color: #ff0000;
-}
-.text-dark {
-  color: #333333;
-}
-.text-gray {
-  color: #a8a8a8;
-}
 .container {
   height: 100%;
   max-width: 1170px;
@@ -61,23 +52,23 @@ input {
   padding: 0 10px;
 }
 .row {
-  margin: 0 -.625rem;
+  margin: 0 -0.625rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.header-logo{
+.header-logo {
   display: flex;
   align-items: center;
 }
-.logo-link{
+.logo-link {
   font-size: 1.25rem;
   font-weight: bold;
 }
 .row [class*="col"] {
-  padding: 0 .625rem;
+  padding: 0 0.625rem;
 }
 .col {
   display: flex;
@@ -97,10 +88,10 @@ input {
 }
 .btn {
   height: 3rem;
-  padding: .875rem;
+  padding: 0.875rem;
   border-radius: 1.5rem;
   border: none;
-  font-size: .75rem;
+  font-size: .875rem;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -125,7 +116,7 @@ input {
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "";
 }
 .card-info {
@@ -147,19 +138,19 @@ input {
 .service-card img {
   width: 2.25rem;
   height: 2.25rem;
-  padding: .625rem;
-  border-radius: .5rem;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
   background-color: #fff3df;
 }
 .badge {
   position: absolute;
   height: 2rem;
   width: 4rem;
-  padding: .5rem;
+  padding: 0.5rem;
   text-align: center;
   border-radius: 1rem;
   border: none;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: #ffffff;
   font-weight: 600;
 }
@@ -186,13 +177,13 @@ input {
   align-items: center;
   justify-content: space-between;
 }
-.list-item{  
+.list-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .logo-link,
-.nav-link{
+.nav-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -223,7 +214,7 @@ input {
   position: absolute;
   top: 0;
   z-index: 0;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "";
 }
 .banner-content {
@@ -274,7 +265,7 @@ input {
   align-items: flex-start;
   margin-right: 2.5rem;
 }
-.list-services li {
+.list-services .list-item {
   display: flex;
   min-width: 220px;
   padding: 1.5rem 3rem 0 0;
@@ -289,10 +280,10 @@ input {
 }
 .section-introduct {
   margin: 3rem 0;
-  background-color:#F6F6F6;
+  background-color: #f6f6f6;
 }
 .section-introduct .section-header {
-  padding-top:3rem;
+  padding-top: 3rem;
 }
 .section-introduct .list-group {
   align-items: flex-start;
@@ -322,7 +313,7 @@ input {
   position: absolute;
   content: "";
   z-index: 0;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .section-bottom-banner .bottom-banner {
   display: flex;
@@ -335,7 +326,7 @@ input {
   color: #ffffff;
   z-index: 1;
 }
-.section-bottom-banner input {
+.subscribe-form input {
   display: flex;
   flex: 2;
   margin-right: 2.5rem;
@@ -352,7 +343,7 @@ input {
   justify-content: space-between;
   padding-top: 2.5rem;
 }
-.footer-logo  {
+.footer-logo {
   width: 42px;
   height: 36px;
   margin-right: 20px;
@@ -361,10 +352,10 @@ input {
   align-items: flex-start;
 }
 .about-us {
-  width:40%;
+  width: 40%;
 }
-.about-us-description{
-  padding-top:1rem;
+.about-us-description {
+  padding-top: 1rem;
 }
 .description-content {
   font-size: 14px;
@@ -383,7 +374,7 @@ input {
 .shop-detail {
   align-items: flex-start;
 }
-.shop-detail li {
+.shop-detail .list-item {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -401,8 +392,8 @@ input {
   color: #ffffff;
   line-height: 2.5rem;
 }
-.shop-detail-content{
-  font-size: .875rem;
+.shop-detail-content {
+  font-size: 0.875rem;
 }
 .shop-detail-title {
   font-size: 1rem;
@@ -415,46 +406,44 @@ input {
   justify-content: center;
   align-items: center;
 }
-
-.price{
-  color:#333333;
-  font-weight:400;
+.price {
+  color: #333333;
+  font-weight: 400;
   font-size: 1.25rem;
 }
-.price-initial{
-  color:#CECECE;
+.price-initial {
+  color: #cecece;
 }
-.price-sale-off{
-  color:#FF0000;
+.price-sale-off {
+  color: #ff0000;
 }
-.card-title{
-  color:#333333;
-  font-weight:300;
+.card-title {
+  color: #333333;
+  font-weight: 300;
   font-size: 1rem;
 }
 
-.card-title.introduct-title{
+.card-title.introduct-title {
   font-weight: 700;
   font-size: 1rem;
 }
-.introduct-description{
-  color:#808080;
-  font-size: .875rem;
+.introduct-description {
+  color: #808080;
+  font-size: 0.875rem;
   font-weight: 400;
 }
-.card-title.colection-title{
-  color:#ffffff;
+.card-title.colection-title {
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
 }
-
-.service-despription{
-  font-size: .75rem;
+.service-despription {
+  font-size: 0.75rem;
   font-weight: 400;
-  color:#a8a8a8;
+  color: #a8a8a8;
 }
-.service-title{
-  font-size: .875rem;
+.service-title {
+  font-size: 0.875rem;
   font-weight: 400;
-  color:#333333;
+  color: #333333;
 }
