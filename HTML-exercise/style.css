@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 html {
-  width: 100vw;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
 }
@@ -13,6 +12,7 @@ html {
 }
 body {
   position: relative;
+  font-size: 0.875rem;
 }
 h3 {
   font-size: 2rem;
@@ -30,9 +30,6 @@ input {
   outline: none;
   text-indent: 1rem;
 }
-footer {
-  background-color: #fbb03b;
-}
 .text-primary {
   color: #fbb03b;
 }
@@ -46,6 +43,9 @@ footer {
 }
 .price-sale-off {
   color: #ff0000;
+}
+.page-footer  {
+  background-color: #fbb03b;
 }
 .container {
   height: 100%;
@@ -80,7 +80,6 @@ footer {
 .col-6 {
   width: 50%;
 }
-
 .btn {
   height: 3rem;
   padding: 0.875rem;
@@ -157,7 +156,6 @@ footer {
   border-radius: 0.5rem;
   background-color: #fff3df;
 }
-
 .badge {
   position: absolute;
   top: 10%;
@@ -220,7 +218,7 @@ footer {
   margin-top: 6rem;
 }
 .section-top-banner {
-  height: 100vh;
+  height:100vh;
   position: relative;
   background-image: url(asset/images/top_banner_background.png);
   background-repeat: no-repeat;
@@ -240,18 +238,18 @@ footer {
   content: "";
 }
 .banner-content {
-  z-index: 100;
   width: 40%;
   position: absolute;
   top: 30%;
   left: 23%;
   margin-left: -154px;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .top-banner-title {
-  color: #ffffff;
+  color:#ffffff;
   font-size: 4.5rem;
   line-height: 4.5rem;
 }
@@ -289,7 +287,6 @@ footer {
 }
 .list-services .list-item {
   display: flex;
-  min-width: 220px;
   padding: 1.5rem 3rem 0 0;
 }
 .section-collection {
@@ -409,9 +406,6 @@ footer {
   color: #ffffff;
   line-height: 2.5rem;
 }
-.shop-detail-content {
-  font-size: 0.875rem;
-}
 .shop-detail-title {
   font-size: 1rem;
 }
@@ -423,14 +417,12 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .section-introduct .card-title{
   font-weight: 700;
   font-size: 1rem;
 }
 .introduct-description {
   color: #808080;
-  font-size: 0.875rem;
   font-weight: 400;
 }
 .section-collection .card-title{
@@ -438,13 +430,12 @@ footer {
   font-size: 1.5rem;
   font-weight: 400;
 }
-.service-despription {
+.service-description {
   font-size: 0.75rem;
   font-weight: 400;
   color: #a8a8a8;
 }
 .service-title {
-  font-size: 0.875rem;
   font-weight: 400;
   color: #333333;
 }
