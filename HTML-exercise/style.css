@@ -156,8 +156,8 @@ a{
   z-index:1;
 }
 .service-card img{
-  width:.25rem;
-  height:.25rem;
+  width:2.25rem;
+  height:2.25rem;
   padding:.625rem;
   border-radius:.5rem;
   background-color:#fff3df;
