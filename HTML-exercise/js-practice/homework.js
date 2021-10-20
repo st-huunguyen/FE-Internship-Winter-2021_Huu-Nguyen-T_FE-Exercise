@@ -1,5 +1,5 @@
 // 1
-var getOddSum = function () {
+var calculateOddTotal = function () {
   var array = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
@@ -18,7 +18,9 @@ var cutString = function (string) {
   var output = "";
   if (string.length > 15) {
     output = string.slice(0, 10).concat("...");
-  } else output = string;
+  } else {
+    output = string;
+  }
   return output;
 };
 
@@ -67,14 +69,14 @@ var listStudent = [
 student.prototype.coding = function () {
   if (this.age >= 28) {
     return console.log("coding master");
-  } else {
-    return console.log("learning code");
   }
+  return console.log("learning code");
 };
 listStudent[1].coding();
+listStudent[0].coding();
 
 // 6.
-var findDuplicate = function (array1, array2) {
+var findDuplicateNumberOf2Array = function (array1, array2) {
   var duplicate = [];
   for (var i = 0; i < array1.length; i++) {
     for (var j = 0; j < array2.length; j++) {
@@ -87,7 +89,7 @@ var findDuplicate = function (array1, array2) {
 };
 
 // 7
-var totalDigit = function (number) {
+var getTotalDigit = function (number) {
   var stringNumber = number.toString().split("");
   var sum = 0;
   for (var i = 0; i < stringNumber.length; i++) {
