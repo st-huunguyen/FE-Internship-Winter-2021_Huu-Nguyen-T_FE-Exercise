@@ -1,5 +1,5 @@
 //1
-var sum = function (number1, number2) {
+var getSum = function (number1, number2) {
   if (number1 === number2) {
     return 3 * (number1 + number2);
   } else {

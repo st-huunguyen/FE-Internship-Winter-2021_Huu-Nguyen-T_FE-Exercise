@@ -23,10 +23,10 @@ var cutString = function (string) {
 };
 
 // 3
-var capitalize = function (string) {
+var capitalizeFirstLetter = function (string) {
   var output = "";
   string.toLowerCase();
-  output = string[0].toUpperCase().concat(string.slice(1, string.length));
+  output = string[0].toUpperCase().concat(string.slice(1));
   return output;
 };
 
