@@ -136,7 +136,6 @@ a{
   position:absolute;
   z-index:0;
   background-color:rgba(0, 0, 0, 0.7);
-
 }
 .card .card-title{
   color:#333333;
@@ -420,7 +419,7 @@ a{
   font-size:1rem;
 }
 .section-footer-bottom {
-  height: 3.5rem;
+  height:3.5rem;
   color:#ffffff;
   border-top:1px solid#ffffff;
   display:flex;
