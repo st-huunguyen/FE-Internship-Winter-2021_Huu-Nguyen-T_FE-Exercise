@@ -368,7 +368,7 @@ a {
 .section-footer-top {
   display: flex;
   justify-content: space-between;
-  padding-top: 2.5rem;
+  padding: 2.5rem 0;
 }
 .footer-logo {
   width: 42px;
@@ -434,7 +434,11 @@ a {
   font-weight: 700;
   font-size:  1rem;
 }
-.introduct-description {
+.introduct-card .card-description {
+  color: #808080;
+  font-weight: 400;
+}
+.product-card .card-description {
   color: #808080;
   font-weight: 400;
 }
@@ -443,7 +447,7 @@ a {
   font-size: 1.5rem;
   font-weight: 400;
 }
-.service-description  {
+.service-card .card-description  {
   font-size: .75rem;
   font-weight: 400;
   color: #a8a8a8;

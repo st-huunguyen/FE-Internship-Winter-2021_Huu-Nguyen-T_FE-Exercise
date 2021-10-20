@@ -19,42 +19,48 @@
     <header class="page-header">
       <div class="container">
         <div class="row">
-          <h1 class="header-logo col-2">
-            <a href="#" class="logo-link shop-name">
-              <img class="logo" src="asset/images/logo.png" alt="E-shop" />
-              E-Shop
-            </a>
-          </h1>
-          <nav class="navigation col-4">
+          <div class="col-2">
+            <h1 class="header-logo">
+              <a href="#" class="logo-link shop-name">
+                <img class="logo" src="asset/images/logo.png" alt="E-shop" />
+                E-Shop
+              </a>
+            </h1>
+          </div>
+          <div lass="col-4">
+            <nav class="navigation">
+              <ul class="list-group">
+                <li class="list-item">
+                  <a href="#" class="nav-link">Men</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="nav-link">Women</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="nav-link">Kids</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-2">
             <ul class="list-group">
               <li class="list-item">
-                <a href="#" class="nav-link">Men</a>
+                <a href="#">
+                  <img src="asset/images/search.png" alt="search" />
+                </a>
               </li>
               <li class="list-item">
-                <a href="#" class="nav-link">Women</a>
+                <a href="#">
+                  <img src="asset/images/cart.png" alt="cart" />
+                </a>
               </li>
               <li class="list-item">
-                <a href="#" class="nav-link">Kids</a>
+                <a href="#">
+                  <img src="asset/images/avatar.png" alt="user" />
+                </a>
               </li>
             </ul>
-          </nav>
-          <ul class="list-group col-2">
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/search.png" alt="search" />
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/cart.png" alt="cart" />
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/avatar.png" alt="user" />
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -80,7 +86,7 @@
                   <img src="asset/images/ship_service.svg" alt="shipping-icon" />
                   <div class="card-detail">
                     <h4 class="card-title service-title">Free Shipping</h4>
-                    <p class="service-description">On purchases over $199</p>
+                    <p class="card-description">On purchases over $199</p>
                   </div>
                 </div>
               </li>
@@ -89,7 +95,7 @@
                   <img src="asset/images/customer.svg" alt="customer-icon" />
                   <div class="card-detail">
                     <h4 class="card-title service-title">99% Satisfied Customers</h4>
-                    <p class="service-description">Our clients' opinions speak for themselves</p>
+                    <p class="card-description">Our clients' opinions speak for themselves</p>
                   </div>
                 </div>
               </li>
@@ -98,7 +104,7 @@
                   <img src="asset/images/guarantee_service.svg" alt="warranty-icon" />
                   <div class="card-detail">
                     <h4 class="card-title service-title">Originality Guaranteed</h4>
-                    <p class="service-description">30 days warranty for each product from our store</p>
+                    <p class="card-description">30 days warranty for each product from our store</p>
                   </div>
                 </div>
               </li>
@@ -215,7 +221,7 @@
                 <img src="asset/images/ship.svg" alt="Shipping" />
                 <div class="card-detail">
                   <h4 class="card-title">Free Shipping</h4>
-                  <p class="introduct-description">
+                  <p class="card-description">
                     All purchases over $199 are eligible for free shipping via USPS
                     First Class Mail.
                   </p>
@@ -227,7 +233,7 @@
                 <img src="asset/images/payment.svg" alt="Payments" class="card-icon" />
                 <div class="card-detail">
                   <h4 class="card-title">Easy Payments</h4>
-                  <p class="introduct-description">
+                  <p class="card-description">
                     All payments are processed instantly over a secure payment
                     protocol.
                   </p>
@@ -239,7 +245,7 @@
                 <img src="asset/images/guarantee.svg" alt="Guarantee" class="card-icon" />
                 <div class="card-detail">
                   <h4 class="card-title">Money-Back Guarantee</h4>
-                  <p class="introduct-description">
+                  <p class="card-description">
                     If an item arrived damaged or you've changed your mind, you can
                     send it back for a full refund.
                   </p>
@@ -251,7 +257,7 @@
                 <img src="asset/images/material.svg" alt="material" class="card-icon" />
                 <div class="card-detail">
                   <h4 class="card-title">Finest Quality</h4>
-                  <p class="introduct-description">
+                  <p class="card-description">
                     Designed to last, each of our products has been crafted with the
                     finest materials.
                   </p>
@@ -319,9 +325,11 @@
       <section class="section-bottom-banner">
         <div class="bottom-banner container">
           <div class="row">
-            <h4 class="bottom-banner-title col">
-              Subscribe to our newsletter and receive exclusive offers every week
-            </h4>
+            <div class="col">
+              <h4 class="bottom-banner-title">
+                Subscribe to our newsletter and receive exclusive offers every week
+              </h4>
+            </div>
             <form class="subscribe-form col">
               <input class="input-email" type="text" placeholder="Enter your email" />
               <button class="btn btn-primary">SUBSCRIBE</button>
@@ -417,7 +425,7 @@
                 </ul>
               </li>
               <li class="list-item">
-                <h4 class="item-title shop-detail-title ">Contact</h4>
+                <h4 class="item-title shop-detail-title">Contact</h4>
                 <ul class="list-group shop-detail-item">
                   <li class="list-item shop-detail-item">
                     <p class="shop-detail-content">
