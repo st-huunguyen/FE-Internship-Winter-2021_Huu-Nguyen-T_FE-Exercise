@@ -155,9 +155,8 @@ a {
   z-index: 1;
 }
 .service-card img {
-  width: 4.25rem;
-  height: 4.25rem;
-  /* padding: .625rem; */
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: .5rem;
   background-color: #fff3df;
 }
@@ -318,7 +317,6 @@ a {
   z-index: 2;
 }
 .section-introduct img {
-  font-size: 3rem;
   width: 4.25rem;
   height: 4.25rem;
   display:flex;
@@ -450,7 +448,7 @@ a {
   font-weight: 400;
   color: #a8a8a8;
 }
-.service-title  {
-  font-weight: 400;
+.service-card .card-title {
+  font-weight: 700;
   color: #333333;
 }
