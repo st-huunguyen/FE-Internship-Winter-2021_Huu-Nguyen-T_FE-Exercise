@@ -1,0 +1,19 @@
+.badge {
+  @include font-size-weight(0.75rem,600);
+  position: absolute;
+  z-index: 2;
+  height: 2rem;
+  width: 4rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: none;
+  color: $color-white;
+}
+.badge-danger {
+  background-color: $color-red;
+}
+// .badge {
+//   top: 10%;
+//   left: 10%;
+// }

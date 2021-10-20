@@ -1,0 +1,60 @@
+.page-footer  {
+  background-color: $color-primary;
+  .section-footer-top {
+    @include justify-between-align-center;
+    padding: 2.5rem 0;
+  }
+  .section-footer-bottom {
+    @include justify-center-align-center;
+    height: 3.5rem;
+    color: $color-white;
+    border-top: 1px solid $color-white;
+  }
+}
+.footer-top-content {
+  @include align-start;
+  .about-us {
+    width: 40%;
+    .footer-logo {
+      width: 42px;
+      height: 36px;
+      margin-right: 20px;
+    }
+    .about-us-description {
+      padding-top: 1rem;
+      .description-content {
+        @include font-size-weight(.875rem,400);
+        color: $color-white;
+      }
+    }
+  }
+}
+.social-network {
+  margin-top: 58px;
+  width: 12.75rem;
+  .list-group {
+    @include justify-between-align-center;
+  }
+}
+.shop-detail {
+  @include align-start;
+  .list-item {
+    @include align-start;
+    flex: 1;
+    flex-direction: column;
+    .list-group {
+      @include align-start;
+      @include font-size-weight(.875rem,400);
+      flex-direction: column;
+      color: $color-white;
+    }
+  }
+  .shop-detail-title {
+    @extend .shop-detail-content;
+    font-size: 1rem;
+  }
+  .shop-detail-content {
+    color: $color-white;
+    line-height: 2.5rem;
+  }
+}

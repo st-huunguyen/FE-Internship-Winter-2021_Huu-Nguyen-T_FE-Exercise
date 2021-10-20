@@ -1,0 +1,32 @@
+.container {
+  height: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.row {
+  margin: 0 -0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  & [class*="col"] {
+    padding: 0 0.625rem;
+  }
+}
+.col {
+  display: flex;
+  flex: 1;
+}
+.col-2 {
+  width: 16.667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.333%;
+}
+.col-6 {
+  width: 50%;
+}

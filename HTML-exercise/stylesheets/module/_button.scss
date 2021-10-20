@@ -1,0 +1,17 @@
+.btn {
+  @include font-size-weight(0.875rem, 800);
+  @include justify-center;
+  height: 3rem;
+  padding: 0.875rem;
+  border-radius: 1.5rem;
+  border: none;
+  text-transform: uppercase;
+  &.btn-outline {
+    border: 1px solid map-get($color-gray, "c4");
+    background-color: transparent;
+  }
+  &.btn-primary {
+      background-color: $color-primary;
+    }
+}
+
