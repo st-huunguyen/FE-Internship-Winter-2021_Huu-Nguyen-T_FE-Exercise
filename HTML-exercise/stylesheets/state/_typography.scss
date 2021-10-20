@@ -1,0 +1,13 @@
+.price {
+  color: $color-black;
+  @include font-size-weight(1.25rem,400);
+}
+.text-primary {
+  color: $color-primary;
+}
+.text-red {
+  color: $color-red;
+}
+.text-gray {
+  color: map-get($color-gray, "ce" )
+}
