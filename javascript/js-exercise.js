@@ -70,7 +70,9 @@ function student(_name,_age,_school){
   new student("Mark" , 30 , "Oxford"),
   new student("Bill" , 28 , "Havard"),
  ]
- student.prototype = { code : "" }
+ student.prototype = function(){
+   console.log("Hi")
+ }
  for(var i=0;i<listStudent.length;i++){
    if(listStudent[i].age>=28){
     listStudent[i].code='coding master';
