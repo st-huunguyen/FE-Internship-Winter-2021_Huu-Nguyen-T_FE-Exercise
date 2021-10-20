@@ -135,7 +135,7 @@ a {
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, .7);
 }
 .card .card-title {
   color: #333333;
@@ -155,9 +155,9 @@ a {
   z-index: 1;
 }
 .service-card img {
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: .625rem;
+  width: 4.25rem;
+  height: 4.25rem;
+  /* padding: .625rem; */
   border-radius: .5rem;
   background-color: #fff3df;
 }
@@ -222,7 +222,7 @@ a {
   margin-top: 6rem;
 }
 .section-top-banner {
-  height: 100vh;
+  height: 110vh;
   position: relative;
   background: url(asset/images/top_banner_background.png) no-repeat;
   background-size: 100% auto;
@@ -238,7 +238,7 @@ a {
   position: absolute;
   top: 0;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, .7);
 }
 .banner-content {
   width: 40%;
@@ -318,9 +318,12 @@ a {
   z-index: 2;
 }
 .section-introduct img {
+  font-size: 3rem;
   width: 4.25rem;
   height: 4.25rem;
-  padding: 1rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 3rem;
   background-color: #ffffff;
   border-radius: 10px;
@@ -339,7 +342,7 @@ a {
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, .7);
 }
 .section-bottom-banner .bottom-banner {
   display: flex;
