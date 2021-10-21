@@ -19,16 +19,15 @@
     <header class="page-header">
       <div class="container">
         <div class="row">
-          <div class="col-6 col-xl-2">
+          <div class="col-2 col-xl-2">
             <h1 class="header-logo">
               <a href="#" class="logo-link shop-name">
-                <img class="logo" src="asset/images/logo.png" alt="E-shop" />
+                <img class="logo" src="asset/images/logo.svg" alt="E-shop" />
                 E-Shop
               </a>
             </h1>
           </div>
-          <div class="col-xl-4">
-            <nav class="navigation">
+            <nav class="navigation col-xl-4">
               <ul class="list-group">
                 <li class="list-item">
                   <a href="#" class="nav-link">Men</a>
@@ -41,22 +40,21 @@
                 </li>
               </ul>
             </nav>
-          </div>
-          <div class="col-xl-2 col-6">
+          <div class="col-4 col-xl-2">
             <ul class="list-group">
               <li class="list-item">
-                <a href="#">
-                  <img src="asset/images/search.png" alt="search" />
+                <a  class="logo-link" href="#">
+                  <i class="fas fa-search"></i>
                 </a>
               </li>
               <li class="list-item">
-                <a href="#">
-                  <img src="asset/images/cart.png" alt="cart" />
+                <a class="logo-link" href="#">
+                  <i class="fas fa-shopping-cart"></i>
                 </a>
               </li>
               <li class="list-item">
-                <a href="#">
-                  <img src="asset/images/avatar.png" alt="user" />
+                <a class="logo-link" href="#">
+                  <i class="far fa-user"></i>
                 </a>
               </li>
             </ul>
@@ -172,8 +170,8 @@
                 <div class="card-detail">
                   <h4 class="card-title">T-Shirt Summer Vibes</h4>
                   <div class="card-price">
-                    <p class="price text-red">$89.99</p>
-                    <p class="price text-gray">$119.99</p>
+                    <p class="price price-sale-off">$89.99</p>
+                    <p class="price price-initial">$119.99</p>
                   </div>
                 </div>
               </div>
@@ -220,7 +218,7 @@
             <h3 class="section-title">Why should you choose us?</h3>
           </div>
           <ul class="list-group row">
-            <li class="list-item col-6 col-xl-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/ship.svg" alt="Shipping" />
                 <div class="card-detail">
@@ -232,7 +230,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-6 col-xl-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/payment.svg" alt="Payments" class="card-icon" />
                 <div class="card-detail">
@@ -244,7 +242,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-6 col-xl-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/guarantee.svg" alt="Guarantee" class="card-icon" />
                 <div class="card-detail">
@@ -256,7 +254,7 @@
                 </div>
               </div>
             </li>
-            <li class="introduct-item col-6 col-xl-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/material.svg" alt="material" class="card-icon" />
                 <div class="card-detail">
@@ -328,15 +326,15 @@
       </section>
       <section class="section-bottom-banner">
         <div class="bottom-banner container">
-          <div class="row">
-            <div class="col col">
+          <div class="row bottom-banner-content">
+            <div class="col-12 col-xl-6">
               <h4 class="bottom-banner-title">
                 Subscribe to our newsletter and receive exclusive offers every week
               </h4>
             </div>
-            <form class="subscribe-form col col">
-              <input class="input-email" type="text" placeholder="Enter your email" />
-              <button class="btn btn-primary">SUBSCRIBE</button>
+            <form class="subscribe-form col-12 col-xl-6">
+              <input class="input-email col-12 col-xl-6" type="text" placeholder="Enter your email"/>
+              <button class="btn btn-primary col-6 col-xl-4">SUBSCRIBE</button>
             </form>
           </div>
         </div>
@@ -346,22 +344,18 @@
       <section class="section-footer-top">
         <div class="container">
           <div class="row footer-top-content">
-            <div class="about-us col-12 col-xl-6">
+            <div class="col-12 col-xl-6">
               <div class="about-us-detail">
-                <div class="footer-logo">
-                  <h2 class="header-logo">
-                    <a href="#" class="logo-link shop-name">
-                      <img class="logo" src="asset/images/logo.png" alt="E-shop" />
-                      E-Shop
-                    </a>
-                  </h2>
-                </div>
-                <div class="about-us-description">
-                  <h4 class="description-content">
-                    House My Brand designs clothing for the young, the old &everyone
-                    in between – but most importantly, for the fashionable
-                  </h4>
-                </div>
+                <h2 class="footer-logo">
+                  <a href="#" class="logo-link shop-name">
+                    <img class="logo" src="asset/images/logo.svg" alt="E-shop" />
+                    E-Shop
+                  </a>
+                </h2>
+                <h4 class="description-content">
+                  House My Brand designs clothing for the young, the old &everyone
+                  in between – but most importantly, for the fashionable
+                </h4>
                 <div class="social-network">
                   <ul class="list-group">
                     <li class="list-item">
@@ -388,7 +382,7 @@
               </div>
             </div>
             <ul class="list-group shop-detail col-12 col-xl-6">
-              <li class="list-item">
+              <li class="list-item ">
                 <h4 class="item-title shop-detail-title ">Shopping online</h4>
                 <ul class="list-group">
                   <li class="list-item shop-detail-item">

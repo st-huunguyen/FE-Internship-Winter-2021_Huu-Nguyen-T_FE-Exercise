@@ -5,7 +5,7 @@
 }
 html {
   font-family: "Poppins",sans-serif;
-  font-size: 16px;
+  font-size: 10px;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -21,6 +21,9 @@ h3 {
 }
 a {
   text-decoration: none;
+}
+img{
+  width:100%;
 }
 .input-email {
   height: 3rem;
@@ -47,21 +50,6 @@ a {
 .page-footer {
   background-color: #fbb03b;
 }
-.container {
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-.row {
-  margin: 0 -.625rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.row [class*="col"] {
-  padding: 0 .625rem;
-}
 .btn {
   height: 3rem;
   padding: .875rem;
@@ -81,13 +69,15 @@ a {
 .list-group {
   list-style-type: none;
   display: flex;
-  align-items: center;
+  overflow: hidden;
+  align-items:center;
   justify-content: space-between;
 }
 .list-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .section-header {
   font-weight: 300;
@@ -97,10 +87,12 @@ a {
   display: flex;
   justify-content: center;
 }
+.page-header nav{
+  display: none;
+}
 .card {
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 .collection-card {
   display: flex;
@@ -118,7 +110,7 @@ a {
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, .5);
 }
 .card .card-title {
   color: #333333;
@@ -161,21 +153,30 @@ a {
   width: 100%;
   height: 3rem;
   position: absolute;
+  background-color: #ffffff;
   z-index: 100;
-  top: 3rem;
+  top: 0;
   font-weight: 700;
   font-size: 1.25rem;
 }
-.header-logo {
-  display: flex;
-  align-items: center;
-}
 .header-logo .logo {
   margin-right:  1rem;
+  height:3rem;
 }
 .logo-link {
   font-size: 1.25rem;
   font-weight: bold;
+  color:#000000;
+}
+.footer-logo .logo-link{
+  color:#ffffff;
+}
+.footer-logo .logo {
+  margin-right:  1rem;
+  height:3rem;
+}
+.nav-link{
+  color: #fbb03b;
 }
 .logo-link,
 .nav-link {
@@ -183,13 +184,11 @@ a {
   align-items: center;
   justify-content: space-between;
   font-weight: 700;
-  color: #fbb03b;
   font-size: 1.25rem;
   white-space: nowrap;
 }
 .shop-name {
   font-family: Helvetica;
-  color: #ffffff;
   margin-left: 1rem;
 }
 .section-suggestions .card-price,
@@ -204,14 +203,11 @@ a {
   margin-top: 6rem;
 }
 .section-top-banner {
-  height: 110vh;
+  height: 100vh;
   position: relative;
-  background: url(asset/images/top_banner_background.png) no-repeat;
+  background: url(asset/images/mobile_top_banner_background.png) no-repeat;
   background-size: 100% auto;
   object-fit: cover;
-}
-.section-top-banner .top-banner {
-  position: relative;
 }
 .section-top-banner::before {
   content: "";
@@ -220,14 +216,12 @@ a {
   position: absolute;
   top: 0;
   z-index: 0;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, .5);
 }
 .banner-content {
-  width: 40%;
   position: absolute;
-  top: 30%;
-  left: 23%;
-  margin-left: -154px;
+  top: 40%;
+  left: 5%;
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -237,6 +231,7 @@ a {
   color: #ffffff;
   font-size: 4.5rem;
   line-height: 4.5rem;
+  width:100%;
 }
 .banner-link {
   color: #ffffff;
@@ -255,11 +250,11 @@ a {
   border-radius: 50%;
 }
 .services {
-  width: 90%;
-  max-width: 1110px;
+  display:none;
+  width:80%;
   background-color: #ffffff;
   border-radius: 0 70px 0 0;
-  padding-left: 23%;
+  padding-left: 30%;
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -323,7 +318,7 @@ a {
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, .5);
 }
 .section-bottom-banner .bottom-banner {
   display: flex;
@@ -334,24 +329,24 @@ a {
   font-size: 1.5rem;
   font-weight: 400;
   color: #ffffff;
+}
+.bottom-banner-content {
+  height:100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
   z-index: 1;
 }
-.subscribe-form .input-email {
+.subscribe-form{
+  height:50%;
   display: flex;
-  flex: 2;
-  margin-right: 2.5rem;
-  z-index: 1;
-}
-.section-bottom-banner .btn {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  z-index: 1;
+  flex-direction: column;
+  justify-content: space-around ;
+  align-items: flex-start;
 }
 .section-footer-top {
   display: flex;
   justify-content: space-between;
-  padding: 2.5rem 0;
 }
 .footer-logo {
   width: 42px;
@@ -360,9 +355,7 @@ a {
 }
 .footer-top-content {
   align-items: flex-start;
-}
-.about-us {
-  width: 40%;
+  margin: 3rem 0;
 }
 .about-us-description {
   padding-top: 1rem;
@@ -373,7 +366,7 @@ a {
   font-weight: 400;
 }
 .social-network {
-  margin-top: 58px;
+  margin: 3rem 0;
   width: 12.75rem;
 }
 .social-network .list-group {
@@ -383,6 +376,7 @@ a {
 }
 .shop-detail {
   align-items: flex-start;
+  flex-direction: column;
 }
 .shop-detail .list-item {
   display: flex;
@@ -397,13 +391,15 @@ a {
   font-size: 1rem;
   color: #ffffff;
 }
-.shop-detail-title,
+
 .shop-detail-content {
   color: #ffffff;
   line-height: 2.5rem;
+  font-weight: 300;
 }
 .shop-detail-title {
   font-size: 1rem;
+  color: #ffffff;
 }
 .section-footer-bottom {
   height: 3.5rem;
@@ -439,14 +435,50 @@ a {
   font-weight: 700;
   color: #333333;
 }
-
-@media only screen and (min-width:576px){
-  .container {
-    max-width: 1170px;
+.container {
+  width:100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.row {
+  margin: 0 -.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row [class*="col"] {
+  padding: 0 .625rem;
+}
+.col {
+  display: flex;
+  flex: 1;
+}
+.col-1 {
+  width: 8.333%;
+}
+.col-2 {
+  width: 16.667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.333%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-12 {
+  width: 100%;
+}
+@media (min-width:1200px) {
+  html {
+    font-size: 16px;
   }
-  .col-xl {
-    display: flex;
-    flex: 1;
+  .row [class*="col"] {
+    padding: 0 .625rem;
   }
   .col-xl-2 {
     width: 16.667%;
@@ -460,26 +492,39 @@ a {
   .col-xl-6 {
     width: 50%;
   }
+  .col-xl-8 {
+    width: 66.667%;
+  }
+  .container {
+    max-width: 1170px;
+  }
+  .page-header{
+    background-color: transparent;
+    top:3rem;
+  }
+  .page-header nav {
+    display: block;
+  }
+  .section-top-banner {
+    background: url(asset/images/top_banner_background.png) no-repeat;
+  }
+  .services {
+    display:block;
+  }
+  .shop-detail {
+    flex-direction: row;
+  }
+  .subscribe-form{
+    height:100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .banner-content {
+    width:40%;
+    top: 20%;
+    left: 20%;
+  }
+  .logo-link{
+    color:#ffffff;
+  }
 }
-@media only screen and (min-width:1200px){
-  .col {
-    display: flex;
-    flex: 1;
-  }
-  .col-2 {
-    width: 16.667%;
-  }
-  .col-3 {
-    width: 25%;
-  }
-  .col-4 {
-    width: 33.333%;
-  }
-  .col-6 {
-    width: 50%;
-  }
-  .col-12 {
-    width: 100%;
-  }
-}
-
