@@ -12,27 +12,15 @@ var calculateDifferenceWith19ByEachCase = function (number) {
   };
   return 19 - number;
 };
-//3
-var findNumberDivisibleBy3 = function (input) {
+//3 //4
+var findNumberFromInputDivisibleForOtherNumber = function (input,number) {
   var output = [];
   for (var i = 0; i <= 9; i++) {
     var change = input.replace("*", i);
     change=parseInt(change);
-    if (change % 3 === 0) {
+    if (change % number === 0) {
       output.push(change);
     }
   }
-  return output;
-};
-
-//4
-var findNumberDivisibleBy6 = function (input) {
-  var input = findNumberDivisibleBy3(input);
-  var output = [];
-  input.forEach((item) => {
-    if (item % 6 === 0) {
-      output.push(item);
-    }
-  });
   return output;
 };
