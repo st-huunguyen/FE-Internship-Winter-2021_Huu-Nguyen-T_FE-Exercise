@@ -12,100 +12,108 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   </head>
 
   <body>
-    <header>
+    <header class="page-header">
       <div class="container">
         <div class="row">
-          <h1 class="header-logo cols-2">
-            <a href="#" class="header-logo-link">
-              <img src="asset/images/logo.png" alt="E-shop" />
-              E-Shop
-            </a>
-          </h1>
-          <nav class="navigation cols-4">
+          <div class="col-2 col-xl-2">
+            <h1 class="header-logo">
+              <a href="#" class="logo-link shop-name">
+                <img class="logo" src="asset/images/logo.svg" alt="E-shop" />
+                E-Shop
+              </a>
+            </h1>
+          </div>
+            <nav class="navigation col-xl-4">
+              <ul class="list-group">
+                <li class="list-item">
+                  <a href="#" class="nav-link">Men</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="nav-link">Women</a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="nav-link">Kids</a>
+                </li>
+              </ul>
+            </nav>
+          <div class="col-4 col-xl-2">
             <ul class="list-group">
               <li class="list-item">
-                <a href="#" class="item-link">Men</a>
+                <a  class="logo-link" href="#">
+                  <i class="fas fa-search"></i>
+                </a>
               </li>
               <li class="list-item">
-                <a href="#" class="item-link">Women</a>
+                <a class="logo-link" href="#">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
               </li>
               <li class="list-item">
-                <a href="#" class="item-link">Kids</a>
+                <a class="logo-link" href="#">
+                  <i class="far fa-user"></i>
+                </a>
               </li>
             </ul>
-          </nav>
-          <ul class="list-group cols-2">
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/search.png" alt="search" />
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/cart.png" alt="cart" />
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/avatar.png" alt="user" />
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </header>
 
     <main>
       <section class="section-top-banner">
-        <div class="banner-content">
-          <h2 class="top-banner-title">
-            Sale of the <span class="text-primary">summer</span>collection
-          </h2>
-          <a class="banner-link" href="#">
-            <img class="bg-primary" src="asset/images/arrow_Left.png" alt="arrow" />
-            SHOP NOW
-          </a>
-        </div>
-        <div class="services">
-          <ul class="list-services">
-            <li class="list-item">
-              <div class="card service-card">
-                <img src="asset/images/ship_service.png" alt="shipping-icon" />
-                <div class="card-detail">
-                  <h4 class="card-title">Free Shipping</h4>
-                  <p class="text-muted">On purchases over $199</p>
+        <div class="top-banner container">
+          <div class="banner-content">
+            <h2 class="top-banner-title">
+              Sale of the <span class="text-primary">summer</span> collection
+            </h2>
+            <a class="banner-link" href="#">
+              <span class="arrow-icon">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+              SHOP NOW
+            </a>
+          </div>
+          <div class="services">
+            <ul class="list-services">
+              <li class="list-item">
+                <div class="card service-card">
+                  <img src="asset/images/ship_service.svg" alt="shipping-icon" />
+                  <div class="card-detail">
+                    <h4 class="card-title service-title">Free Shipping</h4>
+                    <p class="card-description">On purchases over $199</p>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="list-item">
-              <div class="card service-card">
-                <img src="asset/images/customer.png" alt="customer-icon" />
-                <div class="card-detail">
-                  <h4 class="card-title">99% Satisfied Customers</h4>
-                  <p class="text-muted">Our clients' opinions speak for themselves</p>
+              </li>
+              <li class="list-item">
+                <div class="card service-card">
+                  <img src="asset/images/customer.svg" alt="customer-icon" />
+                  <div class="card-detail">
+                    <h4 class="card-title service-title">99% Satisfied Customers</h4>
+                    <p class="card-description">Our clients' opinions speak for themselves</p>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="list-item">
-              <div class="card service-card">
-                <img src="asset/images/guarantee_service.png" alt="warranty-icon" />
-                <div class="card-detail">
-                  <h4 class="card-title">Originality Guaranteed</h4>
-                  <p class="text-muted">30 days warranty for each product from our store</p>
+              </li>
+              <li class="list-item">
+                <div class="card service-card">
+                  <img src="asset/images/guarantee_service.svg" alt="warranty-icon" />
+                  <div class="card-detail">
+                    <h4 class="card-title service-title">Originality Guaranteed</h4>
+                    <p class="card-description">30 days warranty for each product from our store</p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+              </li>
+            </ul>
+          </div>
       </section>
 
       <section class="section-collection">
         <div class="container">
           <ul class="list-group row">
-            <li class="list-item cols-6">
+            <li class="list-item col-12 col-xl-6">
               <div class="card collection-card">
                 <img class="card-image" src="asset/images/collection_image_1.png" alt="collection_image_1">
                 <div class="card-info">
@@ -116,31 +124,35 @@
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
-              <div class="card collection-card">
-                <img class="card-image" src="asset/images/collection_image_2.png" alt="collection_image_2">
-                <div class="card-info">
-                  <h4 class="card-title">
-                    Basic t-shirts
-                  </h4>
-                  <p class="price text-light">$29,99</p>
-                  <button class="btn">MORE DETAILS</button>
-                </div>
-              </div>
-            </li>
-            <li class="list-item cols-3">
-              <div class="card collection-card">
-                <img class="card-image" src="asset/images/collection_image_3.png" alt="collection_image_3">
-                <p class="badge">50%</p>
-                <div class="card-info">
-                  <h4 class="card-title">
-                    Sale this summer
-                  </h4>
-                  <button class="btn btn-secondary">VIEW ALL</button>
-                </div>
-              </div>
+            <li class="list-item col-12 col-xl-6">
+              <ul class="list-group row">
+                <li class="list-item col-6 col-xl-6">
+                  <div class="card collection-card">
+                    <img class="card-image" src="asset/images/collection_image_2.png" alt="collection_image_2">
+                    <div class="card-info">
+                      <h4 class="card-title">
+                        Basic t-shirts $29,99
+                      </h4>
+                      <button class="btn">MORE DETAILS</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item col-6 col-xl-6">
+                  <div class="card collection-card">
+                    <img class="card-image" src="asset/images/collection_image_3.png" alt="collection_image_3">
+                    <p class="badge badge-danger">50%</p>
+                    <div class="card-info">
+                      <h4 class="card-title">
+                        Sale this summer
+                      </h4>
+                      <button class="btn btn-secondary">VIEW ALL</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </li>
           </ul>
+        </div>
         </div>
       </section>
 
@@ -148,51 +160,51 @@
         <div class="container">
           <div class="section-header">
             <h3 class="section-title">Selected just for you</h3>
-            <button class="btn btn-border">SHOW MORE</button>
+            <button class="btn btn-outline">SHOW MORE</button>
           </div>
           <ul class="list-group row">
-            <li class="list-item cols-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/t_shirt_summer.png" alt="t-shirt-summer" class="card-image" />
-                <p class="badge">30%</p>
+                <p class="badge badge-danger">30%</p>
                 <div class="card-detail">
                   <h4 class="card-title">T-Shirt Summer Vibes</h4>
                   <div class="card-price">
-                    <p class="price text-danger">$89.99</p>
-                    <p class="price text-muted">$119.99</p>
+                    <p class="price price-sale-off">$89.99</p>
+                    <p class="price price-initial">$119.99</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/loose_knit_sleeve.png" alt="loose-knit-3/4-sleeve" class="card-image" />
                 <div class="card-detail">
                   <h4 class="card-title">Loose Knit 3/4 Sleeve</h4>
                   <div class="card-price">
-                    <p class="price text-dark">$119.99</p>
+                    <p class="price">$119.99</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/slim_fit_t_shirt.png" alt="slim-fit-t-shirt" class="card-image" />
                 <div class="card-detail">
                   <h4 class="card-title">Basic Slim Fit T-Shirt</h4>
                   <div class="card-price">
-                    <p class="price text-dark">$79.99</p>
+                    <p class="price">$79.99</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/loose_textured_t_shirt.png" alt="textured-t-shirt" class="card-image" />
                 <div class="card-detail">
                   <h4 class="card-title">Loose Textured T-Shirt</h4>
                   <div class="card-price">
-                    <p class="price text-dark">$119.99</p>
+                    <p class="price">$119.99</p>
                   </div>
                 </div>
               </div>
@@ -206,48 +218,48 @@
             <h3 class="section-title">Why should you choose us?</h3>
           </div>
           <ul class="list-group row">
-            <li class="list-item cols-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
-                <img src="asset/images/ship.png" alt="Shipping" />
+                <img src="asset/images/ship.svg" alt="Shipping" />
                 <div class="card-detail">
-                  <h4 class="card-title text-dark">Free Shipping</h4>
-                  <p class="text-muted">
+                  <h4 class="card-title">Free Shipping</h4>
+                  <p class="card-description">
                     All purchases over $199 are eligible for free shipping via USPS
                     First Class Mail.
                   </p>
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
-                <img src="asset/images/payment.png" alt="Payments" class="card-icon" />
+                <img src="asset/images/payment.svg" alt="Payments" class="card-icon" />
                 <div class="card-detail">
-                  <h4 class="card-title text-dark">Easy Payments</h4>
-                  <p class="text-muted">
+                  <h4 class="card-title">Easy Payments</h4>
+                  <p class="card-description">
                     All payments are processed instantly over a secure payment
                     protocol.
                   </p>
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
-                <img src="asset/images/guarantee.png" alt="Guarantee" class="card-icon" />
+                <img src="asset/images/guarantee.svg" alt="Guarantee" class="card-icon" />
                 <div class="card-detail">
-                  <h4 class="card-title text-dark">Money-Back Guarantee</h4>
-                  <p class="text-muted">
+                  <h4 class="card-title">Money-Back Guarantee</h4>
+                  <p class="card-description">
                     If an item arrived damaged or you've changed your mind, you can
                     send it back for a full refund.
                   </p>
                 </div>
               </div>
             </li>
-            <li class="introduct-item cols-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
-                <img src="asset/images/material.png" alt="material" class="card-icon" />
+                <img src="asset/images/material.svg" alt="material" class="card-icon" />
                 <div class="card-detail">
-                  <h4 class="card-title text-dark">Finest Quality</h4>
-                  <p class="text-muted">
+                  <h4 class="card-title">Finest Quality</h4>
+                  <p class="card-description">
                     Designed to last, each of our products has been crafted with the
                     finest materials.
                   </p>
@@ -263,48 +275,48 @@
             <h3 class="section-title">Products in today</h3>
           </div>
           <ul class="list-group row">
-            <li class="list-item cols-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/t_shirt_summer.png" alt="t-shirt-image" class="card-image" />
-                <p class="badge">30%</p>
+                <p class="badge badge-danger">30%</p>
                 <div class="card-detail">
                   <h4 class="card-title">T-Shirt Summer Vibes</h4>
                   <div class="card-price">
-                    <p class="price text-danger">$89.99</p>
-                    <p class="price text-muted">$119.99</p>
+                    <p class="price price-sale-off">$89.99</p>
+                    <p class="price price-initial">$119.99</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/loose_knit_sleeve.png" alt="loose-knit-3/4-sleeve" class="card-image" />
                 <div class="card-detail">
                   <h4 class="card-title">Loose Knit 3/4 Sleeve</h4>
                   <div class="card-price">
-                    <p class="price text-dark">$119.99</p>
+                    <p class="price">$119.99</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/slim_fit_t_shirt.png" alt="slim-fit-t-shirt" class="card-image" />
                 <div class="card-detail">
                   <h4 class="card-title">Basic Slim Fit T-Shirt</h4>
                   <div class="card-price">
-                    <p class="price text-dark">$79.99</p>
+                    <p class="price">$79.99</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="list-item cols-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/loose_textured_t_shirt.png" alt="textured-t-shirt" class="card-image" />
                 <div class="card-detail">
                   <h4 class="card-title">Loose Textured T-Shirt</h4>
                   <div class="card-price">
-                    <p class="price text-dark">$119.99</p>
+                    <p class="price">$119.99</p>
                   </div>
                 </div>
               </div>
@@ -313,95 +325,124 @@
         </div>
       </section>
       <section class="section-bottom-banner">
-        <div class="container">
-          <div class="row">
-            <h4 class="item-title col">
-              Subscribe to our newsletter and receive exclusive offers every week
-            </h4>
-            <form class="subscribe-form col">
-              <input type="text" placeholder="Enter your email" />
-              <button class="btn btn-primary">SUBSCRIBE</button>
+        <div class="bottom-banner container">
+          <div class="row bottom-banner-content">
+            <div class="col-12 col-xl-6">
+              <h4 class="bottom-banner-title">
+                Subscribe to our newsletter and receive exclusive offers every week
+              </h4>
+            </div>
+            <form class="subscribe-form col-12 col-xl-6">
+              <input class="input-email col-12 col-xl-6" type="text" placeholder="Enter your email"/>
+              <button class="btn btn-primary col-6 col-xl-4">SUBSCRIBE</button>
             </form>
           </div>
         </div>
       </section>
     </main>
-    <footer>
-      <div class="section-footer-top">
-        <div class="about-us">
-          <div class="footer-logo">
-            <a href="#">
-              <img src="asset/images/logo.png" alt="E-shop" />
-              <h3 class="shop-name">E-Shop</h3>
-            </a>
-          </div>
-          <div class="about-us-detail">
-            <h4 class="item-title">
-              House My Brand designs clothing for the young, the old &everyone
-              in between – but most importantly, for the fashionable
-            </h4>
-          </div>
-          <div class="social-network">
-            <ul class="list-group">
-              <li class="list-item">
-                <a href="#"><img src="asset/images/facebook.png" alt="facebook" /></a>
+    <footer class="page-footer">
+      <section class="section-footer-top">
+        <div class="container">
+          <div class="row footer-top-content">
+            <div class="col-12 col-xl-6">
+              <div class="about-us-detail">
+                <h2 class="footer-logo">
+                  <a href="#" class="logo-link shop-name">
+                    <img class="logo" src="asset/images/logo.svg" alt="E-shop" />
+                    E-Shop
+                  </a>
+                </h2>
+                <h4 class="description-content">
+                  House My Brand designs clothing for the young, the old &everyone
+                  in between – but most importantly, for the fashionable
+                </h4>
+                <div class="social-network">
+                  <ul class="list-group">
+                    <li class="list-item">
+                      <a href="#"><img src="asset/images/facebook.png" alt="facebook" /></a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#"><img src="asset/images/twitter.png" alt="twitter" /></a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#"><img src="asset/images/linkedIn.png" alt="linkedin" /></a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">
+                        <img src="asset/images/instagram.png" alt="instagram" />
+                      </a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">
+                        <img src="asset/images/youtube.png" alt="youtube" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group shop-detail col-12 col-xl-6">
+              <li class="list-item ">
+                <h4 class="item-title shop-detail-title ">Shopping online</h4>
+                <ul class="list-group">
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Order Status</a>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Shipping and Delivery</a>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Returns</a>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Payment Options</a>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Contact Us</a>
+                  </li>
+                </ul>
               </li>
               <li class="list-item">
-                <a href="#"><img src="asset/images/twitter.png" alt="twitter" /></a>
+                <h4 class="item-title shop-detail-title">Information</h4>
+                <ul class="list-group">
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Gift Cards</a>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Find a store</a>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Newsletter</a>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Become a member</a>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <a class="shop-detail-content" href="#">Site feedback</a>
+                  </li>
+                </ul>
               </li>
               <li class="list-item">
-                <a href="#"><img src="asset/images/linkedIn.png" alt="linkedin" /></a>
-              </li>
-              <li class="list-item">
-                <a href="#">
-                  <img src="asset/images/instagram.png" alt="instagram" />
-                </a>
-              </li>
-              <li class="list-item">
-                <a href="#">
-                  <img src="asset/images/youtube.png" alt="youtube" />
-                </a>
+                <h4 class="item-title shop-detail-title">Contact</h4>
+                <ul class="list-group shop-detail-item">
+                  <li class="list-item shop-detail-item">
+                    <p class="shop-detail-content">
+                      store@uikit.com
+                    </p>
+                  </li>
+                  <li class="list-item shop-detail-item">
+                    <p class="shop-detail-content">
+                      Hotline: +1 131 138 138
+                    </p>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
         </div>
-          <ul class="list-group shop-detail">
-            <li class="list-item">
-              <h4 class="item-title">Shopping online</h4>
-              <ul class="list-group">
-                <li class="list-item"><a href="#">Order Status</a></li>
-                <li class="list-item"><a href="#">Shipping and Delivery</a></li>
-                <li class="list-item"><a href="#">Returns</a></li>
-                <li class="list-item"><a href="#">Payment Options</a></li>
-                <li class="list-item"><a href="#">Contact Us</a></li>
-              </ul>
-            </li>
-            <li class="list-item">
-              <h4 class="item-title">Information</h4>
-              <ul class="list-group">
-                <li class="list-item"><a href="#">Gift Cards</a></li>
-                <li class="list-item"><a href="#">Find a store</a></li>
-                <li class="list-item"><a href="#">Newsletter</a></li>
-                <li class="list-item"><a href="#">Become a member</a></li>
-                <li class="list-item"><a href="#">Site feedback</a></li>
-              </ul>
-            </li>
-            <li class="list-item">
-              <h4 class="item-title">Contact</h4>
-              <ul class="list-group">
-                <li class="list-item">
-                  <p>store@uikit.com</p>
-                </li>
-                <li class="list-item">
-                  <p>Hotline: +1 131 138 138</p>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
       </section>
       <section class="section-footer-bottom">
-        <p>DESIGN BY ICEO.CO - &copy; 2021. ALL RIGHTS RESERVED. </p>
+        <p>DESIGN BY ICEO.CO - &copy; 2019. ALL RIGHTS RESERVED. </p>
       </section>
     </footer>
     <script></script>
