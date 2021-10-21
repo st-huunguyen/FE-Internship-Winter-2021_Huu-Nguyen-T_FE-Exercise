@@ -1,8 +1,6 @@
 // 1
-var calculateOddTotal = function () {
-  var array = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-  ];
+var array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+var calculateOddTotal = function (array) {
   var sum = 0;
   var count = array.length;
   for (var i = 0; i < count; i++) {
@@ -12,23 +10,20 @@ var calculateOddTotal = function () {
   }
   return sum;
 };
+calculateOddTotal(array);
 
 // 2
 var cutString = function (string) {
-  var output = "";
-  if (string.length > 15) {
-    output = string.slice(0, 10).concat("...");
-  } else {
-    output = string;
+  if (string && string.length > 15) {
+    string = string.slice(0, 10).concat("...");
   }
-  return output;
+  return string;
 };
 
 // 3
 var capitalizeFirstLetter = function (string) {
-  var output = "";
   string.toLowerCase();
-  output = string[0].toUpperCase().concat(string.slice(1));
+  var output = string[0].toUpperCase().concat(string.slice(1));
   return output;
 };
 
