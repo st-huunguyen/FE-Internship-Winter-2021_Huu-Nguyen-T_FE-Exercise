@@ -22,7 +22,7 @@ var cutString = function (string) {
 
 // 3
 var capitalizeFirstLetter = function (string) {
-  string.toLowerCase();
+  string = string.toLowerCase();
   var output = string[0].toUpperCase().concat(string.slice(1));
   return output;
 };
