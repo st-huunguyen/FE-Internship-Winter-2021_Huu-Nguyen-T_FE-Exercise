@@ -9,6 +9,7 @@ li {
 }
 body {
   width: 800px;
+  text-align: center;
   margin: 50px auto;
   border: 3px solid #800000;
   font-family: Roboto, sans-serif;
