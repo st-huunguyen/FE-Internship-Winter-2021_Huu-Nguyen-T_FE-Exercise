@@ -12,24 +12,14 @@
 .row [class*="col"] {
   padding: 0 .625rem;
 }
-.col {
+.col{
   display: flex;
   flex: 1;
 }
-.col-2 {
-  width: 16.667%;
-}
-.col-3 {
-  width: 25%;
-}
-.col-4 {
-  width: 33.333%;
-}
-.col-6 {
-  width: 50%;
-}
-.col-12 {
-  width: 100%;
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width : ($i / 12 * 100%);
+  }
 }
 @media (min-width: 1200px) {
   html {
@@ -38,19 +28,10 @@
   .container {
     max-width: 1170px;
   }
-  .col-xl-2 {
-    width: 16.667%;
-  }
-  .col-xl-3 {
-    width: 25%;
-  }
-  .col-xl-4 {
-    width: 33.333%;
-  }
-  .col-xl-6 {
-    width: 50%;
-  }
-  .col-xl-8 {
-    width: 66.667%;
+
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      width: ($i / 12 * 100%);
+    }
   }
 }

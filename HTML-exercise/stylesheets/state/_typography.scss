@@ -1,13 +1,13 @@
 .price {
-  color: $color-black;
-  @include font-size-weight($font-size-xl,400);
+  color: map-get($color,"black");
+  @include font-size-weight(map-get($font-size,"xl"),400);
 }
 .text-primary {
-  color: $color-primary;
+  color: map-get($color,"primary");
 }
 .price-sale-off {
-  color: $color-red;
+  color: map-get($color,"red");
 }
 .price-initial {
-  color: map-get($color-gray, "ce" )
+  color: map-get($color,"gray-d");
 }

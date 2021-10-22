@@ -3,8 +3,8 @@
   overflow: hidden;
   margin-bottom: 1rem;
   .card-title {
-    @include font-size-weight($font-size-m, 300);
-    color: $color-black;
+    @include font-size-weight(map-get($font-size,"m"), 300);
+    color: map-get($color, "black" );
   }
 }
 .collection-card {
@@ -29,17 +29,23 @@
   flex: 1;
   .card-title {
     font-weight: 700;
-    color: $color-black;
+    color: map-get($color, "black" );
   }
   .card-description {
-    @include font-size-weight($font-size-xs, 400);
-    color: map-get($color-gray, "a8");
+    @include font-size-weight(map-get($font-size,"xs"), 400);
+    color: map-get($color, "gray-c" );
   }
   img {
     width: 2.25rem;
     height: 2.25rem;
     border-radius: 0.5rem;
     margin-right: 1rem;
-    background-color: map-get($color-gray, "ff");
+    background-color: map-get($color, "gray-g" );
+  }
+}
+.product-card{
+  .card-description {
+    color: map-get($color, "gray-b");
+    font-weight: 400;
   }
 }
