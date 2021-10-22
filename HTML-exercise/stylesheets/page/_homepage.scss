@@ -4,11 +4,11 @@
   color: $color-black;
   margin-bottom: 2rem;
 }
-.shop-name {
-  font-family: Helvetica;
-  color: $color-white;
-  margin-left: 1rem;
-}
+// .shop-name {
+//   font-family: Helvetica;
+//   color: $color-white;
+//   margin-left: 1rem;
+// }
 .section-suggestions .card-price,
 .section-today-suggestions .card-price{
   @include justify-between;
@@ -22,7 +22,7 @@
 .section-top-banner {
   height:100vh;
   position: relative;
-  background: url(../asset/images/top_banner_background.png) no-repeat;
+  background: url(../asset/images/mobile_top_banner_background.png) no-repeat;
   background-size: 100% auto;
   object-fit: cover;
 }
@@ -36,11 +36,9 @@
 }
 .banner-content {
   @include justify-between;
-  width: 40%;
   position: absolute;
-  top: 30%;
-  left: 23%;
-  margin-left: -154px;
+  top: 40%;
+  left: 5%;
   z-index: 100;
   flex-direction: column;
 }
@@ -48,9 +46,11 @@
   color:$color-white;
   font-size: 4.5rem;
   line-height: 4.5rem;
+  width:100%;
 }
 .banner-link {
-  @include font-size-weight($font-size-xxl,400);
+  font-size: 1.5rem;
+  // @include font-size-weight($font-size-xxl,400);
   @include align-center;
   color: $color-white;
   text-decoration: underline;
@@ -65,11 +65,11 @@
   }
 }
 .services {
-  width: 90%;
-  max-width: 1110px;
+  width: 80%;
+  display:none;
   background-color: $color-white;
   border-radius: 0 70px 0 0;
-  padding-left: 23%;
+  padding-left: 30%;
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -81,16 +81,36 @@
   .list-item {
     display: flex;
     flex:1;
-    padding: 1rem 2rem 0 0;
+    padding: 1.5rem 2rem 0 0;
   }
 }
 .section-collection {
   margin: 3rem auto;
-  .badge {
-    top: 30%;
-    left: 10%;
-  }
+  // .badge {
+  //   top: 30%;
+  //   left: 10%;
+  // }
 }
+.bottom-banner-content {
+  height:100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 1;
+}
+.subscribe-form{
+  height:50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around ;
+  align-items: flex-start;
+}
+
+.introduct-card .card-description {
+  color: #808080;
+  font-weight: 400;
+}
+
 .section-introduct {
   margin: 3rem 0;
   background-color: map-get($color-gray, "f6" );
@@ -116,10 +136,33 @@
 }
 .product-card {
   .badge {
+    position: absolute;
     top: 10%;
     left: 10%;
+    z-index: 2;
   }
 }
+
+.collection-card .badge {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: 2;
+}
+
+.logo-link {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color:#000000;
+}
+
+
+.product-card .card-description {
+  color: #808080;
+  font-weight: 400;
+}
+
+
 .section-today-suggestions {
   margin-bottom: 3rem;
 }
@@ -157,12 +200,8 @@
 }
 .section-introduct{
   .card-title{
-    @include font-size-weight($font-size-xxl,700);
+    @include font-size-weight($font-size-m,700);
   }
-}
-.introduct-description {
-  color: map-get($color-gray, "80" );
-  font-weight: 400;
 }
 .section-collection{
   .card-title{
@@ -178,5 +217,24 @@
   .card-title {
     font-weight: 700;
     color: black;
+  }
+}
+
+@media (min-width:1200px) {
+  .section-top-banner {
+    background: url(asset/images/top_banner_background.png) no-repeat;
+  }
+  .services {
+    display:block;
+  }
+  .subscribe-form{
+    height:100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .banner-content {
+    width:40%;
+    top: 20%;
+    left: 20%;
   }
 }

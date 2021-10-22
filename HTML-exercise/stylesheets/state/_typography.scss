@@ -1,13 +1,13 @@
 .price {
   color: $color-black;
-  @include font-size-weight(1.25rem,400);
+  @include font-size-weight($font-size-xl,400);
 }
 .text-primary {
   color: $color-primary;
 }
-.text-red {
+.price-sale-off {
   color: $color-red;
 }
-.text-gray {
+.price-initial {
   color: map-get($color-gray, "ce" )
 }
