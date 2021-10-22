@@ -1,73 +1,27 @@
-<<<<<<< HEAD:HTML-exercise/style.css
-=======
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-html {
-  font-family: "Poppins",sans-serif;
-  font-size: 10px;
-=======
 
 html {
   font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 html::-webkit-scrollbar {
   display: none;
 }
 html body {
   position: relative;
-<<<<<<< HEAD:HTML-exercise/style.css
-  font-size: .875rem;
-}
-=======
   font-size: 0.875rem;
 }
 
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 h3 {
   font-size: 2rem;
   font-weight: 300;
   color: #333333;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-a {
-  text-decoration: none;
-}
-img{
-  width:100%;
-}
-.input-email {
-  height: 3rem;
-  padding: 1rem;
-  border-radius: 1.5rem;
-  border: none;
-  outline: none;
-  text-indent: 1rem;
-}
-.text-primary {
-  color: #fbb03b;
-}
-.price {
-  color: #333333;
-  font-weight: 400;
-  font-size: 1.25rem;
-}
-.price-initial {
-  color: #cecece;
-}
-.price-sale-off {
-  color: #ff0000;
-}
-.page-footer {
-  background-color: #fbb03b;
-=======
 
 a {
   text-decoration: none;
@@ -119,7 +73,6 @@ img {
 }
 .badge.badge-danger {
   background-color: #FF0000;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 
 .btn {
@@ -131,78 +84,15 @@ img {
   padding: 0.875rem;
   border-radius: 1.5rem;
   border: none;
-<<<<<<< HEAD:HTML-exercise/style.css
-  font-size: .875rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.btn.btn-outline {
-  border: 1px solid#c4c4c4;
-=======
   text-transform: uppercase;
 }
 .btn.btn-outline {
   border: 1px solid #c4c4c4;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   background-color: transparent;
 }
 .btn.btn-primary {
   background-color: #fbb03b;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-.list-group {
-  list-style-type: none;
-  display: flex;
-  overflow: hidden;
-  align-items:center;
-  justify-content: space-between;
-}
-.list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
-.section-header {
-  font-weight: 300;
-  font-size: 2rem;
-  color: #333333;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-}
-.page-header nav{
-  display: none;
-}
-.card {
-  width: 100%;
-  position: relative;
-}
-.collection-card {
-  display: flex;
-  justify-content: center;
-}
-.collection-card .badge {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  z-index: 2;
-}
-.collection-card::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 0;
-  background-color: rgba(0, 0, 0, .5);
-}
-.card .card-title {
-  color: #333333;
-  font-weight: 300;
-  font-size: 1rem;
-}
-.card .card-info {
-=======
 
 .card {
   width: 100%;
@@ -218,7 +108,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   width: 70%;
   height: 40%;
   position: absolute;
@@ -227,20 +116,6 @@ img {
   flex-direction: column;
   z-index: 1;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-.service-card img {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: .5rem;
-  background-color: #fff3df;
-}
-.badge {
-  height: 2rem;
-  width: 4rem;
-  padding: .5rem;
-  text-align: center;
-  border-radius: 1rem;
-=======
 
 .collection-card {
   display: flex;
@@ -266,47 +141,10 @@ img {
   height: 3rem;
   padding: 1rem;
   border-radius: 1.5rem;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   border: none;
   outline: none;
   text-indent: 1rem;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-.badge.badge-danger {
-  background-color: #ff0000;
-}
-.page-header {
-  width: 100%;
-  height: 3rem;
-  position: absolute;
-  background-color: #ffffff;
-  z-index: 100;
-  top: 0;
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-.header-logo .logo {
-  margin-right:  1rem;
-  height:3rem;
-}
-.logo-link {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color:#000000;
-}
-.footer-logo .logo-link{
-  color:#ffffff;
-}
-.footer-logo .logo {
-  margin-right:  1rem;
-  height:3rem;
-}
-.nav-link{
-  color: #fbb03b;
-}
-.logo-link,
-.nav-link {
-=======
 
 .list-group, .list-item {
   display: flex;
@@ -414,7 +252,6 @@ img {
 }
 
 .header-logo {
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   display: flex;
   align-items: center;
 }
@@ -435,15 +272,6 @@ img {
   align-items: center;
   font-size: 1.25rem;
   font-weight: 700;
-<<<<<<< HEAD:HTML-exercise/style.css
-  font-size: 1.25rem;
-  white-space: nowrap;
-}
-.shop-name {
-  font-family: Helvetica;
-  margin-left: 1rem;
-}
-=======
   color: #fbb03b;
   white-space: nowrap;
 }
@@ -552,24 +380,17 @@ nav {
   margin-bottom: 2rem;
 }
 
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 .section-suggestions .card-price,
 .section-today-suggestions .card-price {
   display: flex;
   justify-content: space-between;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-.section-suggestions .section-header {
-  justify-content:  space-between;
-}
-=======
 
 .section-suggestions .section-header {
   display: flex;
   justify-content: space-between;
 }
 
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 .section-suggestions {
   margin-top: 6rem;
 }
@@ -577,12 +398,6 @@ nav {
 .section-top-banner {
   height: 100vh;
   position: relative;
-<<<<<<< HEAD:HTML-exercise/style.css
-  background: url(asset/images/mobile_top_banner_background.png) no-repeat;
-  background-size: 100% auto;
-  object-fit: cover;
-}
-=======
   background: url(../asset/images/mobile_top_banner_background.png) no-repeat;
   background-size: 100% auto;
   object-fit: cover;
@@ -591,28 +406,16 @@ nav {
 .section-top-banner .top-banner {
   position: relative;
 }
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 .section-top-banner::before {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 0;
-<<<<<<< HEAD:HTML-exercise/style.css
-  background-color: rgba(0, 0, 0, .5);
-=======
   background-color: rgba(0, 0, 0, 0.5);
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 
 .banner-content {
-<<<<<<< HEAD:HTML-exercise/style.css
-  position: absolute;
-  top: 40%;
-  left: 5%;
-  z-index: 100;
-=======
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -626,11 +429,7 @@ nav {
   color: #ffffff;
   font-size: 4.5rem;
   line-height: 4.5rem;
-<<<<<<< HEAD:HTML-exercise/style.css
-  width:100%;
-=======
   width: 100%;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 
 .banner-link {
@@ -652,13 +451,8 @@ nav {
 }
 
 .services {
-<<<<<<< HEAD:HTML-exercise/style.css
-  display:none;
-  width:80%;
-=======
   width: 80%;
   display: none;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   background-color: #ffffff;
   border-radius: 0 70px 0 0;
   padding-left: 30%;
@@ -676,17 +470,11 @@ nav {
 .list-services .list-item {
   display: flex;
   flex: 1;
-<<<<<<< HEAD:HTML-exercise/style.css
-  margin: 1.5rem 2rem 0 0;
-=======
   padding: 1.5rem 1rem 0 0;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 
 .section-collection {
   margin: 3rem auto;
-<<<<<<< HEAD:HTML-exercise/style.css
-=======
 }
 
 .bottom-banner-content {
@@ -703,7 +491,6 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 
 .introduct-card .card-description {
@@ -726,27 +513,15 @@ nav {
   padding: 1rem;
   flex-direction: column;
 }
-.product-card .badge {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  z-index: 2;
-}
 .section-introduct img {
   width: 4.25rem;
   height: 4.25rem;
-<<<<<<< HEAD:HTML-exercise/style.css
-  display:flex;
-=======
   display: flex;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
   background-color: #ffffff;
   border-radius: 10px;
-<<<<<<< HEAD:HTML-exercise/style.css
-=======
 }
 
 .product-card .badge {
@@ -772,7 +547,6 @@ nav {
 .product-card .card-description {
   color: #808080;
   font-weight: 400;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 
 .section-today-suggestions {
@@ -781,11 +555,7 @@ nav {
 
 .section-bottom-banner {
   height: 240px;
-<<<<<<< HEAD:HTML-exercise/style.css
-  background: url(asset/images/bottom_banner_background.png) no-repeat;
-=======
   background: url(../asset/images/bottom_banner_background.png) no-repeat;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   position: relative;
 }
 .section-bottom-banner::before {
@@ -794,11 +564,7 @@ nav {
   height: 100%;
   position: absolute;
   z-index: 0;
-<<<<<<< HEAD:HTML-exercise/style.css
-  background-color: rgba(0, 0, 0, .5);
-=======
   background-color: rgba(0, 0, 0, 0.5);
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 
 .section-bottom-banner .bottom-banner {
@@ -806,99 +572,25 @@ nav {
   justify-content: center;
   flex-direction: column;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-=======
 
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 .bottom-banner-title {
   font-size: 1.5rem;
   font-weight: 400;
   color: #ffffff;
-}
-<<<<<<< HEAD:HTML-exercise/style.css
-.bottom-banner-content {
-  height:100%;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #ffffff;
   z-index: 1;
 }
-.subscribe-form{
-  height:50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around ;
-  align-items: flex-start;
-}
-.section-footer-top {
-  display: flex;
-  justify-content: space-between;
-}
-.footer-logo {
-  width: 42px;
-  height: 36px;
-  margin-right: 20px;
-}
-.footer-top-content {
-  align-items: flex-start;
-  margin: 3rem 0;
-}
-.about-us-description {
-  padding-top: 1rem;
-}
-.description-content {
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: 400;
-}
-.social-network {
-  margin: 3rem 0;
-  width: 12.75rem;
-}
-.social-network .list-group {
-  display: flex;
-  justify-content: space-between;
-=======
 
 .section-bottom-banner .btn {
   display: flex;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   align-items: center;
   z-index: 1;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-.shop-detail {
-  align-items: flex-start;
-  flex-direction: column;
-}
-.shop-detail .list-item {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.shop-detail .list-item .list-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-=======
 
 .section-introduct .card-title {
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
   font-size: 1rem;
   font-weight: 700;
 }
 
-<<<<<<< HEAD:HTML-exercise/style.css
-.shop-detail-content {
-  color: #ffffff;
-  line-height: 2.5rem;
-  font-weight: 300;
-}
-.shop-detail-title {
-  font-size: 1rem;
-  color: #ffffff;
-=======
 .section-collection .card-title {
   color: #ffffff;
   font-size: 1.5rem;
@@ -908,134 +600,12 @@ nav {
 .service-card .card-title {
   font-weight: 700;
   color: #333333;
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
 }
 .service-card .card-description {
   font-size: 0.75rem;
   font-weight: 400;
   color: #a8a8a8;
 }
-<<<<<<< HEAD:HTML-exercise/style.css
-.section-introduct .card-title {
-  font-weight: 700;
-  font-size:  1rem;
-}
-.introduct-card .card-description {
-  color: #808080;
-  font-weight: 400;
-}
-.product-card .card-description {
-  color: #808080;
-  font-weight: 400;
-}
-.section-collection .card-title {
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-.service-card .card-description  {
-  font-size: .75rem;
-  font-weight: 400;
-  color: #a8a8a8;
-}
-.service-card .card-title {
-  font-weight: 700;
-  color: #333333;
-}
-.container {
-  width:100%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-.row {
-  margin: 0 -.625rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.row [class*="col"] {
-  padding: 0 .625rem;
-}
-.col {
-  display: flex;
-  flex: 1;
-}
-.col-1 {
-  width: 8.333%;
-}
-.col-2 {
-  width: 16.667%;
-}
-.col-3 {
-  width: 25%;
-}
-.col-4 {
-  width: 33.333%;
-}
-.col-6 {
-  width: 50%;
-}
-.col-12 {
-  width: 100%;
-}
-@media (min-width:1200px) {
-  html {
-    font-size: 16px;
-  }
-  .row [class*="col"] {
-    padding: 0 .625rem;
-  }
-  .col-xl-2 {
-    width: 16.667%;
-  }
-  .col-xl-3 {
-    width: 25%;
-  }
-  .col-xl-4 {
-    width: 33.333%;
-  }
-  .col-xl-6 {
-    width: 50%;
-  }
-  .col-xl-8 {
-    width: 66.667%;
-  }
-  .container {
-    max-width: 1170px;
-  }
-  .page-header{
-    background-color: transparent;
-    top:3rem;
-  }
-  .page-header nav {
-    display: block;
-  }
-  .section-top-banner {
-    background: url(asset/images/top_banner_background.png) no-repeat;
-  }
-  .services {
-    display:block;
-  }
-  .shop-detail {
-    flex-direction: row;
-  }
-  .subscribe-form{
-    height:100%;
-    flex-direction: row;
-    align-items: center;
-  }
-  .banner-content {
-    width:40%;
-    top: 20%;
-    left: 20%;
-  }
-  .logo-link{
-    color:#ffffff;
-  }
-}
-=======
 
 @media (min-width: 1200px) {
   .section-top-banner {
@@ -1064,4 +634,3 @@ nav {
 }
 
 /*# sourceMappingURL=style.css.map */
->>>>>>> task/20211019/st-huunguyen_scss-exercise:HTML-exercise/stylesheets/style.css
