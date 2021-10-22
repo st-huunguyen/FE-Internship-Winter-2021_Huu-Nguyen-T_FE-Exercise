@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,13 +19,15 @@
     <header class="page-header">
       <div class="container">
         <div class="row">
-          <h1 class="header-logo col-2">
-            <a href="#" class="logo-link">
-              <img src="asset/images/logo.png" alt="E-shop" />
-              <h3 class="shop-name">E-Shop</h3>
-            </a>
-          </h1>
-          <nav class="navigation col-4">
+          <div class="col-2 col-xl-2">
+            <h1 class="header-logo">
+              <a href="#" class="logo-link shop-name">
+                <img class="logo" src="asset/images/logo.svg" alt="E-shop" />
+                E-Shop
+              </a>
+            </h1>
+          </div>
+          <nav class="navigation col-xl-4">
             <ul class="list-group">
               <li class="list-item">
                 <a href="#" class="nav-link">Men</a>
@@ -39,23 +40,25 @@
               </li>
             </ul>
           </nav>
-          <ul class="list-group col-2">
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/search.png" alt="search" />
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/cart.png" alt="cart" />
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="#">
-                <img src="asset/images/avatar.png" alt="user" />
-              </a>
-            </li>
-          </ul>
+          <div class="col-4 col-xl-2">
+            <ul class="list-group">
+              <li class="list-item">
+                <a class="logo-link" href="#">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="logo-link" href="#">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="logo-link" href="#">
+                  <i class="far fa-user"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -68,7 +71,7 @@
               Sale of the <span class="text-primary">summer</span> collection
             </h2>
             <a class="banner-link" href="#">
-              <span>
+              <span class="arrow-icon">
                 <i class="fas fa-arrow-right"></i>
               </span>
               SHOP NOW
@@ -78,28 +81,28 @@
             <ul class="list-services">
               <li class="list-item">
                 <div class="card service-card">
-                  <img src="asset/images/ship_service.png" alt="shipping-icon" />
+                  <img src="asset/images/ship_service.svg" alt="shipping-icon" />
                   <div class="card-detail">
                     <h4 class="card-title service-title">Free Shipping</h4>
-                    <p class="service-despription">On purchases over $199</p>
+                    <p class="card-description">On purchases over $199</p>
                   </div>
                 </div>
               </li>
               <li class="list-item">
                 <div class="card service-card">
-                  <img src="asset/images/customer.png" alt="customer-icon" />
+                  <img src="asset/images/customer.svg" alt="customer-icon" />
                   <div class="card-detail">
                     <h4 class="card-title service-title">99% Satisfied Customers</h4>
-                    <p class="service-despription">Our clients' opinions speak for themselves</p>
+                    <p class="card-description">Our clients' opinions speak for themselves</p>
                   </div>
                 </div>
               </li>
               <li class="list-item">
                 <div class="card service-card">
-                  <img src="asset/images/guarantee_service.png" alt="warranty-icon" />
+                  <img src="asset/images/guarantee_service.svg" alt="warranty-icon" />
                   <div class="card-detail">
                     <h4 class="card-title service-title">Originality Guaranteed</h4>
-                    <p class="service-despription">30 days warranty for each product from our store</p>
+                    <p class="card-description">30 days warranty for each product from our store</p>
                   </div>
                 </div>
               </li>
@@ -110,34 +113,34 @@
       <section class="section-collection">
         <div class="container">
           <ul class="list-group row">
-            <li class="list-item col-6">
+            <li class="list-item col-12 col-xl-6">
               <div class="card collection-card">
                 <img class="card-image" src="asset/images/collection_image_1.png" alt="collection_image_1">
                 <div class="card-info">
-                  <h4 class="card-title colection-title">
+                  <h4 class="card-title">
                     New arrivals are now in!
                   </h4>
                   <button class="btn btn-secondary">SHOW COLLECTION</button>
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card collection-card">
                 <img class="card-image" src="asset/images/collection_image_2.png" alt="collection_image_2">
                 <div class="card-info">
-                  <h4 class="card-title colection-title">
+                  <h4 class="card-title">
                     Basic t-shirts $29,99
                   </h4>
                   <button class="btn">MORE DETAILS</button>
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card collection-card">
                 <img class="card-image" src="asset/images/collection_image_3.png" alt="collection_image_3">
                 <p class="badge badge-danger">50%</p>
                 <div class="card-info">
-                  <h4 class="card-title colection-title">
+                  <h4 class="card-title">
                     Sale this summer
                   </h4>
                   <button class="btn btn-secondary">VIEW ALL</button>
@@ -156,7 +159,7 @@
             <button class="btn btn-outline">SHOW MORE</button>
           </div>
           <ul class="list-group row">
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/t_shirt_summer.png" alt="t-shirt-summer" class="card-image" />
                 <p class="badge badge-danger">30%</p>
@@ -169,7 +172,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/loose_knit_sleeve.png" alt="loose-knit-3/4-sleeve" class="card-image" />
                 <div class="card-detail">
@@ -180,7 +183,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/slim_fit_t_shirt.png" alt="slim-fit-t-shirt" class="card-image" />
                 <div class="card-detail">
@@ -191,7 +194,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/loose_textured_t_shirt.png" alt="textured-t-shirt" class="card-image" />
                 <div class="card-detail">
@@ -211,48 +214,48 @@
             <h3 class="section-title">Why should you choose us?</h3>
           </div>
           <ul class="list-group row">
-            <li class="list-item col-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
-                <img src="asset/images/ship.png" alt="Shipping" />
+                <img src="asset/images/ship.svg" alt="Shipping" />
                 <div class="card-detail">
-                  <h4 class="card-title introduct-title">Free Shipping</h4>
-                  <p class="introduct-description">
+                  <h4 class="card-title">Free Shipping</h4>
+                  <p class="card-description">
                     All purchases over $199 are eligible for free shipping via USPS
                     First Class Mail.
                   </p>
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
-                <img src="asset/images/payment.png" alt="Payments" class="card-icon" />
+                <img src="asset/images/payment.svg" alt="Payments" class="card-icon" />
                 <div class="card-detail">
-                  <h4 class="card-title introduct-title">Easy Payments</h4>
-                  <p class="introduct-description">
+                  <h4 class="card-title">Easy Payments</h4>
+                  <p class="card-description">
                     All payments are processed instantly over a secure payment
                     protocol.
                   </p>
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
-                <img src="asset/images/guarantee.png" alt="Guarantee" class="card-icon" />
+                <img src="asset/images/guarantee.svg" alt="Guarantee" class="card-icon" />
                 <div class="card-detail">
-                  <h4 class="card-title introduct-title">Money-Back Guarantee</h4>
-                  <p class="introduct-description">
+                  <h4 class="card-title">Money-Back Guarantee</h4>
+                  <p class="card-description">
                     If an item arrived damaged or you've changed your mind, you can
                     send it back for a full refund.
                   </p>
                 </div>
               </div>
             </li>
-            <li class="introduct-item col-3">
+            <li class="list-item col-12 col-xl-3">
               <div class="card product-card">
-                <img src="asset/images/material.png" alt="material" class="card-icon" />
+                <img src="asset/images/material.svg" alt="material" class="card-icon" />
                 <div class="card-detail">
-                  <h4 class="card-title introduct-title">Finest Quality</h4>
-                  <p class="introduct-description">
+                  <h4 class="card-title">Finest Quality</h4>
+                  <p class="card-description">
                     Designed to last, each of our products has been crafted with the
                     finest materials.
                   </p>
@@ -268,7 +271,7 @@
             <h3 class="section-title">Products in today</h3>
           </div>
           <ul class="list-group row">
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/t_shirt_summer.png" alt="t-shirt-image" class="card-image" />
                 <p class="badge badge-danger">30%</p>
@@ -281,7 +284,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/loose_knit_sleeve.png" alt="loose-knit-3/4-sleeve" class="card-image" />
                 <div class="card-detail">
@@ -292,7 +295,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/slim_fit_t_shirt.png" alt="slim-fit-t-shirt" class="card-image" />
                 <div class="card-detail">
@@ -303,7 +306,7 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-3">
+            <li class="list-item col-6 col-xl-3">
               <div class="card product-card">
                 <img src="asset/images/loose_textured_t_shirt.png" alt="textured-t-shirt" class="card-image" />
                 <div class="card-detail">
@@ -319,13 +322,15 @@
       </section>
       <section class="section-bottom-banner">
         <div class="bottom-banner container">
-          <div class="row">
-            <h4 class="bottom-banner-title col">
-              Subscribe to our newsletter and receive exclusive offers every week
-            </h4>
-            <form class="subscribe-form col">
-              <input type="text" placeholder="Enter your email" />
-              <button class="btn btn-primary">SUBSCRIBE</button>
+          <div class="row bottom-banner-content">
+            <div class="col-12 col-xl-6">
+              <h4 class="bottom-banner-title">
+                Subscribe to our newsletter and receive exclusive offers every week
+              </h4>
+            </div>
+            <form class="subscribe-form col-12 col-xl-6">
+              <input class="input-email col-12 col-xl-6" type="text" placeholder="Enter your email" />
+              <button class="btn btn-primary col-6 col-xl-4">SUBSCRIBE</button>
             </form>
           </div>
         </div>
@@ -335,22 +340,18 @@
       <section class="section-footer-top">
         <div class="container">
           <div class="row footer-top-content">
-            <div class="about-us col-6">
+            <div class="col-12 col-xl-6">
               <div class="about-us-detail">
-                <div class="footer-logo">
-                  <h2 class="header-logo">
-                    <a href="#" class="logo-link">
-                      <img src="asset/images/logo.png" alt="E-shop" />
-                      <h3 class="shop-name">E-Shop</h3>
-                    </a>
-                  </h2>
-                </div>
-                <div class="about-us-description">
-                  <h4 class="description-content">
-                    House My Brand designs clothing for the young, the old &everyone
-                    in between – but most importantly, for the fashionable
-                  </h4>
-                </div>
+                <h2 class="footer-logo">
+                  <a href="#" class="logo-link shop-name">
+                    <img class="logo" src="asset/images/logo.svg" alt="E-shop" />
+                    E-Shop
+                  </a>
+                </h2>
+                <h4 class="description-content">
+                  House My Brand designs clothing for the young, the old &everyone
+                  in between – but most importantly, for the fashionable
+                </h4>
                 <div class="social-network">
                   <ul class="list-group">
                     <li class="list-item">
@@ -376,8 +377,8 @@
                 </div>
               </div>
             </div>
-            <ul class="list-group shop-detail col-6">
-              <li class="list-item">
+            <ul class="list-group shop-detail col-12 col-xl-6">
+              <li class="list-item ">
                 <h4 class="item-title shop-detail-title ">Shopping online</h4>
                 <ul class="list-group">
                   <li class="list-item shop-detail-item">
@@ -418,7 +419,7 @@
                 </ul>
               </li>
               <li class="list-item">
-                <h4 class="item-title shop-detail-title ">Contact</h4>
+                <h4 class="item-title shop-detail-title">Contact</h4>
                 <ul class="list-group shop-detail-item">
                   <li class="list-item shop-detail-item">
                     <p class="shop-detail-content">
@@ -437,11 +438,9 @@
         </div>
       </section>
       <section class="section-footer-bottom">
-        <p>DESIGN BY ICEO.CO - &copy; 2021. ALL RIGHTS RESERVED. </p>
+        <p>DESIGN BY ICEO.CO - &copy; 2019. ALL RIGHTS RESERVED. </p>
       </section>
-      </div>
     </footer>
     <script></script>
   </body>
-
 </html>
