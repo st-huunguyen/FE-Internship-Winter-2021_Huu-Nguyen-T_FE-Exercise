@@ -2,11 +2,9 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-}
-.collection-card {
-  @include justify-center ;
-  &::after {
-    @include mask-gray;
+  .card-title {
+    @include font-size-weight($font-size-m, 300);
+    color: $color-black;
   }
   .card-info {
     @include justify-between-align-start;
@@ -19,9 +17,11 @@
     z-index: 1;
   }
 }
-.card-title {
-  @include font-size-weight($font-size-m,300);
-  color: $color-black;
+.collection-card {
+  @include justify-center;
+  &::after {
+    @include mask-gray;
+  }
 }
 .service-card img {
   width: 2.25rem;

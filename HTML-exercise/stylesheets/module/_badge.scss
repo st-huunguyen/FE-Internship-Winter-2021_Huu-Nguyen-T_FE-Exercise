@@ -9,7 +9,7 @@
   border-radius: 1rem;
   border: none;
   color: $color-white;
-}
-.badge-danger {
-  background-color: $color-red;
+  &.badge-danger {
+    background-color: $color-red;
+  }
 }

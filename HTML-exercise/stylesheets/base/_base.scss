@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
 html {
   font-family: $font-primary;
-  font-size: $font-size-xxxs;
+  font-size: $font-size-xs;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -11,21 +11,20 @@ html {
   }
 }
 h3 {
-  @include font-size-weight(2rem,300);
+  @include font-size-weight(2rem, 300);
   color: $color-black;
 }
 a {
   text-decoration: none;
 }
-img{
-  width:100%;
+img {
+  width: 100%;
 }
-
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   html {
     font-size: $font-size-m;
   }
-  img{
-    width:unset;
+  img {
+    width: unset;
   }
 }

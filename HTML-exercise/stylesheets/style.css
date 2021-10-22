@@ -7,7 +7,7 @@
 
 html {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 html::-webkit-scrollbar {
   display: none;
@@ -27,6 +27,19 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1rem;
+  }
+
+  img {
+    width: unset;
+  }
+}
 .price {
   color: #333333;
   font-size: 1.25rem;
@@ -37,11 +50,11 @@ a {
   color: #fbb03b;
 }
 
-.text-red {
+.price-sale-off {
   color: #FF0000;
 }
 
-.text-gray {
+.price-initial {
   color: #cecece;
 }
 
@@ -58,8 +71,7 @@ a {
   border: none;
   color: #ffffff;
 }
-
-.badge-danger {
+.badge.badge-danger {
   background-color: #FF0000;
 }
 
@@ -87,20 +99,12 @@ a {
   position: relative;
   overflow: hidden;
 }
-
-.collection-card {
-  display: flex;
-  justify-content: center;
+.card .card-title {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #333333;
 }
-.collection-card::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.collection-card .card-info {
+.card .card-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -113,10 +117,17 @@ a {
   z-index: 1;
 }
 
-.card-title {
-  font-size: 1rem;
-  font-weight: 300;
-  color: #333333;
+.collection-card {
+  display: flex;
+  justify-content: center;
+}
+.collection-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .service-card img {
@@ -126,7 +137,7 @@ a {
   background-color: #fff3df;
 }
 
-input {
+.input-email {
   height: 3rem;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -145,13 +156,8 @@ input {
 .page-footer {
   background-color: #fbb03b;
 }
-.page-footer .section-footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.5rem 0;
-}
-.page-footer .section-footer-bottom {
+
+.section-footer-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,32 +166,34 @@ input {
   border-top: 1px solid #ffffff;
 }
 
-.footer-top-content {
+.section-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem auto;
+}
+.section-footer-top .footer-top-content {
   display: flex;
   align-items: flex-start;
+  padding: 3rem 0;
 }
-.footer-top-content .about-us {
-  width: 40%;
+.section-footer-top .footer-top-content .about-us-detail .footer-logo {
+  display: flex;
+  justify-content: left;
+  margin: 2rem auto;
 }
-.footer-top-content .about-us .footer-logo {
-  width: 42px;
-  height: 36px;
-  margin-right: 20px;
-}
-.footer-top-content .about-us .about-us-description {
-  padding-top: 1rem;
-}
-.footer-top-content .about-us .about-us-description .description-content {
-  font-size: 0.875rem;
-  font-weight: 400;
+.section-footer-top .footer-top-content .about-us-detail .description-content {
+  font-size: 14px;
+  font-weight: 300;
   color: #ffffff;
+  width: 90%;
 }
 
-.social-network {
-  margin-top: 58px;
+.section-footer-top .social-network {
+  margin: 3rem 0;
   width: 12.75rem;
 }
-.social-network .list-group, .social-network .list-item {
+.section-footer-top .social-network .list-group, .section-footer-top .social-network .list-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,6 +202,7 @@ input {
 .shop-detail {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
 }
 .shop-detail .list-item {
   display: flex;
@@ -217,14 +226,29 @@ input {
   line-height: 2.5rem;
 }
 
+.footer-logo .logo-link {
+  color: #ffffff;
+}
+
+.footer-logo .logo {
+  margin-right: 1rem;
+  height: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .shop-detail {
+    flex-direction: row;
+  }
+}
 .page-header {
   font-size: 1.25rem;
   font-weight: 700;
+  background-color: #ffffff;
   width: 100%;
   height: 3rem;
   position: absolute;
   z-index: 100;
-  top: 3rem;
+  top: 0;
 }
 
 .header-logo {
@@ -233,6 +257,7 @@ input {
 }
 .header-logo .logo {
   margin-right: 1rem;
+  height: 3rem;
 }
 
 .logo-link {
@@ -251,9 +276,31 @@ input {
   white-space: nowrap;
 }
 
+nav {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header {
+    background-color: transparent;
+    top: 3rem;
+  }
+
+  .page-header nav {
+    display: block;
+  }
+
+  .shop-detail {
+    flex-direction: row;
+  }
+
+  .logo-link {
+    color: #ffffff;
+  }
+}
 .container {
+  width: 100%;
   height: 100%;
-  max-width: 1170px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -265,6 +312,7 @@ input {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .row [class*=col] {
   padding: 0 0.625rem;
 }
@@ -290,6 +338,39 @@ input {
   width: 50%;
 }
 
+.col-12 {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 1170px;
+  }
+
+  .col-xl-2 {
+    width: 16.667%;
+  }
+
+  .col-xl-3 {
+    width: 25%;
+  }
+
+  .col-xl-4 {
+    width: 33.333%;
+  }
+
+  .col-xl-6 {
+    width: 50%;
+  }
+
+  .col-xl-8 {
+    width: 66.667%;
+  }
+}
 .section-header {
   font-size: 2rem;
   font-weight: 300;
@@ -297,12 +378,6 @@ input {
   justify-content: center;
   color: #333333;
   margin-bottom: 2rem;
-}
-
-.shop-name {
-  font-family: Helvetica;
-  color: #ffffff;
-  margin-left: 1rem;
 }
 
 .section-suggestions .card-price,
@@ -323,7 +398,7 @@ input {
 .section-top-banner {
   height: 100vh;
   position: relative;
-  background: url(../asset/images/top_banner_background.png) no-repeat;
+  background: url(../asset/images/mobile_top_banner_background.png) no-repeat;
   background-size: 100% auto;
   object-fit: cover;
 }
@@ -337,17 +412,15 @@ input {
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .banner-content {
   display: flex;
   justify-content: space-between;
-  width: 40%;
   position: absolute;
-  top: 30%;
-  left: 23%;
-  margin-left: -154px;
+  top: 40%;
+  left: 5%;
   z-index: 100;
   flex-direction: column;
 }
@@ -356,6 +429,7 @@ input {
   color: #ffffff;
   font-size: 4.5rem;
   line-height: 4.5rem;
+  width: 100%;
 }
 
 .banner-link {
@@ -377,11 +451,11 @@ input {
 }
 
 .services {
-  width: 90%;
-  max-width: 1110px;
+  width: 80%;
+  display: none;
   background-color: #ffffff;
   border-radius: 0 70px 0 0;
-  padding-left: 23%;
+  padding-left: 30%;
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -396,15 +470,32 @@ input {
 .list-services .list-item {
   display: flex;
   flex: 1;
-  padding: 1rem 2rem 0 0;
+  padding: 1.5rem 1rem 0 0;
 }
 
 .section-collection {
   margin: 3rem auto;
 }
-.section-collection .badge {
-  top: 30%;
-  left: 10%;
+
+.bottom-banner-content {
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.subscribe-form {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.introduct-card .card-description {
+  color: #808080;
+  font-weight: 400;
 }
 
 .section-introduct {
@@ -434,8 +525,28 @@ input {
 }
 
 .product-card .badge {
-  top: 10%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 2;
+}
+
+.collection-card .badge {
+  position: absolute;
+  top: 25%;
   left: 10%;
+  z-index: 2;
+}
+
+.logo-link {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.product-card .card-description {
+  color: #808080;
+  font-weight: 400;
 }
 
 .section-today-suggestions {
@@ -453,7 +564,7 @@ input {
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .section-bottom-banner .bottom-banner {
@@ -469,28 +580,15 @@ input {
   z-index: 1;
 }
 
-.subscribe-form input {
-  display: flex;
-  flex: 2;
-  margin-right: 2.5rem;
-  z-index: 1;
-}
-
 .section-bottom-banner .btn {
   display: flex;
   align-items: center;
-  flex: 1;
   z-index: 1;
 }
 
 .section-introduct .card-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-}
-
-.introduct-description {
-  color: #808080;
-  font-weight: 400;
 }
 
 .section-collection .card-title {
@@ -499,15 +597,40 @@ input {
   font-weight: 400;
 }
 
-.service-description {
+.service-card .card-title {
+  font-weight: 700;
+  color: #333333;
+}
+.service-card .card-description {
   font-size: 0.75rem;
   font-weight: 400;
   color: #a8a8a8;
 }
 
-.service-card .card-title {
-  font-weight: 700;
-  color: black;
+@media (min-width: 1200px) {
+  .section-top-banner {
+    background: url(../asset/images/top_banner_background.png) no-repeat;
+  }
+
+  .services {
+    display: block;
+  }
+
+  .logo-link {
+    color: #ffffff;
+  }
+
+  .subscribe-form {
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .banner-content {
+    width: 40%;
+    top: 20%;
+    left: 20%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
