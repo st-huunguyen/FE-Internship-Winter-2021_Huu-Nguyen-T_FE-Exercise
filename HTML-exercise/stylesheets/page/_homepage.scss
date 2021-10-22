@@ -59,11 +59,10 @@
   }
 }
 .services {
-  width: 80%;
   display: none;
   background-color: $color-white;
   border-radius: 0 70px 0 0;
-  padding-left: 30%;
+  padding-left: 25%;
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -71,11 +70,12 @@
 }
 .list-services {
   @include align-start;
+  width:90%;
   margin-right: 2.5rem;
   .list-item {
     display: flex;
     flex: 1;
-    padding: 1.5rem 1rem 0 0;
+    padding: 2rem 0;
   }
 }
 .section-collection {
@@ -111,7 +111,6 @@
     padding-bottom: 2rem;
   }
   .product-card {
-    padding: 01rem;
     flex-direction: column;
   }
   img {
@@ -124,6 +123,7 @@
   }
 }
 .product-card {
+  position: relative;
   .badge {
     position: absolute;
     top: 5%;
@@ -185,16 +185,6 @@
     @include font-size-weight($font-size-xxl, 400);
   }
 }
-.service-card {
-  .card-title {
-    font-weight: 700;
-    color: $color-black;
-  }
-  .card-description {
-    @include font-size-weight($font-size-xs, 400);
-    color: map-get($color-gray, "a8");
-  }
-}
 @media (min-width: 1200px) {
   .section-top-banner {
     background: url(../asset/images/top_banner_background.png) no-repeat;
@@ -212,7 +202,7 @@
   }
   .banner-content {
     width: 40%;
-    top: 20%;
-    left: 20%;
+    top: 30%;
+    left: 12%;
   }
 }

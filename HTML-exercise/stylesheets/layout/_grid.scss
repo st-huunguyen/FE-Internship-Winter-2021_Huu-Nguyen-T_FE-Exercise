@@ -5,14 +5,12 @@
   padding: 0 10px;
 }
 .row {
-  margin: 0 -0.625rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: 0 -.625rem;
+  @include justify-between-align-center;
   flex-wrap: wrap;
 }
 .row [class*="col"] {
-  padding: 0 0.625rem;
+  padding: 0 .625rem;
 }
 .col {
   display: flex;

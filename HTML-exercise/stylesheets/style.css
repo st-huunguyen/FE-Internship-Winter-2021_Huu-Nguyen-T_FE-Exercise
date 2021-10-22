@@ -28,7 +28,7 @@ a {
 }
 
 img {
-  width: 100%;
+  width: 110%;
 }
 
 @media (min-width: 1200px) {
@@ -85,6 +85,7 @@ img {
   border-radius: 1.5rem;
   border: none;
   text-transform: uppercase;
+  background-color: #ffffff;
 }
 .btn.btn-outline {
   border: 1px solid #c4c4c4;
@@ -96,15 +97,29 @@ img {
 
 .card {
   width: 100%;
-  position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 .card .card-title {
   font-size: 1rem;
   font-weight: 300;
   color: #333333;
 }
-.card .card-info {
+
+.collection-card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.collection-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.collection-card .card-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -117,23 +132,24 @@ img {
   z-index: 1;
 }
 
-.collection-card {
+.service-card {
   display: flex;
-  justify-content: center;
+  flex: 1;
 }
-.collection-card::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+.service-card .card-title {
+  font-weight: 700;
+  color: #333333;
 }
-
+.service-card .card-description {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #a8a8a8;
+}
 .service-card img {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 0.5rem;
+  margin-right: 1rem;
   background-color: #fff3df;
 }
 
@@ -245,10 +261,19 @@ img {
   font-weight: 700;
   background-color: #ffffff;
   width: 100%;
-  height: 3rem;
+  height: 5rem;
+  padding: 1rem;
   position: absolute;
   z-index: 100;
   top: 0;
+}
+
+.for-desktop {
+  display: none;
+}
+
+.for-mobile {
+  display: block;
 }
 
 .header-logo {
@@ -281,6 +306,14 @@ nav {
 }
 
 @media screen and (min-width: 1200px) {
+  .for-desktop {
+    display: block;
+  }
+
+  .for-mobile {
+    display: none;
+  }
+
   .page-header {
     background-color: transparent;
     top: 3rem;
@@ -451,11 +484,10 @@ nav {
 }
 
 .services {
-  width: 80%;
   display: none;
   background-color: #ffffff;
   border-radius: 0 70px 0 0;
-  padding-left: 30%;
+  padding-left: 25%;
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -465,12 +497,13 @@ nav {
 .list-services {
   display: flex;
   align-items: flex-start;
+  width: 90%;
   margin-right: 2.5rem;
 }
 .list-services .list-item {
   display: flex;
   flex: 1;
-  padding: 1.5rem 1rem 0 0;
+  padding: 2rem 0;
 }
 
 .section-collection {
@@ -510,7 +543,6 @@ nav {
   padding-bottom: 2rem;
 }
 .section-introduct .product-card {
-  padding: 1rem;
   flex-direction: column;
 }
 .section-introduct img {
@@ -524,6 +556,9 @@ nav {
   border-radius: 10px;
 }
 
+.product-card {
+  position: relative;
+}
 .product-card .badge {
   position: absolute;
   top: 5%;
@@ -597,16 +632,6 @@ nav {
   font-weight: 400;
 }
 
-.service-card .card-title {
-  font-weight: 700;
-  color: #333333;
-}
-.service-card .card-description {
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: #a8a8a8;
-}
-
 @media (min-width: 1200px) {
   .section-top-banner {
     background: url(../asset/images/top_banner_background.png) no-repeat;
@@ -628,8 +653,8 @@ nav {
 
   .banner-content {
     width: 40%;
-    top: 20%;
-    left: 20%;
+    top: 30%;
+    left: 12%;
   }
 }
 

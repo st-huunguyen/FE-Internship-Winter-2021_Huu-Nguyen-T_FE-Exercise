@@ -6,6 +6,7 @@
   border-radius: 1.5rem;
   border: none;
   text-transform: uppercase;
+  background-color: $color-white;
   &.btn-outline {
     border: 1px solid map-get($color-gray, "c4");
     background-color: transparent;
