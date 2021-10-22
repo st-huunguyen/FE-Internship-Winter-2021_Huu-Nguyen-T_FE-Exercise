@@ -1,0 +1,31 @@
+.card {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .card-title {
+    @include font-size-weight($font-size-m, 300);
+    color: $color-black;
+  }
+  .card-info {
+    @include justify-between-align-start;
+    width: 70%;
+    height: 40%;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    flex-direction: column;
+    z-index: 1;
+  }
+}
+.collection-card {
+  @include justify-center;
+  &::after {
+    @include mask-gray;
+  }
+}
+.service-card img {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background-color: map-get($color-gray, "ff");
+}

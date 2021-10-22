@@ -1,0 +1,73 @@
+.page-footer {
+  background-color: $color-primary;
+}
+.section-footer-bottom {
+  @include justify-center-align-center;
+  height: 3.5rem;
+  color: $color-white;
+  border-top: 1px solid $color-white;
+}
+.section-footer-top {
+  @include justify-between-align-center;
+  padding: 3rem auto;
+  .footer-top-content {
+    @include align-start;
+    padding: 3rem 0;
+    .about-us-detail {
+      .footer-logo {
+        display: flex;
+        justify-content: left;
+        margin: 2rem auto;
+      }
+      .description-content {
+        @include font-size-weight(14px, 300);
+        color: $color-white;
+        width: 90%;
+      }
+    }
+  }
+}
+.section-footer-top {
+  .social-network {
+    margin: 3rem 0;
+    width: 12.75rem;
+    .list-group {
+      @include justify-between-align-center;
+    }
+  }
+}
+.shop-detail {
+  @include align-start;
+  flex-direction: column;
+  .list-item {
+    @include align-start;
+    flex: 1;
+    flex-direction: column;
+    .list-group {
+      @include align-start;
+      @include font-size-weight($font-size-s, 400);
+      flex-direction: column;
+      color: $color-white;
+    }
+  }
+  .shop-detail-title {
+    @extend .shop-detail-content;
+    font-size: $font-size-m;
+  }
+  .shop-detail-content {
+    color: $color-white;
+    line-height: 2.5rem;
+  }
+}
+.footer-logo .logo-link {
+  color: #ffffff;
+}
+.footer-logo .logo {
+  margin-right: 1rem;
+  height: 3rem;
+}
+@media (min-width: 1200px) {
+  .shop-detail {
+    flex-direction: row;
+  }
+}

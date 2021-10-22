@@ -1,0 +1,7 @@
+.list-group {
+  @include justify-between-align-center;
+  list-style-type: none;
+}
+.list-item {
+  @extend .list-group;
+}

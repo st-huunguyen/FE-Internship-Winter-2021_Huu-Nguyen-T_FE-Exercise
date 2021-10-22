@@ -1,0 +1,218 @@
+.section-header {
+  @include font-size-weight($font-size-xxxl, 300);
+  @include justify-center;
+  color: $color-black;
+  margin-bottom: 2rem;
+}
+.section-suggestions .card-price,
+.section-today-suggestions .card-price {
+  @include justify-between;
+}
+.section-suggestions .section-header {
+  @include justify-between;
+}
+.section-suggestions {
+  margin-top: 6rem;
+}
+.section-top-banner {
+  height: 100vh;
+  position: relative;
+  background: url(../asset/images/mobile_top_banner_background.png) no-repeat;
+  background-size: 100% auto;
+  object-fit: cover;
+}
+.section-top-banner {
+  .top-banner {
+    position: relative;
+  }
+  &::before {
+    @include mask-gray;
+  }
+}
+.banner-content {
+  @include justify-between;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  z-index: 100;
+  flex-direction: column;
+}
+.top-banner-title {
+  color: $color-white;
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  width: 100%;
+}
+.banner-link {
+  @include font-size-weight($font-size-xxl, 400);
+  @include align-center;
+  color: $color-white;
+  text-decoration: underline;
+  padding-top: 1rem;
+  .arrow-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    text-align: center;
+    margin-right: 1rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+  }
+}
+.services {
+  width: 80%;
+  display: none;
+  background-color: $color-white;
+  border-radius: 0 70px 0 0;
+  padding-left: 30%;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -154px;
+}
+.list-services {
+  @include align-start;
+  margin-right: 2.5rem;
+  .list-item {
+    display: flex;
+    flex: 1;
+    padding: 1.5rem 1rem 0 0;
+  }
+}
+.section-collection {
+  margin: 3rem auto;
+}
+.bottom-banner-content {
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 1;
+}
+.subscribe-form {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.introduct-card .card-description {
+  color: #808080;
+  font-weight: 400;
+}
+.section-introduct {
+  margin: 3rem 0;
+  background-color: map-get($color-gray, "f6");
+  .section-header {
+    padding-top: 3rem;
+  }
+  .list-group {
+    align-items: flex-start;
+    padding-bottom: 2rem;
+  }
+  .product-card {
+    padding: 01rem;
+    flex-direction: column;
+  }
+  img {
+    width: 4.25rem;
+    height: 4.25rem;
+    @include justify-center-align-center;
+    margin-bottom: 3rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+}
+.product-card {
+  .badge {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 2;
+  }
+}
+.collection-card .badge {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  z-index: 2;
+}
+.logo-link {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+}
+.product-card .card-description {
+  color: #808080;
+  font-weight: 400;
+}
+.section-today-suggestions {
+  margin-bottom: 3rem;
+}
+.section-bottom-banner {
+  height: 240px;
+  background: url(../asset/images/bottom_banner_background.png) no-repeat;
+  position: relative;
+  &::before {
+    @include mask-gray;
+  }
+}
+.section-bottom-banner {
+  .bottom-banner {
+    @include justify-center;
+    flex-direction: column;
+  }
+}
+.bottom-banner-title {
+  @include font-size-weight($font-size-xxl, 400);
+  color: $color-white;
+  z-index: 1;
+}
+.section-bottom-banner {
+  .btn {
+    @include align-center;
+    z-index: 1;
+  }
+}
+.section-introduct {
+  .card-title {
+    @include font-size-weight($font-size-m, 700);
+  }
+}
+.section-collection {
+  .card-title {
+    color: $color-white;
+    @include font-size-weight($font-size-xxl, 400);
+  }
+}
+.service-card {
+  .card-title {
+    font-weight: 700;
+    color: $color-black;
+  }
+  .card-description {
+    @include font-size-weight($font-size-xs, 400);
+    color: map-get($color-gray, "a8");
+  }
+}
+@media (min-width: 1200px) {
+  .section-top-banner {
+    background: url(../asset/images/top_banner_background.png) no-repeat;
+  }
+  .services {
+    display: block;
+  }
+  .logo-link {
+    color: $color-white;
+  }
+  .subscribe-form {
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .banner-content {
+    width: 40%;
+    top: 20%;
+    left: 20%;
+  }
+}
