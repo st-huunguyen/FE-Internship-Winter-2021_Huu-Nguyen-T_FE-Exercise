@@ -3,65 +3,63 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-ul {}
-
+ul,
 li {
   list-style: none;
 }
-body{
-  width:800px;
-  margin:50px auto;
-  border:3px solid #800000;
-  font-family: Roboto,sans-serif;
+body {
+  width: 800px;
+  margin: 50px auto;
+  border: 3px solid #800000;
+  font-family: Roboto, sans-serif;
   color: #3c3c3c;
 }
-form{
-  width:200px;
-  margin:50px auto;
+form {
+  width: 200px;
+  margin: 50px auto;
 }
-#options{
-  margin:100px auto;
-  width:100%;
+#options {
+  margin: 100px auto;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-#options>li{
-  width:380px;
+#options > li {
+  width: 380px;
   height: 200px;
   border: 1px solid #cecece;
   border-radius: 5px;
   text-align: center;
 }
 .card-title,
-.card-price{
-  height:2.5rem;
+.card-price {
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card-title{
+.card-title {
   border-bottom: 1px solid #cecece;
 }
-.groupBenefit{
-  font-size:12px;
+.groupBenefit {
+  font-size: 12px;
 }
 .btn-secondary,
-.btn-primary{
-width:90%;
-border-radius: 5px;
-border: none;
-height: 2rem;
-margin:10px auto;
+.btn-primary {
+  width: 90%;
+  border-radius: 5px;
+  border: none;
+  height: 2rem;
+  margin: 10px auto;
 }
-.btn-secondary{
-  border:1px solid #157FFB;
-  color:#157FFB;
+.btn-secondary {
+  border: 1px solid #157ffb;
+  color: #157ffb;
   background-color: transparent;
 }
-.btn-primary{
-  color:#ffffff;
-  background-color: #157FFB;
+.btn-primary {
+  color: #ffffff;
+  background-color: #157ffb;
 }
