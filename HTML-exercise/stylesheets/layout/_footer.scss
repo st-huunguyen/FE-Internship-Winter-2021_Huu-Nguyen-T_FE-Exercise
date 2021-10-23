@@ -71,8 +71,8 @@
       .about-us-detail {
         .social-network {
           .list-group {
-            display: inline-block;
             @include flex-center-between;
+            display: inline-block;
           }
         }
         .description-content {

@@ -5,8 +5,8 @@
   padding: 0 2rem;
 }
 .row {
-  margin: 0 - (map-get($font-size, "xxxxs"));
   @include flex-center-between;
+  margin: 0 - (map-get($font-size, "xxxxs"));
   flex-wrap: wrap;
   & [class*="col"] {
     padding: 0 map-get($font-size, "xxxxs");
@@ -30,8 +30,8 @@
     padding: 0 0.625rem;
   }
   .row {
-    margin: 0 - (map-get($font-size, "xxxs"));
     @include flex-center-between;
+    margin: 0 - (map-get($font-size, "xxxs"));
     flex-wrap: wrap;
     & [class*="col"] {
       padding: 0 map-get($font-size, "xxxs");
@@ -41,7 +41,6 @@
       }
     }
   }
-
   @for $i from 1 through 12 {
     .col-xl-#{$i} {
       width: ($i / 12 * 100%);

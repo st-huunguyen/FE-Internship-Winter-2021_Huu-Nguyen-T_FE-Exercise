@@ -152,8 +152,8 @@
       color: map-get($color, "white");
       z-index: 1;
       .bottom-banner-title {
-        width: 80%;
         @include font-size-weight(map-get($font-size, "xxl"), 400);
+        width: 80%;
         color: map-get($color, "white");
       }
     }

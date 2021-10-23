@@ -1,5 +1,5 @@
 .badge {
-  @include font-size-weight(map-get($font-size,"xs"),600);
+  @include font-size-weight(map-get($font-size, "xs"), 600);
   position: absolute;
   z-index: 2;
   height: 2rem;
@@ -8,8 +8,8 @@
   text-align: center;
   border-radius: 1rem;
   border: none;
-  color: map-get($color, "white" );
+  color: map-get($color, "white");
   &.badge-danger {
-    background-color: map-get($color, "red" );
+    background-color: map-get($color, "red");
   }
 }
