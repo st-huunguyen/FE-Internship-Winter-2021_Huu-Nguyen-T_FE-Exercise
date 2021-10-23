@@ -1,4 +1,4 @@
-@mixin font-size-weight($size , $weight){
+@mixin font-size-weight($size, $weight) {
   font-size: $size;
   font-weight: $weight;
 }
@@ -10,22 +10,22 @@
   display: flex;
   align-items: center;
 }
-@mixin justify-between-align-center {
+@mixin flex-center-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-@mixin justify-center-align-center {
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@mixin justify-center-align-start {
+@mixin flex-start-center {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-@mixin justify-between-align-start {
+@mixin flex-start-between {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -46,4 +46,3 @@
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-

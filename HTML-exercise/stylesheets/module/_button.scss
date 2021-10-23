@@ -1,17 +1,18 @@
 .btn {
-  @include font-size-weight($font-size-s, 800);
-  @include justify-center;
+  @include font-size-weight(map-get($font-size, "s"), 800);
+  @include flex-center;
   height: 3rem;
-  padding: 0.875rem;
+  padding: 0.5rem 1rem;
   border-radius: 1.5rem;
   border: none;
   text-transform: uppercase;
+  white-space: nowrap;
+  background-color: map-get($color, "white");
   &.btn-outline {
-    border: 1px solid map-get($color-gray, "c4");
+    border: 1px solid map-get($color, "gray-e");
     background-color: transparent;
   }
   &.btn-primary {
-      background-color: $color-primary;
-    }
+    background-color: map-get($color, "primary");
+  }
 }
-

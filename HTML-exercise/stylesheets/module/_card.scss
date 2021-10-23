@@ -1,13 +1,19 @@
 .card {
   width: 100%;
-  position: relative;
   overflow: hidden;
+  margin-bottom: 0.625rem;
   .card-title {
-    @include font-size-weight($font-size-m, 300);
-    color: $color-black;
+    @include font-size-weight(map-get($font-size, "m"), 300);
+  }
+}
+.collection-card {
+  @include justify-center;
+  position: relative;
+  &::after {
+    @include mask-gray;
   }
   .card-info {
-    @include justify-between-align-start;
+    @include flex-start-between;
     width: 70%;
     height: 40%;
     position: absolute;
@@ -17,15 +23,28 @@
     z-index: 1;
   }
 }
-.collection-card {
-  @include justify-center;
-  &::after {
-    @include mask-gray;
+.service-card {
+  display: flex;
+  flex: 1;
+  .card-title {
+    font-weight: 700;
+    color: map-get($color, "black");
+  }
+  .card-description {
+    @include font-size-weight(map-get($font-size, "xs"), 400);
+    color: map-get($color, "gray-c");
+  }
+  img {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    background-color: map-get($color, "gray-g");
   }
 }
-.service-card img {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 0.5rem;
-  background-color: map-get($color-gray, "ff");
+.product-card {
+  .card-description {
+    color: map-get($color, "gray-b");
+    font-weight: 400;
+  }
 }
