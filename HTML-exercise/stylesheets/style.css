@@ -50,9 +50,9 @@ img {
   }
 }
 .price {
-  color: #333333;
   font-size: 1.25rem;
   font-weight: 400;
+  color: #333333;
 }
 
 .text-primary {
@@ -192,14 +192,14 @@ img {
 }
 
 .row {
-  margin: -0.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: -4px;
   flex-wrap: wrap;
 }
 .row [class*=col] {
-  padding: 0 0.4rem;
+  padding: 0 4px;
 }
 .row [class*=col] .col {
   display: flex;
@@ -265,16 +265,16 @@ img {
   }
 
   .row {
-    margin: -0.625rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: -10px;
     flex-wrap: wrap;
   }
   .row [class*=col] {
-    padding: 0 0.625rem;
+    padding: 0 10px;
   }
-  .row [class*=col] .col {
+  .row .col {
     display: flex;
     flex: 1;
   }
@@ -408,10 +408,10 @@ img {
 
 @media (min-width: 1200px) {
   .section-footer-top .footer-top-content .about-us-detail .social-network .list-group, .section-footer-top .footer-top-content .about-us-detail .social-network .list-item {
-    display: inline-block;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: inline-block;
   }
   .section-footer-top .footer-top-content .about-us-detail .description-content {
     font-size: 1rem;
@@ -676,9 +676,9 @@ img {
   z-index: 1;
 }
 .section-bottom-banner .bottom-banner .bottom-banner-content .bottom-banner-title {
-  width: 80%;
   font-size: 1.5rem;
   font-weight: 400;
+  width: 80%;
   color: #ffffff;
 }
 
