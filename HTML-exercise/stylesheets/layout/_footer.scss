@@ -2,13 +2,13 @@
   background-color: map-get($color, "primary");
 }
 .section-footer-bottom {
-  @include justify-center-align-center;
+  @include flex-center;
   height: 3.5rem;
   color: map-get($color, "white");
   border-top: 1px solid map-get($color, "white");
 }
 .section-footer-top {
-  @include justify-between-align-center;
+  @include flex-center-between;
   padding: 3rem auto;
   .footer-top-content {
     @include align-start;
@@ -35,7 +35,7 @@
         margin: 3rem 0;
         width: 12.75rem;
         .list-group {
-          @include justify-between-align-center;
+          @include flex-center-between;
         }
       }
     }

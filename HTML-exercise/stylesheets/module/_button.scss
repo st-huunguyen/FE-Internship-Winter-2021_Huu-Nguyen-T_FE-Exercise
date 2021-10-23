@@ -1,8 +1,8 @@
 .btn {
   @include font-size-weight(map-get($font-size, "s"), 800);
   @include justify-center;
-  height: 3rem;
-  padding: 0.875rem;
+  height: 2.5rem;
+  padding: .5rem 1rem;
   border-radius: 1.5rem;
   border: none;
   text-transform: uppercase;

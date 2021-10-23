@@ -5,17 +5,19 @@
   padding: 0 10px;
 }
 .row {
-  margin: 0 -.625rem;
-  @include justify-between-align-center;
+  margin: 0 -(map-get($font-size, "xxxs" ));
+  @include flex-center-between;
   flex-wrap: wrap;
+  & [class*="col"] {
+    padding: 0 map-get($font-size, "xxxs" );
+    .col{
+      display: flex;
+      flex: 1;
+    }
+  }
 }
-.row [class*="col"] {
-  padding: 0 .625rem;
-}
-.col{
-  display: flex;
-  flex: 1;
-}
+
+
 @for $i from 1 through 12 {
   .col-#{$i} {
     width : ($i / 12 * 100%);

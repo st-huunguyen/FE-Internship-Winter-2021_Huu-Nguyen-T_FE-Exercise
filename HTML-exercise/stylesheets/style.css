@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +30,7 @@ a {
 }
 
 img {
-  width: 110%;
+  width: 100%;
 }
 
 .logo-link {
@@ -89,8 +90,8 @@ img {
   font-weight: 800;
   display: flex;
   justify-content: center;
-  height: 3rem;
-  padding: 0.875rem;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 1.5rem;
   border: none;
   text-transform: uppercase;
@@ -191,18 +192,16 @@ img {
 }
 
 .row {
-  margin: 0 -0.625rem;
+  margin: -0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .row [class*=col] {
   padding: 0 0.625rem;
 }
-
-.col {
+.row [class*=col] .col {
   display: flex;
   flex: 1;
 }
@@ -409,11 +408,14 @@ img {
   z-index: 100;
   top: 0;
 }
-.page-header .for-desktop {
+.page-header .header-desktop {
   display: none;
 }
-.page-header .for-mobile {
+.page-header .header-mobile {
   display: block;
+}
+.page-header .header-mobile .logo-link {
+  color: #333333;
 }
 .page-header .header-logo {
   display: flex;
@@ -433,7 +435,7 @@ img {
   color: #fbb03b;
   white-space: nowrap;
 }
-.page-header nav {
+.page-header .navigation {
   display: none;
 }
 
@@ -442,13 +444,13 @@ img {
     background-color: transparent;
     top: 3rem;
   }
-  .page-header .for-desktop {
+  .page-header .header-desktop {
     display: block;
   }
-  .page-header .for-mobile {
+  .page-header .header-mobile {
     display: none;
   }
-  .page-header nav {
+  .page-header .navigation {
     display: block;
   }
   .page-header .shop-detail {
@@ -471,8 +473,7 @@ img {
   height: 800px;
   position: relative;
   background: url(../asset/images/mobile_top_banner_background.png) no-repeat;
-  background-size: 100% auto;
-  object-fit: cover;
+  background-size: auto 100%;
 }
 .section-top-banner::before {
   content: "";
@@ -547,6 +548,9 @@ img {
   font-size: 1.5rem;
   font-weight: 400;
   color: #ffffff;
+}
+.section-collection .collection-card {
+  padding: 0;
 }
 .section-collection .collection-card .badge {
   position: absolute;
@@ -632,18 +636,20 @@ img {
   z-index: 1;
 }
 .section-bottom-banner .bottom-banner .bottom-banner-content .bottom-banner-title {
+  width: 80%;
   font-size: 1.5rem;
   font-weight: 400;
   color: #ffffff;
 }
-.section-bottom-banner .bottom-banner .bottom-banner-content .subscribe-form {
+
+.subscribe-form {
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
 }
-.section-bottom-banner .bottom-banner .bottom-banner-content .subscribe-form .btn {
+.subscribe-form .btn {
   display: flex;
   align-items: center;
 }
@@ -661,9 +667,10 @@ img {
     color: #ffffff;
   }
 
-  .subscribe-form {
+  .section-bottom-banner .subscribe-form {
     height: 100%;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 

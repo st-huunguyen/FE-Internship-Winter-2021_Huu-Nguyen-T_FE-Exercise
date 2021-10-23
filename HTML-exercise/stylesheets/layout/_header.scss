@@ -7,11 +7,14 @@
   position: absolute;
   z-index: 100;
   top: 0;
-  .for-desktop {
+  .header-desktop {
     display: none;
   }
-  .for-mobile {
+  .header-mobile {
     display: block;
+    .logo-link {
+      color: map-get($color, "black");
+    }
   }
   .header-logo {
     @include align-center;
@@ -22,12 +25,12 @@
   }
   .logo-link,
   .nav-link {
-    @include justify-between-align-center;
+    @include flex-center-between;
     @include font-size-weight(map-get($font-size, "xl"), 700);
     color: map-get($color, "primary");
     white-space: nowrap;
   }
-  nav {
+  .navigation {
     display: none;
   }
 }
@@ -35,13 +38,13 @@
   .page-header {
     background-color: transparent;
     top: 3rem;
-    .for-desktop {
+    .header-desktop {
       display: block;
     }
-    .for-mobile {
+    .header-mobile {
       display: none;
     }
-    nav {
+    .navigation {
       display: block;
     }
     .shop-detail {

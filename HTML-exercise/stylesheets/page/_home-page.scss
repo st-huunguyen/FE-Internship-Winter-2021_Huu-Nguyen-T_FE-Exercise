@@ -8,8 +8,7 @@
   height: 800px;
   position: relative;
   background: url(../asset/images/mobile_top_banner_background.png) no-repeat;
-  background-size: 100% auto;
-  object-fit:cover;
+  background-size: auto 100%;
   &::before {
     @include mask-gray;
   }
@@ -72,11 +71,14 @@
     @include font-size-weight(map-get($font-size, "xxl"), 400);
     color: map-get($color, "white");
   }
-  .collection-card .badge {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    z-index: 2;
+  .collection-card{
+    padding:0;
+    .badge {
+      position: absolute;
+      top: 25%;
+      left: 10%;
+      z-index: 2;
+    }
   }
 }
 .section-suggestions .section-header,
@@ -98,7 +100,7 @@
     padding-bottom: 2rem;
   }
   img {
-    @include justify-center-align-center;
+    @include flex-center;
     width: 4.25rem;
     height: 4.25rem;
     margin-bottom: 3rem;
@@ -141,20 +143,21 @@
       color: map-get($color, "white");
       z-index: 1;
       .bottom-banner-title {
+        width:80%;
         @include font-size-weight(map-get($font-size, "xxl"), 400);
         color: map-get($color, "white");
       }
-      .subscribe-form {
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        .btn {
-          @include align-center;
-        }
-      }
     }
+  }
+}
+.subscribe-form {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  .btn {
+    @include align-center;
   }
 }
 @media (min-width: 1200px) {
@@ -167,10 +170,13 @@
   .logo-link {
     color: map-get($color, "white");
   }
-  .subscribe-form {
-    height: 100%;
-    flex-direction: row;
-    align-items: center;
+  .section-bottom-banner {
+    .subscribe-form {
+      height: 100%;
+      flex-direction: row;
+      justify-content:space-between ;
+      align-items: center;
+    }
   }
   .banner-content {
     width: 40%;

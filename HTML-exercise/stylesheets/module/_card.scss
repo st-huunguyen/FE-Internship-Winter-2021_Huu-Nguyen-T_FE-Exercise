@@ -14,7 +14,7 @@
     @include mask-gray;
   }
   .card-info {
-    @include justify-between-align-start;
+    @include flex-start-between;
     width: 70%;
     height: 40%;
     position: absolute;
