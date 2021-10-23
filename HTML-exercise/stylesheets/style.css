@@ -90,7 +90,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.5rem;
+  height: 3rem;
   padding: 0.5rem 1rem;
   border-radius: 1.5rem;
   border: none;
@@ -364,7 +364,7 @@ img {
   height: 3rem;
 }
 .section-footer-top .footer-top-content .about-us-detail .description-content {
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   font-weight: 300;
   color: #ffffff;
   width: 90%;
@@ -374,9 +374,7 @@ img {
   width: 12.75rem;
 }
 .section-footer-top .footer-top-content .about-us-detail .social-network .list-group, .section-footer-top .footer-top-content .about-us-detail .social-network .list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
 }
 
 .shop-detail {
@@ -393,13 +391,13 @@ img {
 .shop-detail .list-item .shop-detail-title {
   color: #ffffff;
   line-height: 2.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .shop-detail .list-item .list-group, .shop-detail .list-item .list-item {
   display: flex;
   align-items: flex-start;
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 300;
   flex-direction: column;
   color: #ffffff;
 }
@@ -409,8 +407,27 @@ img {
 }
 
 @media (min-width: 1200px) {
+  .section-footer-top .footer-top-content .about-us-detail .social-network .list-group, .section-footer-top .footer-top-content .about-us-detail .social-network .list-item {
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-footer-top .footer-top-content .about-us-detail .description-content {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
   .shop-detail {
     flex-direction: row;
+  }
+  .shop-detail .list-item .shop-detail-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .shop-detail .list-item .list-group, .shop-detail .list-item .list-item {
+    font-size: 1rem;
+    font-weight: 300;
   }
 }
 .page-header {

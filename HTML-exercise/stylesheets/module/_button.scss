@@ -1,7 +1,7 @@
 .btn {
   @include font-size-weight(map-get($font-size, "s"), 800);
   @include flex-center;
-  height: 2.5rem;
+  height: 3rem;
   padding: .5rem 1rem;
   border-radius: 1.5rem;
   border: none;

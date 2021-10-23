@@ -5,12 +5,12 @@
   padding: 0 2rem;
 }
 .row {
-  margin: 0 -(map-get($font-size, "xxxxs" ));
+  margin: 0 - (map-get($font-size, "xxxxs"));
   @include flex-center-between;
   flex-wrap: wrap;
   & [class*="col"] {
-    padding: 0 map-get($font-size, "xxxxs" );
-    .col{
+    padding: 0 map-get($font-size, "xxxxs");
+    .col {
       display: flex;
       flex: 1;
     }
@@ -18,7 +18,7 @@
 }
 @for $i from 1 through 12 {
   .col-#{$i} {
-    width : ($i / 12 * 100%);
+    width: ($i / 12 * 100%);
   }
 }
 @media (min-width: 1200px) {
@@ -27,15 +27,15 @@
   }
   .container {
     max-width: 1170px;
-    padding: 0 .625rem;
+    padding: 0 0.625rem;
   }
   .row {
-    margin: 0 -(map-get($font-size, "xxxs" ));
+    margin: 0 - (map-get($font-size, "xxxs"));
     @include flex-center-between;
     flex-wrap: wrap;
     & [class*="col"] {
-      padding: 0 map-get($font-size, "xxxs" );
-      .col{
+      padding: 0 map-get($font-size, "xxxs");
+      .col {
         display: flex;
         flex: 1;
       }
