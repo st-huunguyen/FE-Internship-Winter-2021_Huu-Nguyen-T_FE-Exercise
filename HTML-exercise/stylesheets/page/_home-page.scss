@@ -72,6 +72,7 @@
     color: map-get($color, "white");
   }
   .collection-card{
+    position: relative;
     padding:0;
     .badge {
       position: absolute;

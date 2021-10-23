@@ -90,11 +90,13 @@ img {
   font-weight: 800;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 2.5rem;
   padding: 0.5rem 1rem;
   border-radius: 1.5rem;
   border: none;
   text-transform: uppercase;
+  white-space: nowrap;
   background-color: #ffffff;
 }
 .btn.btn-outline {
@@ -114,6 +116,30 @@ img {
   font-size: 1rem;
   font-weight: 300;
   color: #333333;
+}
+.card .add-cart-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  box-shadow: 0 0 1rem 0.3rem #808080;
+}
+.card .add-cart-btn:hover {
+  box-shadow: 0 0 1rem 0.3rem #a8a8a8;
+  transition: 0.2s;
+}
+.card .add-cart-btn:active {
+  box-shadow: 0 0 1rem 0.3rem #c4c4c4;
+  transition: 0.2s;
+}
+.card:hover > .add-cart-btn {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.4s;
 }
 
 .collection-card {
@@ -550,6 +576,7 @@ img {
   color: #ffffff;
 }
 .section-collection .collection-card {
+  position: relative;
   padding: 0;
 }
 .section-collection .collection-card .badge {

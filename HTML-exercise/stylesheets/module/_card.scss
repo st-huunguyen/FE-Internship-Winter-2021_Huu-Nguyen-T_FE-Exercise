@@ -6,6 +6,30 @@
     @include font-size-weight(map-get($font-size,"m"), 300);
     color: map-get($color, "black" );
   }
+  .add-cart-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5; 
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    box-shadow: 0 0 1rem .3rem map-get($color, "gray-b" );
+    &:hover{
+      box-shadow: 0 0 1rem .3rem map-get($color, "gray-c" );
+      transition: 0.2s;
+    }
+    &:active{
+      box-shadow: 0 0 1rem .3rem map-get($color, "gray-e" );
+      transition: 0.2s;
+    }
+  }
+  &:hover>.add-cart-btn{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.4s;
+  }
 }
 .collection-card {
   @include justify-center;
