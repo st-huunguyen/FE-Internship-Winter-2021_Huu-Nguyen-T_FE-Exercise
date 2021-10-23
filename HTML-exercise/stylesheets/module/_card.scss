@@ -1,10 +1,9 @@
 .card {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: .625rem;
   .card-title {
     @include font-size-weight(map-get($font-size,"m"), 300);
-    color: map-get($color, "black" );
   }
 }
 .collection-card {

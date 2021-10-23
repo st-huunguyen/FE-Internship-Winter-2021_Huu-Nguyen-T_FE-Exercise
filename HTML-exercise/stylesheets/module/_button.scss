@@ -1,11 +1,12 @@
 .btn {
   @include font-size-weight(map-get($font-size, "s"), 800);
-  @include justify-center;
+  @include flex-center;
   height: 2.5rem;
   padding: .5rem 1rem;
   border-radius: 1.5rem;
   border: none;
   text-transform: uppercase;
+  white-space: nowrap;
   background-color: map-get($color, "white");
   &.btn-outline {
     border: 1px solid map-get($color, "gray-e");
