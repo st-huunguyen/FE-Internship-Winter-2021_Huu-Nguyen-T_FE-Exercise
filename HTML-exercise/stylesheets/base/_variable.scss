@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Helvetica', sans-serif;
+$color: (
+  "primary": #fbb03b,
+  "red": #FF0000,
+  "black": #333333,
+  "white": #ffffff,
+  "gray-a":#ababab,
+  "gray-b":#808080,
+  "gray-c":#a8a8a8,
+  "gray-d":#cecece,
+  "gray-e":#c4c4c4,
+  "gray-f":#f6f6f6,
+  "gray-g":#fff3df,
+);
+$font-size: (
+  "xxxxs": 0.5rem,
+  "xxxs": 0.625rem,
+  "xxs": 0.6875rem,
+  "xs": 0.75rem,
+  "s": 0.875rem,
+  "m": 1rem,
+  "l": 1.125rem,
+  "xl": 1.25rem,
+  "xxl": 1.5rem,
+  "xxxl": 2rem,
+  "xxxxl": 4.5rem,
+)
