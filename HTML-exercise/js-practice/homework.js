@@ -15,7 +15,7 @@ calculateOddTotal(array);
 // 2
 var cutString = function (string) {
   if (string && string.length > 15) {
-    string = string.slice(0, 10).concat("...");
+    string = string.slice(0, 10).concat('...');
   }
   return string;
 };
@@ -45,9 +45,9 @@ function student(_name, _age, _school) {
   this.school = _school;
 }
 var listStudent = [
-  new student("John", 26, "Cambridge"),
-  new student("Mark", 30, "Oxford"),
-  new student("Bill", 28, "Havard"),
+  new student('John', 26, 'Cambridge'),
+  new student('Mark', 30, 'Oxford'),
+  new student('Bill', 28, 'Havard'),
 ];
 
 //  5.1
@@ -57,15 +57,15 @@ function student(_name, _age, _school) {
   this.school = _school;
 }
 var listStudent = [
-  new student("John", 26, "Cambridge"),
-  new student("Mark", 30, "Oxford"),
-  new student("Bill", 28, "Havard"),
+  new student('John', 26, 'Cambridge'),
+  new student('Mark', 30, 'Oxford'),
+  new student('Bill', 28, 'Havard'),
 ];
 student.prototype.coding = function () {
   if (this.age >= 28) {
-    return console.log("coding master");
+    return console.log('coding master');
   }
-  return console.log("learning code");
+  return console.log('learning code');
 };
 listStudent[1].coding();
 listStudent[0].coding();
@@ -85,7 +85,7 @@ var findDuplicateNumberOf2Array = function (array1, array2) {
 
 // 7
 var getTotalDigit = function (number) {
-  var stringNumber = number.toString().split("");
+  var stringNumber = number.toString().split('');
   var sum = 0;
   for (var i = 0; i < stringNumber.length; i++) {
     sum += parseInt(stringNumber[i]);

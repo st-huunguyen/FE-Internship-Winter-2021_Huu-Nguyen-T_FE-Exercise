@@ -16,7 +16,7 @@ var calculateDifferenceWith19ByEachCase = function (number) {
 var findNumberFromInputDivisibleForOtherNumber = function (input, number) {
   var output = [];
   for (var i = 0; i <= 9; i++) {
-    var change = input.replace("*", i);
+    var change = input.replace('*', i);
     change = parseInt(change);
     if (change % number === 0) {
       output.push(change);
