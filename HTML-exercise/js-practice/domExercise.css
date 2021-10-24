@@ -43,6 +43,7 @@ form {
 }
 .card-title {
   border-bottom: 1px solid #cecece;
+  background-color: #f7f7f7;
 }
 .groupBenefit {
   font-size: 12px;
