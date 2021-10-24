@@ -1,7 +1,11 @@
 #cart-page {
   display: block;
   .container {
-    display: flex;
+    @include flex-center;
+    flex-wrap: wrap;
+  }
+  .text-center{
+    text-align: center;
   }
   .logo-link,
   .nav-link {
@@ -42,11 +46,41 @@
         }
         .center-line{
           height: 50%;
-          width:80px;
+          width:100px;
           border-top: 1px solid map-get($color, "gray-h" );
           margin:0 .625rem;
         }
       }
     }
+    .shopping-product{
+      margin: 3rem auto;
+      .table-title{
+        color: map-get($color , "gray-k" );
+      }
+      &-table{
+        .mini-card{
+          @include align-center;
+          margin: 1rem 0;
+          &-image{
+            width:60px;
+            height:60px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 3rem;
+          }
+          &-id{
+            color: map-get($color , "gray-e" );
+            font-weight: normal;
+          }
+        }
+        .amount{
+         
+          margin:0 auto;
+          width:8rem;
+          justify-content: space-around;
+        }
+      }
+    }
   }
+
 }
