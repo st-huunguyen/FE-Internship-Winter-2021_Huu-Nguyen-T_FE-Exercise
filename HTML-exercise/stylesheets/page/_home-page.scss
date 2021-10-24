@@ -1,187 +1,236 @@
-.section-header {
-  @include font-size-weight(map-get($font-size, "xxl"), 300);
-  @include justify-center;
-  color: map-get($color, "black");
-  margin-bottom: 2rem;
-}
-.section-top-banner {
-  height: 800px;
-  position: relative;
-  background: url(../asset/images/mobile_top_banner_background.png) no-repeat;
-  background-size: auto 100%;
-  &::before {
-    @include mask-gray;
+#home-page{
+  display: none;
+  .section-header {
+    .section-title {
+      @include font-size-weight(map-get($font-size, "xl"), 300);
+      @include justify-center;
+      color: map-get($color, "black");
+      margin-bottom: 2rem;
+    }
   }
-  .top-banner {
+  .section-top-banner {
+    height: 800px;
     position: relative;
-    .banner-content {
-      @include justify-between;
-      position: absolute;
-      top: 40%;
-      left: 5%;
-      z-index: 100;
-      flex-direction: column;
-      .top-banner-title {
-        color: map-get($color, "white");
-        font-size: map-get($font-size, "xxxxl");
-        line-height: 4.5rem;
-        width: 100%;
-      }
-      .banner-link {
-        @include font-size-weight(map-get($font-size, "xxl"), 400);
-        @include align-center;
-        color: map-get($color, "white");
-        text-decoration: underline;
-        padding-top: 1rem;
-        .arrow-icon {
-          width: 2.25rem;
-          height: 2.25rem;
-          text-align: center;
-          margin-right: 1rem;
-          background-color: map-get($color, "primary");
-          border-radius: 50%;
+    background: url(../asset/images/mobile_top_banner_background.png) no-repeat;
+    background-size: auto 100%;
+    &::before {
+      @include mask-gray;
+    }
+    .top-banner {
+      position: relative;
+      .banner-content {
+        @include justify-between;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        z-index: 100;
+        flex-direction: column;
+        .top-banner-title {
+          color: map-get($color, "white");
+          font-size: map-get($font-size, "xxxxl");
+          line-height: 4.5rem;
+          width: 100%;
+        }
+        .banner-link {
+          @include font-size-weight(map-get($font-size, "xxl"), 400);
+          @include align-center;
+          color: map-get($color, "white");
+          text-decoration: underline;
+          padding-top: 1rem;
+          .arrow-icon {
+            width: 2.25rem;
+            height: 2.25rem;
+            text-align: center;
+            margin-right: 1rem;
+            background-color: map-get($color, "primary");
+            border-radius: 50%;
+          }
         }
       }
     }
   }
-}
-.services {
-  display: none;
-  background-color: map-get($color, "white");
-  border-radius: 0 70px 0 0;
-  padding-left: 25%;
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-  left: -154px;
-  .list-services {
-    @include align-start;
-    width: 90%;
-    margin-right: 2.5rem;
-    .list-item {
-      display: flex;
-      flex: 1;
-      padding: 2rem 0;
-    }
-  }
-}
-.section-collection {
-  margin: 3rem auto;
-  .card-title {
-    @include font-size-weight(map-get($font-size, "xxl"), 400);
-    color: map-get($color, "white");
-  }
-  .collection-card{
-    position: relative;
-    padding:0;
-    .badge {
-      position: absolute;
-      top: 25%;
-      left: 10%;
-      z-index: 2;
-    }
-  }
-}
-.section-suggestions .section-header,
-.section-suggestions .card-price,
-.section-today-suggestions .card-price {
-  @include justify-between;
-}
-.section-suggestions {
-  margin-top: 6rem 0 3rem 0;
-}
-.section-introduct {
-  margin: 3rem 0;
-  background-color: map-get($color, "gray-f");
-  .section-header {
-    padding-top: 3rem;
-  }
-  .list-group {
-    align-items: flex-start;
-    padding-bottom: 2rem;
-  }
-  img {
-    @include flex-center;
-    width: 4.25rem;
-    height: 4.25rem;
-    margin-bottom: 3rem;
+  .services {
+    display: none;
     background-color: map-get($color, "white");
-    border-radius: 10px;
-  }
-  .introduct-card {
-    .card-title {
-      @include font-size-weight(map-get($font-size, "m"), 700);
-    }
-    .card-description {
-      color: map-get($color, "gray-b");
-      font-weight: 400;
-    }
-  }
-}
-.product-card {
-  position: relative;
-  .badge {
+    border-radius: 0 70px 0 0;
+    padding-left: 25%;
     position: absolute;
-    top: 5%;
-    left: 5%;
-    z-index: 2;
-  }
-}
-.section-bottom-banner {
-  height: 240px;
-  background: url(../asset/images/bottom_banner_background.png) no-repeat;
-  position: relative;
-  &::before {
-    @include mask-gray;
-  }
-  .bottom-banner {
-    @include justify-center;
-    flex-direction: column;
-    .bottom-banner-content {
-      height: 100%;
-      font-size: map-get($font-size, "xxl");
-      font-weight: 400;
-      color: map-get($color, "white");
-      z-index: 1;
-      .bottom-banner-title {
-        width:80%;
-        @include font-size-weight(map-get($font-size, "xxl"), 400);
-        color: map-get($color, "white");
+    z-index: 0;
+    bottom: 0;
+    left: -154px;
+    .list-services {
+      @include align-start;
+      width: 90%;
+      margin-right: 2.5rem;
+      .list-item {
+        display: flex;
+        flex: 1;
+        padding: 2rem 0;
       }
     }
   }
-}
-.subscribe-form {
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  .btn {
-    @include align-center;
-  }
-}
-@media (min-width: 1200px) {
-  .section-top-banner {
-    background: url(../asset/images/top_banner_background.png) no-repeat;
-  }
-  .services {
-    display: block;
-  }
-  .logo-link {
-    color: map-get($color, "white");
-  }
-  .section-bottom-banner {
-    .subscribe-form {
-      height: 100%;
-      flex-direction: row;
-      justify-content:space-between ;
-      align-items: center;
+  .section-collection {
+    margin: 3rem auto;
+    .card-title {
+      @include font-size-weight(map-get($font-size, "xl"), 400);
+      color: map-get($color, "white");
+    }
+    .collection-card {
+      padding: 0;
+      .badge {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        z-index: 2;
+      }
     }
   }
-  .banner-content {
-    width: 40%;
-    top: 30%;
-    left: 12%;
+  .section-suggestions .section-header,
+  .section-suggestions .card-price,
+  .section-today-suggestions .card-price {
+    @include justify-between;
+  }
+  .section-suggestions {
+    margin-top: 6rem 0 3rem 0;
+  }
+  .section-introduct {
+    padding: 0 0.625rem;
+    margin: 3rem 0;
+    background-color: map-get($color, "gray-f");
+    .section-header {
+      padding: 3rem 0;
+    }
+    .list-group {
+      align-items: flex-start;
+      padding-bottom: 2rem;
+      flex-direction: row;
+    }
+    img {
+      @include flex-center;
+      width: 5rem;
+      height: 5rem;
+      margin: 0 2rem 3rem 0;
+      background-color: map-get($color, "white");
+      border-radius: 10px;
+    }
+    .introduct-card {
+      display: flex;
+      flex-direction: row;
+      .card-title {
+        @include font-size-weight(map-get($font-size, "m"), 700);
+      }
+      .card-description {
+        color: map-get($color, "gray-b");
+        font-weight: 400;
+      }
+    }
+  }
+  .product-card {
+    position: relative;
+    .badge {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      z-index: 2;
+    }
+    .add-cart-btn{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 10;
+      box-shadow: 0 0 1rem .25rem rgba(0,0,0,0.3);
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
+      &:hover{
+        box-shadow: 0 0 1rem .25rem rgba(0,0,0,0.5);
+      }
+      &:active{
+        box-shadow: 0 0 1rem .25rem rgba(0,0,0,0.7);
+      }
+    }
+    &:hover>.add-cart-btn{
+      visibility: visible;
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
+  .section-today-suggestions {
+    margin-bottom: 3rem;
+  }
+  .section-bottom-banner {
+    height: 240px;
+    background: url(../asset/images/bottom_banner_background.png) no-repeat;
+    position: relative;
+    &::before {
+      @include mask-gray;
+    }
+    .bottom-banner {
+      @include justify-center;
+      flex-direction: column;
+      .bottom-banner-content {
+        height: 100%;
+        font-size: map-get($font-size, "xxl");
+        font-weight: 400;
+        color: map-get($color, "white");
+        z-index: 1;
+        .bottom-banner-title {
+          @include font-size-weight(map-get($font-size, "xxl"), 400);
+          width: 80%;
+          color: map-get($color, "white");
+        }
+      }
+    }
+  }
+  .subscribe-form {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    .btn {
+      @include align-center;
+    }
+  }
+  @media (min-width: 1200px) {
+    .section-top-banner {
+      background: url(../asset/images/top_banner_background.png) no-repeat;
+    }
+    .section-header {
+      .section-title {
+        @include font-size-weight(map-get($font-size, "xxxl"), 300);
+      }
+    }
+    .services {
+      display: block;
+    }
+    .logo-link {
+      color: map-get($color, "white");
+    }
+    .section-introduct {
+      .introduct-card {
+        flex-direction: column;
+      }
+    }
+    .section-collection {
+      .card-title {
+        @include font-size-weight(map-get($font-size, "xxl"), 400);
+      }
+    }
+    .section-bottom-banner {
+      .subscribe-form {
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .banner-content {
+      width: 40%;
+      top: 30%;
+      left: 12%;
+    }
   }
 }
+

@@ -12,12 +12,12 @@
   }
   .header-mobile {
     display: block;
+    padding: 0.5rem;
     .logo-link {
       color: map-get($color, "black");
     }
   }
   .header-logo {
-    @include align-center;
     .logo {
       margin-right: 1rem;
       height: 3rem;
@@ -26,7 +26,7 @@
   .logo-link,
   .nav-link {
     @include flex-center-between;
-    @include font-size-weight(map-get($font-size, "xl"), 700);
+    @include font-size-weight(map-get($font-size, "xxl"), 700);
     color: map-get($color, "primary");
     white-space: nowrap;
   }

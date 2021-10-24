@@ -1,34 +1,9 @@
 .card {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 0.625rem;
   .card-title {
-    @include font-size-weight(map-get($font-size,"m"), 300);
-    color: map-get($color, "black" );
-  }
-  .add-cart-btn{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 5; 
-    transform: translate(-50%,-50%);
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.2s;
-    box-shadow: 0 0 1rem .3rem map-get($color, "gray-b" );
-    &:hover{
-      box-shadow: 0 0 1rem .3rem map-get($color, "gray-c" );
-      transition: 0.2s;
-    }
-    &:active{
-      box-shadow: 0 0 1rem .3rem map-get($color, "gray-e" );
-      transition: 0.2s;
-    }
-  }
-  &:hover>.add-cart-btn{
-    visibility: visible;
-    opacity: 1;
-    transition: 0.4s;
+    @include font-size-weight(map-get($font-size, "m"), 300);
   }
 }
 .collection-card {
@@ -53,21 +28,21 @@
   flex: 1;
   .card-title {
     font-weight: 700;
-    color: map-get($color, "black" );
+    color: map-get($color, "black");
   }
   .card-description {
-    @include font-size-weight(map-get($font-size,"xs"), 400);
-    color: map-get($color, "gray-c" );
+    @include font-size-weight(map-get($font-size, "xs"), 400);
+    color: map-get($color, "gray-c");
   }
   img {
     width: 2.25rem;
     height: 2.25rem;
     border-radius: 0.5rem;
     margin-right: 1rem;
-    background-color: map-get($color, "gray-g" );
+    background-color: map-get($color, "gray-g");
   }
 }
-.product-card{
+.product-card {
   .card-description {
     color: map-get($color, "gray-b");
     font-weight: 400;

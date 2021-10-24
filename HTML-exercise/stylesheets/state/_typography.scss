@@ -1,6 +1,6 @@
 .price {
-  color: map-get($color,"black");
   @include font-size-weight(map-get($font-size,"xl"),400);
+  color: map-get($color,"black");
 }
 .text-primary {
   color: map-get($color,"primary");

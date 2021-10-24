@@ -1,0 +1,52 @@
+#cart-page {
+  display: block;
+  .container {
+    display: flex;
+  }
+  .logo-link,
+  .nav-link {
+    @include font-size-weight(map-get($font-size, "s"), 700);
+    color: map-get($color, "black");
+    justify-content: left;
+  }
+  .page-header {
+    position: static;
+    display: flex;
+    align-items: center;
+    height: 110px;
+    border-bottom: 1px solid map-get($color, "gray-h" );
+    .header-logo {
+      margin: 0;
+      img {
+        width: 3rem;
+        height: 2rem;
+      }
+    }
+  }
+  .section-shopping-cart {
+    margin: 50px auto;
+    .section-header {
+      width: 100%;
+      @include flex-center-between;
+      .section-title {
+        @include font-size-weight(map-get($font-size, "m"), 700);
+      }
+      .shopping-state{
+        @include flex-center-between;
+        .user-cart {
+          width: 2rem;
+          height: 2rem;
+          padding:.5rem;
+          background-color: map-get($color, "primary");
+          border-radius: 50%;
+        }
+        .center-line{
+          height: 50%;
+          width:80px;
+          border-top: 1px solid map-get($color, "gray-h" );
+          margin:0 .625rem;
+        }
+      }
+    }
+  }
+}
