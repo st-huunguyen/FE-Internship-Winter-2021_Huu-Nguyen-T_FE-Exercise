@@ -45,7 +45,8 @@ var plans = [
   {
     title: 'Basic',
     type: 'basic',
-    price: '$10/month',
+    price: 10,
+    duaration: 'month',
     benefit: [
       '10 users included',
       '2 GB of storage',
@@ -57,7 +58,8 @@ var plans = [
   {
     title: 'Pro',
     type: 'pro',
-    price: '$30/month',
+    price: 30,
+    duaration: 'month',
     benefit: [
       '100 users included',
       '20 GB of storage',
@@ -71,7 +73,7 @@ var plans = [
 var renderPlans = function (plans) {
   plans.forEach(function (element) {
     var $listPlan = document.createElement('li');
-    $listPlan.setAttribute('class','list-group-benefit')
+    $listPlan.setAttribute('class', 'list-group-benefit');
 
     var $title = document.createElement('h3');
     $title.setAttribute('class', 'card-title');
@@ -79,7 +81,7 @@ var renderPlans = function (plans) {
 
     var $price = document.createElement('h4');
     $price.setAttribute('class', 'card-price');
-    $price.textContent = element.price;
+    $price.textContent = '$'+element.price+'/'+element.duaration;
 
     var $benefits = document.createElement('ul');
     $benefits.setAttribute('class', 'group-benefit');
@@ -105,7 +107,6 @@ var renderPlans = function (plans) {
     $groupPlan.appendChild($listPlan);
   });
 };
-
 window.onload = function () {
   calculateAge();
   renderPlans(plans);
