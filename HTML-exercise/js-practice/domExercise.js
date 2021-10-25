@@ -81,7 +81,7 @@ var renderPlans = function (plans) {
     $price.textContent = element.price;
 
     var $benefits = document.createElement('ul');
-    $benefits.setAttribute('class', 'groupBenefit');
+    $benefits.setAttribute('class', 'group-benefit');
 
     element.benefit.forEach(function (item) {
       var $listBenefit = document.createElement('li');
