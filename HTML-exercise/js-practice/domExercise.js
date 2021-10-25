@@ -44,7 +44,7 @@ document.body.appendChild($listPlan);
 var plans = [
   {
     title: 'Basic',
-    type: 'plan',
+    type: 'basic',
     price: '$10/month',
     benefit: [
       '10 users included',
@@ -56,7 +56,7 @@ var plans = [
   },
   {
     title: 'Pro',
-    type: 'plan',
+    type: 'pro',
     price: '$30/month',
     benefit: [
       '100 users included',
@@ -71,6 +71,7 @@ var plans = [
 var renderPlans = function (plans) {
   plans.forEach(function (element) {
     var $listPlan = document.createElement('li');
+    $listPlan.setAttribute('class','list-group-benefit')
 
     var $title = document.createElement('h3');
     $title.setAttribute('class', 'card-title');
@@ -92,7 +93,7 @@ var renderPlans = function (plans) {
     });
 
     var $buttonSubmitPlan = document.createElement('button');
-    if (element.title === 'Basic' && element.type === 'plan') {
+    if (element.type === 'basic') {
       $buttonSubmitPlan.setAttribute('class', 'btn btn-secondary');
     } else {
       $buttonSubmitPlan.setAttribute('class', 'btn btn-primary');
