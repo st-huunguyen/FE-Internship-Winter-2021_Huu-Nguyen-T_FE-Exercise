@@ -1,7 +1,25 @@
 // Câu 1
+var $formCalculateAge = document.createElement('form');
+$formCalculateAge.setAttribute('id', 'form');
+
+var $inputAge = document.createElement('input');
+$inputAge.setAttribute('id', 'input');
+$inputAge.type = 'number';
+$inputAge.placeholder = 'Nhập năm sinh';
+
+var $CalculateButton = document.createElement('button');
+$CalculateButton.setAttribute('id', 'button');
+$CalculateButton.textContent = 'Tính tuổi';
+
+var $output = document.createElement('p');
+$output.setAttribute('id', 'output');
+
+$formCalculateAge.appendChild($inputAge);
+$formCalculateAge.appendChild($CalculateButton);
+$formCalculateAge.appendChild($output);
+
 var calculateAge = function () {
   var $input = document.getElementById('input');
-  $input.placeholder = 'nhập năm sinh';
   var $submitButton = document.getElementById('button');
   var $output = document.getElementById('output');
   var age;
@@ -14,10 +32,19 @@ var calculateAge = function () {
     $output.textContent = 'Tuổi của bạn là: ' + age;
   };
 };
+
+document.body.appendChild($formCalculateAge);
 // Câu 2
-var options = [
+
+var $listPlan = document.createElement('ul');
+$listPlan.setAttribute('id', 'plans');
+
+document.body.appendChild($listPlan);
+
+var plans = [
   {
     title: 'Basic',
+    type: 'plan',
     price: '$10/month',
     benefit: [
       '10 users included',
@@ -29,6 +56,7 @@ var options = [
   },
   {
     title: 'Pro',
+    type: 'plan',
     price: '$30/month',
     benefit: [
       '100 users included',
@@ -40,9 +68,9 @@ var options = [
   },
 ];
 
-var renderOption = function (options) {
-  options.forEach(function (element) {
-    var $listOption = document.createElement('li');
+var renderPlans = function (plans) {
+  plans.forEach(function (element) {
+    var $listPlan = document.createElement('li');
 
     var $title = document.createElement('h3');
     $title.setAttribute('class', 'card-title');
@@ -63,21 +91,21 @@ var renderOption = function (options) {
       $benefits.appendChild($listBenefit);
     });
 
-    var $choiceOption = document.createElement('button');
-    if (element.title === 'Basic') {
-      $choiceOption.setAttribute('class', 'btn-secondary');
+    var $buttonSubmitPlan = document.createElement('button');
+    if (element.title === 'Basic' && element.type === 'plan') {
+      $buttonSubmitPlan.setAttribute('class', 'btn btn-secondary');
     } else {
-      $choiceOption.setAttribute('class', 'btn-primary');
+      $buttonSubmitPlan.setAttribute('class', 'btn btn-primary');
     }
-    $choiceOption.textContent = element.action;
+    $buttonSubmitPlan.textContent = element.action;
 
-    $listOption.append($title, $price, $benefits, $choiceOption);
-    var $groupOption = document.getElementById('options');
-    $groupOption.appendChild($listOption);
+    $listPlan.append($title, $price, $benefits, $buttonSubmitPlan);
+    var $groupPlan = document.getElementById('plans');
+    $groupPlan.appendChild($listPlan);
   });
 };
 
 window.onload = function () {
   calculateAge();
-  renderOption(options);
+  renderPlans(plans);
 };

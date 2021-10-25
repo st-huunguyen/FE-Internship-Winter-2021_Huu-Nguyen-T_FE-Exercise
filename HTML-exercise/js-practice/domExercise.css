@@ -19,7 +19,7 @@ form {
   width: 200px;
   margin: 50px auto;
 }
-#options {
+#plans {
   margin: 100px auto;
   width: 100%;
   display: flex;
@@ -27,7 +27,7 @@ form {
   justify-content: space-around;
   align-items: center;
 }
-#options > li {
+#plans > li {
   width: 380px;
   height: 200px;
   border: 1px solid #cecece;
@@ -48,20 +48,19 @@ form {
 .groupBenefit {
   font-size: 12px;
 }
-.btn-secondary,
-.btn-primary {
+.btn{
   width: 90%;
   border-radius: 5px;
   border: none;
   height: 2rem;
   margin: 10px auto;
 }
-.btn-secondary {
+.btn.btn-secondary {
   border: 1px solid #157ffb;
   color: #157ffb;
   background-color: transparent;
 }
-.btn-primary {
+.btn.btn-primary {
   color: #ffffff;
   background-color: #157ffb;
 }
