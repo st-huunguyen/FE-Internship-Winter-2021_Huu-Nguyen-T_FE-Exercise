@@ -17,7 +17,7 @@ body {
 }
 .list-group-benefit,
 .group-benefit,
-.benefit-item{
+.benefit-item {
   list-style: none;
 }
 #plans {
@@ -49,7 +49,7 @@ body {
 .group-benefit {
   font-size: 12px;
 }
-.btn{
+.btn {
   width: 90%;
   border-radius: 5px;
   border: none;

@@ -1,46 +1,36 @@
 // Câu 1
-var $formCalculateAge = document.createElement('form');
-$formCalculateAge.setAttribute('id', 'form');
+var renderCalculateAgeForm = function () {
+  var $formCalculateAge = document.createElement('form');
+  $formCalculateAge.setAttribute('id', 'form');
 
-var $inputAge = document.createElement('input');
-$inputAge.setAttribute('id', 'input');
-$inputAge.type = 'number';
-$inputAge.placeholder = 'Nhập năm sinh';
+  var $inputAge = document.createElement('input');
+  $inputAge.setAttribute('id', 'input');
+  $inputAge.type = 'number';
+  $inputAge.placeholder = 'Nhập năm sinh';
 
-var $CalculateButton = document.createElement('button');
-$CalculateButton.setAttribute('id', 'button');
-$CalculateButton.textContent = 'Tính tuổi';
+  var $CalculateButton = document.createElement('button');
+  $CalculateButton.setAttribute('id', 'button');
+  $CalculateButton.textContent = 'Tính tuổi';
 
-var $output = document.createElement('p');
-$output.setAttribute('id', 'output');
+  var $output = document.createElement('p');
+  $output.setAttribute('id', 'output');
 
-$formCalculateAge.appendChild($inputAge);
-$formCalculateAge.appendChild($CalculateButton);
-$formCalculateAge.appendChild($output);
-
-var calculateAge = function () {
-  var $input = document.getElementById('input');
-  var $submitButton = document.getElementById('button');
-  var $output = document.getElementById('output');
   var age;
 
-  $submitButton.onclick = function (e) {
+  $CalculateButton.onclick = function (e) {
     e.preventDefault();
-    var yearOfBirth = $input.value;
+    var yearOfBirth = $inputAge.value;
     var currentYear = new Date().getFullYear();
     age = currentYear - parseInt(yearOfBirth);
     $output.textContent = 'Tuổi của bạn là: ' + age;
+    $inputAge.value = '';
   };
+  $formCalculateAge.appendChild($inputAge);
+  $formCalculateAge.appendChild($CalculateButton);
+  $formCalculateAge.appendChild($output);
+  document.body.appendChild($formCalculateAge);
 };
-
-document.body.appendChild($formCalculateAge);
 // Câu 2
-
-var $listPlan = document.createElement('ul');
-$listPlan.setAttribute('id', 'plans');
-
-document.body.appendChild($listPlan);
-
 var plans = [
   {
     title: 'Basic',
@@ -69,8 +59,9 @@ var plans = [
     action: 'Buy Now',
   },
 ];
-
 var renderPlans = function (plans) {
+  var $listGroupPlan = document.createElement('ul');
+  $listGroupPlan.setAttribute('id', 'plans');
   plans.forEach(function (element) {
     var $listPlan = document.createElement('li');
     $listPlan.setAttribute('class', 'list-group-benefit');
@@ -81,7 +72,7 @@ var renderPlans = function (plans) {
 
     var $price = document.createElement('h4');
     $price.setAttribute('class', 'card-price');
-    $price.textContent = element.price+'$'+'/'+element.duration;
+    $price.textContent = element.price + '$' + '/' + element.duration;
 
     var $benefits = document.createElement('ul');
     $benefits.setAttribute('class', 'group-benefit');
@@ -93,7 +84,6 @@ var renderPlans = function (plans) {
 
       $benefits.appendChild($listBenefit);
     });
-
     var $buttonSubmitPlan = document.createElement('button');
     if (element.type === 'basic') {
       $buttonSubmitPlan.setAttribute('class', 'btn btn-secondary');
@@ -101,13 +91,12 @@ var renderPlans = function (plans) {
       $buttonSubmitPlan.setAttribute('class', 'btn btn-primary');
     }
     $buttonSubmitPlan.textContent = element.action;
-
     $listPlan.append($title, $price, $benefits, $buttonSubmitPlan);
-    var $groupPlan = document.getElementById('plans');
-    $groupPlan.appendChild($listPlan);
+    $listGroupPlan.appendChild($listPlan);
+    document.body.appendChild($listGroupPlan);
   });
 };
 window.onload = function () {
-  calculateAge();
+  renderCalculateAgeForm();
   renderPlans(plans);
 };
