@@ -8,16 +8,16 @@ var renderCalculateAgeForm = function () {
   $inputAge.type = 'number';
   $inputAge.placeholder = 'Nhập năm sinh';
 
-  var $CalculateButton = document.createElement('button');
-  $CalculateButton.setAttribute('id', 'button');
-  $CalculateButton.textContent = 'Tính tuổi';
+  var $calculateButton = document.createElement('button');
+  $calculateButton.setAttribute('id', 'button');
+  $calculateButton.textContent = 'Tính tuổi';
 
   var $output = document.createElement('p');
   $output.setAttribute('id', 'output');
 
   var age;
 
-  $CalculateButton.onclick = function (e) {
+  $calculateButton.onclick = function (e) {
     e.preventDefault();
     var yearOfBirth = $inputAge.value;
     var currentYear = new Date().getFullYear();
@@ -26,7 +26,7 @@ var renderCalculateAgeForm = function () {
     $inputAge.value = '';
   };
   $formCalculateAge.appendChild($inputAge);
-  $formCalculateAge.appendChild($CalculateButton);
+  $formCalculateAge.appendChild($calculateButton);
   $formCalculateAge.appendChild($output);
   document.body.appendChild($formCalculateAge);
 };
