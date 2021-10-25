@@ -81,7 +81,7 @@ var renderPlans = function (plans) {
 
     var $price = document.createElement('h4');
     $price.setAttribute('class', 'card-price');
-    $price.textContent = '$'+element.price+'/'+element.duaration;
+    $price.textContent = element.price+'$'+'/'+element.duration;
 
     var $benefits = document.createElement('ul');
     $benefits.setAttribute('class', 'group-benefit');
