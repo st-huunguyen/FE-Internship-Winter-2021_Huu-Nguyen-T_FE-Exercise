@@ -46,7 +46,7 @@ var plans = [
     title: 'Basic',
     type: 'basic',
     price: 10,
-    duaration: 'month',
+    duration: 'month',
     benefit: [
       '10 users included',
       '2 GB of storage',
@@ -59,7 +59,7 @@ var plans = [
     title: 'Pro',
     type: 'pro',
     price: 30,
-    duaration: 'month',
+    duration: 'month',
     benefit: [
       '100 users included',
       '20 GB of storage',
