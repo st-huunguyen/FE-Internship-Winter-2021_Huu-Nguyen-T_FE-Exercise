@@ -1,0 +1,95 @@
+.page-footer {
+  background-color: map-get($color, "primary");
+}
+.section-footer-bottom {
+  @include flex-center;
+  height: 3.5rem;
+  color: map-get($color, "white");
+  border-top: 1px solid map-get($color, "white");
+}
+.section-footer-top {
+  @include flex-center-between;
+  padding: 3rem auto;
+  .footer-top-content {
+    @include align-start;
+    padding: 3rem 0;
+    .about-us-detail {
+      .footer-logo {
+        display: flex;
+        justify-content: left;
+        margin-bottom: 1rem;
+        .logo-link {
+          color: map-get($color, "white");
+          .logo {
+            margin-right: 1rem;
+            height: 3rem;
+          }
+        }
+      }
+      .description-content {
+        @include font-size-weight(map-get($font-size, "xl"), 300);
+        color: map-get($color, "white");
+        width: 90%;
+      }
+      .social-network {
+        margin: 3rem 0;
+        width: 12.75rem;
+        .list-group {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.shop-detail {
+  @include align-start;
+  flex-direction: column;
+  .list-item {
+    @include align-start;
+    flex: 1;
+    flex-direction: column;
+    .shop-detail-title {
+      color: map-get($color, "white");
+      line-height: 2.5rem;
+      font-size: map-get($font-size, "xxl");
+    }
+    .list-group {
+      @include align-start;
+      @include font-size-weight(map-get($font-size, "m"), 300);
+      flex-direction: column;
+      color: map-get($color, "white");
+      .shop-detail-content {
+        color: map-get($color, "white");
+        line-height: 2.5rem;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .section-footer-top {
+    .footer-top-content {
+      .about-us-detail {
+        .social-network {
+          .list-group {
+            @include flex-center-between;
+            display: inline-block;
+          }
+        }
+        .description-content {
+          @include font-size-weight(map-get($font-size, "m"), 300);
+        }
+      }
+    }
+  }
+  .shop-detail {
+    flex-direction: row;
+    .list-item {
+      .shop-detail-title {
+        @include font-size-weight(map-get($font-size, "xl"), 600);
+      }
+      .list-group {
+        @include font-size-weight(map-get($font-size, "m"), 300);
+      }
+    }
+  }
+}

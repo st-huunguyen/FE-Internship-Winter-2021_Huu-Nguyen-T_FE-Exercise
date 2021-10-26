@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>E-shop</title>
     <meta name="description" content="E-shop" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +18,41 @@
 
   <body>
     <header class="page-header">
-      <div class="container">
+      <div class="header-mobile container">
         <div class="row">
-          <div class="col-2 col-xl-2">
+          <div class="col-2">
+            <h1 class="header-logo">
+              <a href="#" class="logo-link shop-name">
+                <img class="logo" src="asset\images\logo_black.svg" alt="E-shop" />
+                E-Shop
+              </a>
+            </h1>
+          </div>
+          <div class="col-4">
+            <ul class="list-group">
+              <li class="list-item">
+                <a class="logo-link" href="#">
+                  <img src="asset\images\cart_black.svg" alt="cart_black_icon">
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="logo-link" href="#">
+                  <img src="asset\images\avatar_black.svg" alt="avatar_black_icon">
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="logo-link" href="#">
+                  <img src="asset\images\menu_icon.svg" alt="menu_icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-desktop container">
+        <div class="row">
+          <div class="col-xl-2">
             <h1 class="header-logo">
               <a href="#" class="logo-link shop-name">
                 <img class="logo" src="asset/images/logo.svg" alt="E-shop" />
@@ -27,34 +60,34 @@
               </a>
             </h1>
           </div>
-            <nav class="navigation col-xl-4">
-              <ul class="list-group">
-                <li class="list-item">
-                  <a href="#" class="nav-link">Men</a>
-                </li>
-                <li class="list-item">
-                  <a href="#" class="nav-link">Women</a>
-                </li>
-                <li class="list-item">
-                  <a href="#" class="nav-link">Kids</a>
-                </li>
-              </ul>
-            </nav>
-          <div class="col-4 col-xl-2">
+          <nav class="navigation col-xl-4">
             <ul class="list-group">
               <li class="list-item">
-                <a  class="logo-link" href="#">
-                  <i class="fas fa-search"></i>
+                <a href="#" class="nav-link">Men</a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="nav-link">Women</a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="nav-link">Kids</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="col-xl-2">
+            <ul class="list-group">
+              <li class="list-item">
+                <a class="logo-link" href="#">
+                  <img src="asset\images\search.svg" alt="search_icon">
                 </a>
               </li>
               <li class="list-item">
                 <a class="logo-link" href="#">
-                  <i class="fas fa-shopping-cart"></i>
+                  <img src="asset\images\cart.svg" alt="cart_icon">
                 </a>
               </li>
               <li class="list-item">
                 <a class="logo-link" href="#">
-                  <i class="far fa-user"></i>
+                  <img src="asset\images\avatar.svg" alt="avatar_icon">
                 </a>
               </li>
             </ul>
@@ -124,32 +157,28 @@
                 </div>
               </div>
             </li>
-            <li class="list-item col-12 col-xl-6">
-              <ul class="list-group row">
-                <li class="list-item col-6 col-xl-6">
-                  <div class="card collection-card">
-                    <img class="card-image" src="asset/images/collection_image_2.png" alt="collection_image_2">
-                    <div class="card-info">
-                      <h4 class="card-title">
-                        Basic t-shirts $29,99
-                      </h4>
-                      <button class="btn">MORE DETAILS</button>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-item col-6 col-xl-6">
-                  <div class="card collection-card">
-                    <img class="card-image" src="asset/images/collection_image_3.png" alt="collection_image_3">
-                    <p class="badge badge-danger">50%</p>
-                    <div class="card-info">
-                      <h4 class="card-title">
-                        Sale this summer
-                      </h4>
-                      <button class="btn btn-secondary">VIEW ALL</button>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+            <li class="list-item col-6 col-xl-3">
+              <div class="card collection-card">
+                <img class="card-image" src="asset/images/collection_image_2.png" alt="collection_image_2">
+                <div class="card-info">
+                  <h4 class="card-title">
+                    Basic t-shirts $29,99
+                  </h4>
+                  <button class="btn">MORE DETAILS</button>
+                </div>
+              </div>
+            </li>
+            <li class="list-item col-6 col-xl-3">
+              <div class="card collection-card">
+                <img class="card-image" src="asset/images/collection_image_3.png" alt="collection_image_3">
+                <p class="badge badge-danger">50%</p>
+                <div class="card-info">
+                  <h4 class="card-title">
+                    Sale this summer
+                  </h4>
+                  <button class="btn btn-secondary">VIEW ALL</button>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -219,7 +248,7 @@
           </div>
           <ul class="list-group row">
             <li class="list-item col-12 col-xl-3">
-              <div class="card product-card">
+              <div class="card introduct-card">
                 <img src="asset/images/ship.svg" alt="Shipping" />
                 <div class="card-detail">
                   <h4 class="card-title">Free Shipping</h4>
@@ -231,10 +260,10 @@
               </div>
             </li>
             <li class="list-item col-12 col-xl-3">
-              <div class="card product-card">
+              <div class="card introduct-card">
                 <img src="asset/images/payment.svg" alt="Payments" class="card-icon" />
                 <div class="card-detail">
-                  <h4 class="card-title">Easy Payments</h4>
+                  <h4 class="text-primary card-title">Easy Payments</h4>
                   <p class="card-description">
                     All payments are processed instantly over a secure payment
                     protocol.
@@ -243,7 +272,7 @@
               </div>
             </li>
             <li class="list-item col-12 col-xl-3">
-              <div class="card product-card">
+              <div class="card introduct-card">
                 <img src="asset/images/guarantee.svg" alt="Guarantee" class="card-icon" />
                 <div class="card-detail">
                   <h4 class="card-title">Money-Back Guarantee</h4>
@@ -255,7 +284,7 @@
               </div>
             </li>
             <li class="list-item col-12 col-xl-3">
-              <div class="card product-card">
+              <div class="card introduct-card">
                 <img src="asset/images/material.svg" alt="material" class="card-icon" />
                 <div class="card-detail">
                   <h4 class="card-title">Finest Quality</h4>
@@ -332,8 +361,8 @@
                 Subscribe to our newsletter and receive exclusive offers every week
               </h4>
             </div>
-            <form class="subscribe-form col-12 col-xl-6">
-              <input class="input-email col-12 col-xl-6" type="text" placeholder="Enter your email"/>
+            <form class="subscribe-form col-12 col-xl-6 row">
+              <input class="input-email col-12 col-xl-7" type="text" placeholder="Enter your email" />
               <button class="btn btn-primary col-6 col-xl-4">SUBSCRIBE</button>
             </form>
           </div>
@@ -447,4 +476,5 @@
     </footer>
     <script></script>
   </body>
+
 </html>

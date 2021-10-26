@@ -1,0 +1,50 @@
+.card {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0.625rem;
+  .card-title {
+    @include font-size-weight(map-get($font-size, "m"), 300);
+  }
+}
+.collection-card {
+  @include justify-center;
+  position: relative;
+  &::after {
+    @include mask-gray;
+  }
+  .card-info {
+    @include flex-start-between;
+    width: 70%;
+    height: 40%;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    flex-direction: column;
+    z-index: 1;
+  }
+}
+.service-card {
+  display: flex;
+  flex: 1;
+  .card-title {
+    font-weight: 700;
+    color: map-get($color, "black");
+  }
+  .card-description {
+    @include font-size-weight(map-get($font-size, "xs"), 400);
+    color: map-get($color, "gray-c");
+  }
+  img {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    background-color: map-get($color, "gray-g");
+  }
+}
+.product-card {
+  .card-description {
+    color: map-get($color, "gray-b");
+    font-weight: 400;
+  }
+}
