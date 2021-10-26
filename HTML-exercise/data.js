@@ -44,6 +44,15 @@ const data = [
     quantity: 1,
   },
 ];
+const countCartItem=()=>{
+  let count = 0;
+  let localData = JSON.parse(localStorage.getItem("cart")) || [];
+  localData.forEach((product) => {
+    count+=product.quantity;
+  });
+  let listCartIcon = document.querySelectorAll('.cart');
+  listCartIcon.forEach(item=>{item.textContent = count});
+}
 const renderSuggestionProduct = (data) => {
   const $listProduct = document.querySelector("#list-product");
   data.forEach((element) => {
@@ -184,6 +193,7 @@ const calculateTotalPrice = () => {
     total += product.price * product.quantity;
   });
   $totalPrice.innerHTML = ` $${total.toFixed(2)}`;
+  countCartItem();
 };
 const redirectPage = (e) => {
   e.preventDefault();
