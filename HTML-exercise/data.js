@@ -8,7 +8,7 @@ const data = [
     size: "XL",
     price: 119.99,
     discount: 0.3,
-    quanty: 1,
+    quantity: 1,
   },
   {
     id: "25687",
@@ -19,7 +19,7 @@ const data = [
     size: "XL",
     price: 119.99,
     discount: 0,
-    quanty: 1,
+    quantity: 1,
   },
   {
     id: "58762",
@@ -30,7 +30,7 @@ const data = [
     size: "XL",
     price: 79.99,
     discount: 0,
-    quanty: 1,
+    quantity: 1,
   },
   {
     id: "42546",
@@ -41,48 +41,9 @@ const data = [
     size: "XL",
     price: 119.99,
     discount: 0,
-    quanty: 1,
+    quantity: 1,
   },
 ];
-
-const addToCart = (el) => {
-  let localData = JSON.parse(localStorage.getItem("cart")) || [];
-  const index = localData.findIndex((obj) => obj.id === el);
-  if (index < 0) {
-    let itemMatched = data.filter((item) => {
-      return item.id === el;
-    });
-    localData.push(itemMatched[0]);
-  } else {
-    localData[index].quanty++;
-  }
-  localStorage.setItem("cart", JSON.stringify(localData));
-  alert("Add to cart successfully");
-  renderData();
-};
-
-const subtractToCart = (el) => {
-  let localData = JSON.parse(localStorage.getItem("cart")) || [];
-  const index = localData.findIndex((obj) => obj.id === el);
-  if (localData[index].quanty <= 1) {
-    return;
-  } else {
-    localData[index].quanty--;
-  }
-  localStorage.setItem("cart", JSON.stringify(localData));
-  alert("subtract to cart successfully");
-  renderData();
-};
-
-const removeProductInCart = (el) => {
-  let localData = JSON.parse(localStorage.getItem("cart")) || [];
-  const index = localData.findIndex((obj) => obj.id === el);
-  localData.splice(index, 1);
-  localStorage.setItem("cart", JSON.stringify(localData));
-  alert("remove product successfully");
-  renderData();
-};
-
 const renderSuggestionProduct = (data) => {
   const $listProduct = document.querySelector("#list-product");
   data.forEach((element) => {
@@ -119,59 +80,124 @@ const renderSuggestionProduct = (data) => {
     );
   });
 };
+const $dataTable = document.querySelector(".shopping-product-table");
+const $totalPrice = document.querySelector(".total-price");
+const renderProduct = () => {
+  let localData = JSON.parse(localStorage.getItem("cart")) || [];
+  localData.forEach((product) => {
+    const $cartTableRow = document.createElement("tr");
+    $cartTableRow.className = "table-row";
+    const $miniProductCart = document.createElement("td");
+    $miniProductCart.className = "table-content col-xl-4";
+    const $productColor = document.createElement("td");
+    $productColor.className = "table-content text-center col-xl-1";
+    const $productSize = document.createElement("td");
+    $productSize.className = "table-content text-center col-xl-1";
+    const $productTotalPrice = document.createElement("td");
+    $productTotalPrice.className = "table-content text-center col-xl-1";
+    const $deleteProductIcon = document.createElement("td");
+    $deleteProductIcon.className = "table-content text-center col-xl-2";
+    const $productAmount = document.createElement("td");
+    $productAmount.className = "table-content text-center col-xl-3";
 
-const renderData = () => {
-  let dataTable = ``;
-  let total = 0;
-  const $dataTable = document.querySelector(".shopping-product-table");
-  const $totalPrice = document.querySelector(".total-price");
-  let listProductInCart = JSON.parse(localStorage.getItem("cart")) || [];
-  listProductInCart.forEach((product) => {
-    let subTotal = parseFloat((product.price * product.quanty).toFixed(2));
-    total += subTotal;
-    dataTable += `<tr class="table-row">
-                    <td class="table-content col-xl-4">
-                      <div class="mini-card">
-                        <img src="${product.url}" class="mini-card-image">
-                        <div class="mini-card-info">
-                          <h4 class="mini-card-title">
-                            ${product.title}
-                          </h4>
-                          <h5 class="mini-card-id">
-                            #${product.id}
-                          </h5>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="table-content text-center col-xl-1">
-                      ${product.color}
-                    </td>
-                    <td class="table-content text-center col-xl-1">
-                      ${product.size}
-                    </td>
-                    <td class="table-content text-center col-xl-3">
-                      <div class="amount btn btn-outline">
-                        <p class="change-quanty" onclick="subtractToCart('${product.id}')">
-                        -
-                        </p>
-                        ${product.quanty}
-                        <p class="change-quanty" onclick="addToCart('${product.id}')">
-                        +
-                        </p>
-                      </div>
-                    </td>
-                    <td class="table-content text-center col-xl-1">
-                      <b>$${subTotal}</b>
-                    </td>
-                    <td class="table-content text-center col-xl-2">
-                      <img src="./asset/images/cancel.svg" class="cancel-cross" onclick="removeProductInCart()">
-                    </td>
-                  </tr>`;
+    $miniProductCart.innerHTML = `<div class="mini-cart">
+                                    <img src="${product.url}" class="mini-card-image">
+                                    <div class="mini-card-info">
+                                    <h4 class="mini-card-title">${product.title}</h4>
+                                    <h5 class="mini-card-id">#${product.id}</h5>
+                                    </div>
+                                    </div>
+    `;
+    $productColor.innerHTML = `${product.color}`;
+    $productSize.innerHTML = `${product.size}`;
+    $productAmount.innerHTML = `<div class="amount btn btn-outline">
+                                 <p class="change-quantity" onclick="subtractToCart('${product.id}')">
+                                 -
+                                 </p>
+                                 <p class="quantity">${product.quantity}</p>
+                                 <p class="change-quantity" onclick="addToCart('${product.id}')">
+                                 +
+                                 </p>
+                                </div>`;
+    $productTotalPrice.innerHTML = 
+    `<b>${(product.quantity * product.price).toFixed(2)}</b>`;
+    $deleteProductIcon.innerHTML = `<img src="./asset/images/cancel.svg" 
+    class="cancel-cross" onclick="removeProductInCart('${product.id}')">`;
+    $cartTableRow.append(
+      $miniProductCart,
+      $productColor,
+      $productSize,
+      $productAmount,
+      $productTotalPrice,
+      $deleteProductIcon
+    );
+    $dataTable.appendChild($cartTableRow);
+    calculateTotalPrice();
   });
-  $dataTable.innerHTML = dataTable;
-  $totalPrice.innerHTML = `$${total.toFixed(2)}`;
 };
+const addToCart = (productId) => {
+  let localData = JSON.parse(localStorage.getItem("cart")) || [];
+  const index = localData.findIndex((obj) => obj.id === productId);
+  if (index < 0) {
+    let itemMatched = data.filter((item) => {
+      return item.id === productId;
+    });
+    localData.push(itemMatched[0]);
+
+  } else {
+    localData[index].quantity++;
+    $dataTable.children[index].querySelector(".quantity").innerHTML =
+    localData[index].quantity;
+  }
+  localStorage.setItem("cart", JSON.stringify(localData));
+  calculateTotalPrice();
+  alert("Add to cart successfully");
+};
+const subtractToCart = (productId) => {
+  let localData = JSON.parse(localStorage.getItem("cart")) || [];
+  const index = localData.findIndex((obj) => obj.id === productId);
+  if (localData[index].quantity <= 1) {
+    return;
+  } else {
+    localData[index].quantity--;
+  }
+  $dataTable.children[index].querySelector(".quantity").innerHTML =
+    localData[index].quantity;
+  localStorage.setItem("cart", JSON.stringify(localData));
+  calculateTotalPrice();
+  alert("subtract to cart successfully");
+};
+const removeProductInCart = (productId) => {
+  let localData = JSON.parse(localStorage.getItem("cart")) || [];
+  const index = localData.findIndex((obj) => obj.id === productId);
+  localData.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(localData));
+  $dataTable.removeChild($dataTable.children[index]);
+  calculateTotalPrice();
+  alert("remove product successfully");
+};
+const calculateTotalPrice = () => {
+  let total=0;
+  let localData = JSON.parse(localStorage.getItem("cart")) || [];
+  localData.forEach(product=>{
+    total+=(product.price*product.quantity);
+  })
+  $totalPrice.innerHTML= ` $${total.toFixed(2)}`;
+};
+const redirectPage=(e)=>{
+  e.preventDefault();
+  if(e.getAtribute('class'==='redirect-cart-page')){
+    document.querySelector('#home-page').style.display='none';
+    document.querySelector('#cart-page').style.display='block';
+  }
+  if(e.getAtribute('class'==='redirect-home-page')){
+    document.querySelector('#home-page').style.display='block';
+    document.querySelector('#cart-page').style.display='none';
+  }
+}
 window.onload = () => {
   renderSuggestionProduct(data);
-  renderData();
+  renderProduct();
+  document.querySelector('.redirect-cart-page').onclick=redirectPage;
+  document.querySelector('.redirect-home-page').onclick=redirectPage;
 };

@@ -1,5 +1,4 @@
 #home-page{
-  display: none;
   .section-header {
   .section-title {
     @include font-size-weight(map-get($font-size, "xl"), 300);

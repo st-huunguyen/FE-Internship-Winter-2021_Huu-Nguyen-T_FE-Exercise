@@ -31,7 +31,7 @@
             <ul class="list-group">
               <li class="list-item">
                 <a class="logo-link" href="#">
-                  <img src="asset\images\cart_black.svg" alt="cart_black_icon">
+                  <img src="asset\images\cart_black.svg" alt="cart_black_icon" class="redirect-cart-page">
                 </a>
               </li>
               <li class="list-item">
@@ -79,7 +79,7 @@
               </li>
               <li class="list-item">
                 <a class="logo-link" href="#">
-                  <img src="asset\images\cart.svg" alt="cart_icon">
+                  <img src="asset\images\cart.svg" alt="cart_icon" class="redirect-cart-page">
                 </a>
               </li>
               <li class="list-item">
@@ -485,7 +485,7 @@
           </div>
           <div class="shopping-product row">
             <table class="col-xl-12">
-              <thead>
+              <thead class="table-head">
                 <tr class="table-row">
                   <td class="table-title col-xl-3">Product</td>
                   <td class="table-title text-center col-xl-1">Color</td>
@@ -500,14 +500,16 @@
             </table>
             <form class="checkout-form row">
               <h4 class="col-xl-4">
-                <img src="asset\images\arrow-left.svg" alt="arrow_left">Continue Shopping
+                <a href="#" class="redirect-home-page">
+                  <img src="asset\images\arrow-left.svg" alt="arrow_left"> Continue Shopping
+                </a>
               </h4>
               <div class="btn btn-outline input-area col-xl-3">
                 <input class="input-code" type="text" placeholder="Promo code">
                 <img src="asset\images\send.svg" alt="send">
               </div>
-              <div class="text-center col-xl-2">
-                <p>Total cost</p>
+              <div class="total-area col-xl-2">
+                <p>Total cost </p>
                 <h4 class="total-price"></h4>
               </div>
               <button type="button" class="col-xl-2 btn btn-primary">
