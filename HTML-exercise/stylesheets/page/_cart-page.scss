@@ -1,12 +1,16 @@
 #cart-page {
-  display: block;
+  display: none;
   .container {
     @include flex-center;
     flex-wrap: wrap;
   }
   .total-area{
     @include align-center;
+    font-size: 16px;
     justify-content:space-around
+  }
+  .text-align-center{
+    text-align: center;
   }
   .logo-link,
   .nav-link {
@@ -26,6 +30,12 @@
         width: 3rem;
         height: 2rem;
       }
+    }
+  }
+  .redirect-home-page{
+    color:#000000;
+    img{
+      margin-right: 10px;
     }
   }
   .section-shopping-cart {
@@ -60,18 +70,20 @@
         color: map-get($color , "gray-k" );
       }
       &-table{
-        
-        .mini-card{
-          @include align-center;
+        .cancel-cross{
+          cursor: pointer;
+        }
+        .mini-cart{
           margin: 1rem 0;
-          &-image{
+          @include align-center;
+          .mini-card-image{
             width:60px;
             height:60px;
             object-fit: cover;
             border-radius: 50%;
             margin-right: 3rem;
           }
-          &-id{
+          .mini-card-id{
             color: map-get($color , "gray-e" );
             font-weight: normal;
           }
@@ -83,12 +95,14 @@
         }
       }
     }
+    .checkout-form{
+      margin:20px auto;
+    }
   }
 }
-table{
-  margin-bottom: 30px;
-}
-.mini-cart{
+
+
+
+
+
   
-  @include align-center;
-}

@@ -82,21 +82,19 @@ const renderSuggestionProduct = (data) => {
 };
 const $dataTable = document.querySelector(".shopping-product-table");
 const $totalPrice = document.querySelector(".total-price");
-const renderProduct = () => {
-  let localData = JSON.parse(localStorage.getItem("cart")) || [];
-  localData.forEach((product) => {
-    const $cartTableRow = document.createElement("tr");
+const renderItem=(product)=>{
+  const $cartTableRow = document.createElement("tr");
     $cartTableRow.className = "table-row";
     const $miniProductCart = document.createElement("td");
     $miniProductCart.className = "table-content col-xl-4";
     const $productColor = document.createElement("td");
-    $productColor.className = "table-content text-center col-xl-1";
+    $productColor.className = "table-content text-center col-xl-2";
     const $productSize = document.createElement("td");
     $productSize.className = "table-content text-center col-xl-1";
     const $productTotalPrice = document.createElement("td");
     $productTotalPrice.className = "table-content text-center col-xl-1";
     const $deleteProductIcon = document.createElement("td");
-    $deleteProductIcon.className = "table-content text-center col-xl-2";
+    $deleteProductIcon.className = "table-content text-center col-xl-1";
     const $productAmount = document.createElement("td");
     $productAmount.className = "table-content text-center col-xl-3";
 
@@ -106,8 +104,7 @@ const renderProduct = () => {
                                     <h4 class="mini-card-title">${product.title}</h4>
                                     <h5 class="mini-card-id">#${product.id}</h5>
                                     </div>
-                                    </div>
-    `;
+                                    </div>`;
     $productColor.innerHTML = `${product.color}`;
     $productSize.innerHTML = `${product.size}`;
     $productAmount.innerHTML = `<div class="amount btn btn-outline">
@@ -133,6 +130,11 @@ const renderProduct = () => {
     );
     $dataTable.appendChild($cartTableRow);
     calculateTotalPrice();
+}
+const renderListProduct = () => {
+let localData = JSON.parse(localStorage.getItem("cart")) || [];
+  localData.forEach((product) => {
+    renderItem(product);
   });
 };
 const addToCart = (productId) => {
@@ -143,7 +145,7 @@ const addToCart = (productId) => {
       return item.id === productId;
     });
     localData.push(itemMatched[0]);
-
+    renderItem(itemMatched[0]);
   } else {
     localData[index].quantity++;
     $dataTable.children[index].querySelector(".quantity").innerHTML =
@@ -161,8 +163,7 @@ const subtractToCart = (productId) => {
   } else {
     localData[index].quantity--;
   }
-  $dataTable.children[index].querySelector(".quantity").innerHTML =
-    localData[index].quantity;
+  $dataTable.children[index].querySelector(".quantity").innerHTML = localData[index].quantity;
   localStorage.setItem("cart", JSON.stringify(localData));
   calculateTotalPrice();
   alert("subtract to cart successfully");
@@ -186,18 +187,18 @@ const calculateTotalPrice = () => {
 };
 const redirectPage=(e)=>{
   e.preventDefault();
-  if(e.getAtribute('class'==='redirect-cart-page')){
+  if(e.target.classList.contains('redirect-cart-page')){
     document.querySelector('#home-page').style.display='none';
     document.querySelector('#cart-page').style.display='block';
   }
-  if(e.getAtribute('class'==='redirect-home-page')){
+  if(e.target.classList.contains('redirect-home-page')){
     document.querySelector('#home-page').style.display='block';
     document.querySelector('#cart-page').style.display='none';
   }
 }
 window.onload = () => {
   renderSuggestionProduct(data);
-  renderProduct();
+  renderListProduct();
   document.querySelector('.redirect-cart-page').onclick=redirectPage;
   document.querySelector('.redirect-home-page').onclick=redirectPage;
 };
