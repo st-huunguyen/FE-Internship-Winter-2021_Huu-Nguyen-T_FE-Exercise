@@ -82,31 +82,31 @@ const renderSuggestionProduct = (data) => {
 };
 const $dataTable = document.querySelector(".shopping-product-table");
 const $totalPrice = document.querySelector(".total-price");
-const renderItem=(product)=>{
-    const $cartTableRow = document.createElement("tr");
-    $cartTableRow.className = "table-row";
-    const $miniProductCart = document.createElement("td");
-    $miniProductCart.className = "table-content col-xl-4";
-    const $productColor = document.createElement("td");
-    $productColor.className = "table-content text-center col-xl-2";
-    const $productSize = document.createElement("td");
-    $productSize.className = "table-content text-center col-xl-1";
-    const $productTotalPrice = document.createElement("td");
-    $productTotalPrice.className = "table-content text-center col-xl-1";
-    const $deleteProductIcon = document.createElement("td");
-    $deleteProductIcon.className = "table-content text-center col-xl-1";
-    const $productAmount = document.createElement("td");
-    $productAmount.className = "table-content text-center col-xl-3";
-    $miniProductCart.innerHTML = `<div class="mini-cart">
+const renderItem = (product) => {
+  const $cartTableRow = document.createElement("tr");
+  $cartTableRow.className = "table-row";
+  const $miniProductCart = document.createElement("td");
+  $miniProductCart.className = "table-content col-xl-4";
+  const $productColor = document.createElement("td");
+  $productColor.className = "table-content text-center col-xl-2";
+  const $productSize = document.createElement("td");
+  $productSize.className = "table-content text-center col-xl-1";
+  const $productTotalPrice = document.createElement("td");
+  $productTotalPrice.className = "table-content text-center col-xl-1";
+  const $deleteProductIcon = document.createElement("td");
+  $deleteProductIcon.className = "table-content text-center col-xl-1";
+  const $productAmount = document.createElement("td");
+  $productAmount.className = "table-content text-center col-xl-3";
+  $miniProductCart.innerHTML = `<div class="mini-cart">
                                     <img src="${product.url}" class="mini-card-image">
                                     <div class="mini-card-info">
                                     <h4 class="mini-card-title">${product.title}</h4>
                                     <h5 class="mini-card-id">#${product.id}</h5>
                                     </div>
                                     </div>`;
-    $productColor.innerHTML = `${product.color}`;
-    $productSize.innerHTML = `${product.size}`;
-    $productAmount.innerHTML = `<div class="amount btn btn-outline">
+  $productColor.innerHTML = `${product.color}`;
+  $productSize.innerHTML = `${product.size}`;
+  $productAmount.innerHTML = `<div class="amount btn btn-outline">
                                  <p class="change-quantity" onclick="subtractToCart('${product.id}')">
                                  -
                                  </p>
@@ -115,23 +115,22 @@ const renderItem=(product)=>{
                                  +
                                  </p>
                                 </div>`;
-    $productTotalPrice.innerHTML = 
-    `<b>${(product.quantity * product.price).toFixed(2)}</b>`;
-    $deleteProductIcon.innerHTML = `<img src="./asset/images/cancel.svg" 
+  $productTotalPrice.innerHTML = `<b>${(product.quantity * product.price).toFixed(2)}</b>`;
+  $deleteProductIcon.innerHTML = `<img src="./asset/images/cancel.svg" 
     class="cancel-cross" onclick="removeProductInCart('${product.id}')">`;
-    $cartTableRow.append(
-      $miniProductCart,
-      $productColor,
-      $productSize,
-      $productAmount,
-      $productTotalPrice,
-      $deleteProductIcon
-    );
-    $dataTable.appendChild($cartTableRow);
-    calculateTotalPrice();
-}
+  $cartTableRow.append(
+    $miniProductCart,
+    $productColor,
+    $productSize,
+    $productAmount,
+    $productTotalPrice,
+    $deleteProductIcon
+  );
+  $dataTable.appendChild($cartTableRow);
+  calculateTotalPrice();
+};
 const renderListProduct = () => {
-let localData = JSON.parse(localStorage.getItem("cart")) || [];
+  let localData = JSON.parse(localStorage.getItem("cart")) || [];
   localData.forEach((product) => {
     renderItem(product);
   });
@@ -149,7 +148,7 @@ const addToCart = (productId) => {
   } else {
     localData[index].quantity++;
     $dataTable.children[index].querySelector(".quantity").innerHTML =
-    localData[index].quantity;
+      localData[index].quantity;
   }
   localStorage.setItem("cart", JSON.stringify(localData));
   calculateTotalPrice();
@@ -163,7 +162,8 @@ const subtractToCart = (productId) => {
   } else {
     localData[index].quantity--;
   }
-  $dataTable.children[index].querySelector(".quantity").innerHTML = localData[index].quantity;
+  $dataTable.children[index].querySelector(".quantity").innerHTML =
+    localData[index].quantity;
   localStorage.setItem("cart", JSON.stringify(localData));
   calculateTotalPrice();
   alert("subtract to cart successfully");
@@ -178,27 +178,27 @@ const removeProductInCart = (productId) => {
   alert("remove product successfully");
 };
 const calculateTotalPrice = () => {
-  let total=0;
+  let total = 0;
   let localData = JSON.parse(localStorage.getItem("cart")) || [];
-  localData.forEach(product=>{
-    total+=(product.price*product.quantity);
-  })
-  $totalPrice.innerHTML= ` $${total.toFixed(2)}`;
+  localData.forEach((product) => {
+    total += product.price * product.quantity;
+  });
+  $totalPrice.innerHTML = ` $${total.toFixed(2)}`;
 };
-const redirectPage=(e)=>{
+const redirectPage = (e) => {
   e.preventDefault();
-  if(e.target.classList.contains('redirect-cart-page')){
-    document.querySelector('#home-page').style.display='none';
-    document.querySelector('#cart-page').style.display='block';
+  if (e.target.classList.contains("redirect-cart-page")) {
+    document.querySelector("#home-page").style.display = "none";
+    document.querySelector("#cart-page").style.display = "block";
   }
-  if(e.target.classList.contains('redirect-home-page')){
-    document.querySelector('#home-page').style.display='block';
-    document.querySelector('#cart-page').style.display='none';
+  if (e.target.classList.contains("redirect-home-page")) {
+    document.querySelector("#home-page").style.display = "block";
+    document.querySelector("#cart-page").style.display = "none";
   }
-}
+};
 window.onload = () => {
   renderSuggestionProduct(data);
   renderListProduct();
-  document.querySelector('.redirect-cart-page').onclick=redirectPage;
-  document.querySelector('.redirect-home-page').onclick=redirectPage;
+  document.querySelector(".redirect-cart-page").onclick = redirectPage;
+  document.querySelector(".redirect-home-page").onclick = redirectPage;
 };
