@@ -35,6 +35,7 @@
         margin: 3rem 0;
         width: 12.75rem;
         .list-group {
+          @include flex-center-between;
           display: none;
         }
       }
@@ -72,7 +73,6 @@
         .social-network {
           .list-group {
             @include flex-center-between;
-            display: inline-block;
           }
         }
         .description-content {

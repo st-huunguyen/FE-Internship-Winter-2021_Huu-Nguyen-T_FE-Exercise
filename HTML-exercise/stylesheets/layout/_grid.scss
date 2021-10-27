@@ -8,6 +8,7 @@ $size-s: 4px;
 }
 .row {
   @include flex-center-between;
+  width:100%;
   margin: 0 -$size-s;
   flex-wrap: wrap;
   & [class*="col"] {
