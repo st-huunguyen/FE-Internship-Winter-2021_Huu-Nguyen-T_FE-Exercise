@@ -834,11 +834,15 @@ img {
 #cart-page .section-shopping-cart .shopping-product .product-total-price {
   font-weight: bold;
 }
+#cart-page .section-shopping-cart .shopping-product .quantity {
+  font-size: 1rem;
+}
 #cart-page .section-shopping-cart .shopping-product .decrease-quantity,
 #cart-page .section-shopping-cart .shopping-product .increase-quantity {
   width: 1rem;
   height: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
   display: flex;
   justify-content: center;
   align-items: center;

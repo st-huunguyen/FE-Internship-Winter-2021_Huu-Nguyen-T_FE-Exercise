@@ -71,11 +71,15 @@
       .product-total-price{
         font-weight: bold;
       }
+      .quantity{
+        font-size: map-get($font-size, 'm');
+      }
       .decrease-quantity,
       .increase-quantity{
         width:1rem;
         height:1rem;
-        font-size: 1rem;
+        font-size: map-get($font-size, 'xxl');
+        font-weight: normal;
         @include flex-center;
       }
       .table-title {
