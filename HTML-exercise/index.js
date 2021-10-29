@@ -47,7 +47,7 @@ const countCartItem = () => {
     count += product.quantity;
   });
   let $listCartIcon = document.querySelectorAll('.cart');
-  $listCartIcon.forEach((item) => item.textContent = count);
+  $listCartIcon.forEach((item) => (item.textContent = count));
 };
 const renderSuggestionProduct = (data) => {
   const $listProduct = document.querySelector('#list-product');
@@ -79,7 +79,7 @@ const renderSuggestionProduct = (data) => {
     $price.innerHTML = '$' + element.price * (1 - element.discount);
     const $priceInitial = document.createElement('p');
     $priceInitial.className = 'price price-initial';
-    $priceInitial.innerHTML ='$'+ element.price;
+    $priceInitial.innerHTML = '$' + element.price;
     if (element.discount > 0) {
       $price.classList.add('price-sale-off');
       $cardBadge.style.display = 'block';
@@ -151,20 +151,13 @@ const renderItem = (product) => {
   $increaseQuantity.onclick = () => changeQuantityOfItemInCart('add', product.id);
   $amount.append($decreaseQuantity, $quantity, $increaseQuantity);
   $productAmount.appendChild($amount);
-  $productTotalPrice.innerHTML = '$'+(product.quantity * product.price).toFixed(2);
+  $productTotalPrice.innerHTML = '$' + (product.quantity * product.price).toFixed(2);
   const $deleteIcon = document.createElement('img');
   $deleteIcon.className = 'cancel-cross';
   $deleteIcon.setAttribute('src', './asset/images/cancel.svg');
   $deleteIcon.onclick = () => removeProductInCart(product.id);
   $deleteProductIcon.appendChild($deleteIcon);
-  $cartTableRow.append(
-    $miniProductCart,
-    $productColor,
-    $productSize,
-    $productAmount,
-    $productTotalPrice,
-    $deleteProductIcon
-  );
+  $cartTableRow.append($miniProductCart, $productColor, $productSize, $productAmount, $productTotalPrice, $deleteProductIcon);
   $dataTable.appendChild($cartTableRow);
   calculateTotalPrice();
 };
@@ -187,6 +180,8 @@ const changeQuantityOfItemInCart = (mess, productId) => {
       cartData[index].quantity++;
       $dataTable.children[index].querySelector('.quantity').innerHTML = cartData[index].quantity;
     }
+    localStorage.setItem('cart', JSON.stringify(cartData));
+    calculateTotalPrice();
   }
   if (mess === 'delete') {
     if (cartData[index].quantity <= 1) {
@@ -195,14 +190,14 @@ const changeQuantityOfItemInCart = (mess, productId) => {
       cartData[index].quantity--;
       $dataTable.children[index].querySelector('.quantity').innerHTML = cartData[index].quantity;
     }
+    localStorage.setItem('cart', JSON.stringify(cartData));
+    calculateTotalPrice();
   }
   if (cartData[index].quantity === 1) {
     $dataTable.children[index].querySelector('.decrease-quantity').classList.add('disable');
   } else {
     $dataTable.children[index].querySelector('.decrease-quantity').classList.remove('disable');
   }
-  localStorage.setItem('cart', JSON.stringify(cartData));
-  calculateTotalPrice();
 };
 const removeProductInCart = (productId) => {
   let cartData = JSON.parse(localStorage.getItem('cart')) || [];
