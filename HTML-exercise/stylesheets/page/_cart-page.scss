@@ -1,0 +1,119 @@
+#cart-page {
+  display: none;
+  .container {
+    @include flex-center;
+    flex-wrap: wrap;
+  }
+  .disable{
+    color: map-get($color, "gray-h");
+  }
+  .total-area {
+    @include align-center;
+    font-size: 16px;
+    justify-content: space-around;
+  }
+  .text-align-center {
+    text-align: center;
+  }
+  .logo-link,
+  .nav-link {
+    @include font-size-weight(map-get($font-size, "s"), 700);
+    color: map-get($color, "black");
+    justify-content: left;
+  }
+  .page-header {
+    position: static;
+    display: flex;
+    align-items: center;
+    height: 110px;
+    border-bottom: 1px solid map-get($color, "gray-h");
+    .header-logo {
+      margin: 0;
+      img {
+        width: 3rem;
+        height: 2rem;
+      }
+    }
+  }
+  .redirect-home-page {
+    color: #000000;
+    img {
+      margin-right: 10px;
+    }
+  }
+  .section-shopping-cart {
+    margin: 50px auto;
+    .section-header {
+      width: 100%;
+      @include flex-center-between;
+      .section-title {
+        @include font-size-weight(map-get($font-size, "m"), 700);
+      }
+      .shopping-state {
+        @include flex-center-between;
+        .user-cart {
+          width: 2rem;
+          height: 2rem;
+          padding: 0.5rem;
+          background-color: map-get($color, "primary");
+          border-radius: 50%;
+        }
+        .center-line {
+          height: 50%;
+          width: 100px;
+          border-top: 1px solid map-get($color, "gray-h");
+          margin: 0 0.625rem;
+        }
+      }
+    }
+    .shopping-product {
+      margin: 3rem auto;
+      .product-total-price{
+        font-weight: bold;
+      }
+      .quantity{
+        font-size: map-get($font-size, 'm');
+      }
+      .decrease-quantity,
+      .increase-quantity{
+        width:1rem;
+        height:1rem;
+        font-size: map-get($font-size, 'xxl');
+        font-weight: normal;
+        @include flex-center;
+      }
+      .table-title {
+        height: 80px;
+        color: map-get($color, "gray-k");
+      }
+      &-table {
+        .cancel-cross {
+          cursor: pointer;
+        }
+        .mini-card {
+          margin: 1rem 0;
+          @include align-center;
+          .mini-card-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 3rem;
+          }
+          .mini-card-id {
+            color: map-get($color, "gray-e");
+            font-weight: normal;
+          }
+        }
+        .amount {
+          margin: 0 auto;
+          width: 8rem;
+          justify-content: space-around;
+        }
+      }
+    }
+    .checkout-form {
+      margin: 20px auto;
+    }
+  }
+}

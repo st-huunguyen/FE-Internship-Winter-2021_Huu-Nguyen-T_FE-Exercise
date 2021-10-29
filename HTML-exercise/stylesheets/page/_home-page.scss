@@ -1,4 +1,5 @@
-.section-header {
+#home-page{
+  .section-header {
   .section-title {
     @include font-size-weight(map-get($font-size, "xl"), 300);
     @include justify-center;
@@ -131,6 +132,28 @@
     left: 5%;
     z-index: 2;
   }
+  .add-cart-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    box-shadow: 0 0 1rem .25rem rgba(0,0,0,0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    &:hover{
+      box-shadow: 0 0 1rem .25rem rgba(0,0,0,0.5);
+    }
+    &:active{
+      box-shadow: 0 0 1rem .25rem rgba(0,0,0,0.7);
+    }
+  }
+  &:hover>.add-cart-btn{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+  }
 }
 .section-today-suggestions {
   margin-bottom: 3rem;
@@ -207,4 +230,5 @@
     top: 30%;
     left: 12%;
   }
+}
 }
