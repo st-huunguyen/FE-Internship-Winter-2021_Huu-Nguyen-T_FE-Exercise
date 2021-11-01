@@ -1,0 +1,104 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card img {
+  width:100%;
+}
+
+.card-image {
+  overflow: hidden;
+  padding:15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image a{
+  width:100%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-item{
+  height: 220px;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.collection-item> a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.collection-item:hover .collection-image {
+  height: 110%;
+  transition: 0.4s;
+}
+
+
+.collection-item-content {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+.collection-item-description {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.collection-item-link {
+  font-weight: bold;
+  font-size: 14px;
+  color: #f5ab1e;
+}
+
+.section-product .product-cart .card-title:hover {
+  color: #f5ab1e;
+  transition: 0.3s;
+}
+
+.section-product .product-cart .card-title {
+  font-size: 14px;
+  font-weight: normal;
+  transition: 0.3s;
+}
+
+.section-category .card-title:hover {
+  color: #f5ab1e;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.section-category .card-title {
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.section-category .card-body {
+  text-align: center;
+}
+
+
+
+.collection-item-title {
+  font-weight: normal;
+  font-size: 14px;
+  color: gray;
+}
+

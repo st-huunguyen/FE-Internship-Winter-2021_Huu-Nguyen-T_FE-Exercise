@@ -1,0 +1,112 @@
+@-webkit-keyframes blinking-animation {
+  from {
+    color: black;
+  }
+  to {
+    color: #f5ab1e;
+  }
+}
+.blinking-text {
+  animation: blinking-animation 0.7s infinite;
+  font-weight: 600;
+}
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+.header-top-left {
+  font-size: 14px;
+}
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 15px;
+}
+.header-top-right > .list-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 150px;
+}
+.header-top-right .list-group .list-item {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header-top-right > .list-group > .list-item > .list-group {
+  flex-direction: column;
+  align-items: start;
+  width: 200%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  position: absolute;
+  top: 200%;
+  left: 0;
+  background-color: white;
+  padding: 10px;
+}
+.header-top-right .list-groupli:hover .list-group {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+.header-top-right .list-group.list-item .list-group.list-item {
+  flex-direction: row;
+}
+.header-bottom {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  width: 100%;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 100px;
+}
+.navigation .list-group {
+  display: flex;
+  justify-content: space-between;
+  width: 620px;
+}
+.navigation .list-group .list-item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+}
+.navigation .list-group .list-item .list-group {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigation .list-groupli:hover> .list-group {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+.user-options .list-group {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  font-size: 32px;
+}
