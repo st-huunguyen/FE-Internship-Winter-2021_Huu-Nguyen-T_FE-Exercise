@@ -1,0 +1,82 @@
+
+.section-footer-top{
+  height: 530px;
+  padding:80px 0;
+  background: url('../asset/footer_background.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom:1px solid #c2c2c2;
+}
+.get-coupon-form{
+  height:120px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.get-coupon-form form{
+  width: 100%;
+  display: flex;
+ 
+}
+
+
+.footer-infomation{
+  padding-top:30px;
+  margin-top:30px;
+  line-height: 1.5rem;
+  border-top:1px solid #c2c2c2;
+}
+
+.footer-infomation p{
+  font-size: 14px;
+}
+
+.footer-infomation .list-group .list-item h3{
+  font-size: 16px;
+  font-weight: bold;
+  color: #f5ab1e;
+  margin-bottom: 10px;
+}
+
+.footer-infomation .list-group .list-item .list-group .list-item a{
+  font-size: 14px;
+  display:block;
+  font-weight: normal;
+  color: black;
+  padding:5px 0;
+}
+
+.section-footer-bottom{
+  height:60px;
+  background-color: #f5ab1e;
+  color: white;
+  font-size: 12px;
+  border-bottom: 5px solid white;
+}
+.section-footer-bottom ul{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-social a{
+  font-size: 32px;
+  padding:0 2px;
+  color: white;
+}
+.list-social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-img{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
